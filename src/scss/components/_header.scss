@@ -107,6 +107,10 @@
 
 .nav {
   background-color: $mc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
 
   ul {
     margin: 0;
@@ -115,6 +119,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 
     .active {
       a {
@@ -123,7 +128,6 @@
     }
 
     li {
-      padding: 15px 0;
       list-style-type: none;
       position: relative;
 
@@ -146,13 +150,19 @@
         font-weight: 700;
         color: $bc;
         text-transform: uppercase;
+        padding: 15px 19px;
+        display: block;
 
         &:hover {
           color: $wc;
         }
 
         i {
-          margin-left: 8px;
+          font-size: 23px;
+          right: 0;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
 
@@ -160,17 +170,20 @@
         position: absolute;
         flex-direction: column;
         align-items: flex-start;
-        background-color: #EFEFEF;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        background-color: $sc;
+        box-shadow: $bs;
         min-width: 290px;
         top: 100%;
         padding: 30px;
         display: none;
+        z-index: 1;
+
         .active {
           a {
             color: $mc;
           }
         }
+
         li {
           padding: 0;
           margin-bottom: 15px;
@@ -178,6 +191,7 @@
 
           a {
             font-size: 16px;
+            padding: 0;
 
             &:hover {
               color: $mc;
@@ -185,6 +199,71 @@
           }
         }
       }
+    }
+  }
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100px;
+  width: 100%;
+
+  .search-btn {
+    max-width: 30px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.club-list-wrap {
+  background-color: $sc;
+  position: absolute;
+  max-width: calc(100% - 30px);
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: $bs;
+  padding: 50px 50px;
+  box-sizing: border-box;
+
+  .club {
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: $tr;
+      box-sizing: border-box;
+      padding: 15px;
+      min-height: 130px;
+
+      &:hover {
+        box-shadow: $bs;
+      }
+    }
+
+    &__img {
+      max-width: 85px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__name {
+      margin-left: 17px;
+      font-weight: 700;
+      color: $bc;
     }
   }
 }

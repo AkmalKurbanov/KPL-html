@@ -34,7 +34,7 @@ a{
     margin-right: auto;
     margin-left: auto;
     max-width: 1180px;
-
+    position: relative;
     @include lg {
       max-width: 960px;
     }

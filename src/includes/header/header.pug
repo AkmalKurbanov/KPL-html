@@ -29,6 +29,7 @@ header.header
           a(href="#") Новости        
         li
           a(href="#") клубы
+            i.fal.fa-angle-down          
         li
           a(href="#") турниры
             i.fal.fa-angle-down
@@ -55,6 +56,25 @@ header.header
               a(href="#") документы
             li
               a(href="#") стадионы
-     
+      .search-wrap
+        .search-btn
+          i.fas.fa-search
+    .club-list-wrap.club  
+      .club__list
+        mixin team(logo, name)
+          a.club__item(href="#")
+            .club__img
+              img(src= logo)  
+            .club__name= name 
+        +team('assets/img/KPL-teams/Abdysh-Ata.svg','АБДЫШ-АТА')
+        +team('assets/img/KPL-teams/Alai.svg','АЛАЙ')
+        +team('assets/img/KPL-teams/Lider.svg','АКАДЕМИЯ ЛИДЕР')
+        +team('assets/img/KPL-teams/FK-Alga-Bishkek.svg','АЛГА')
+        +team('assets/img/KPL-teams/Dordoi.svg','ДОРДОЙ')
+        +team('assets/img/KPL-teams/Ilbirs.svg','ИЛБИРС')
+        +team('assets/img/KPL-teams/KaraBalta.svg','КАРА-БАЛТА')
+        +team('assets/img/KPL-teams/Neftchi.svg','НЕФТЧИ')
+
+
 
 
