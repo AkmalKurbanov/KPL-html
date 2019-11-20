@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: 'Montserrat';
+}
+a{
+  text-decoration: none;
+  transition: $tr;
+}
+// flex footer
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .content {
+    flex: 1 0 auto;
+  }
+}
+
+// flex footer end
+
+// container
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1180px;
+
+    @include lg {
+      max-width: 960px;
+    }
+
+    @include md {
+      max-width: 720px;
+    }
+
+    @include sm {
+      max-width: 540px;
+    }
+
+    @include xs {
+      max-width: 460px;
+    }
+  }
+
+
+// container end

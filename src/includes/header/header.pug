@@ -1,0 +1,60 @@
+header.header
+  .container
+    .header__wrap
+      a.header__logo(href="#")
+        img(src="assets/logo.svg" alt="") 
+        span Кыргызская <br> Премьер Лига
+      .team
+        .header__top
+          .social
+            ul
+              each val, index in ['fab fa-instagram', 'fab fa-facebook-square', 'fab fa-twitter','fab fa-vk']
+                li
+                  a(href="#")
+                    i(class=val)
+          .lang
+            ul
+              li.active
+                a(href="#") Кыр
+              li
+                a(href="#") Рус
+        .team__wrap
+          each val, index in ['assets/img/KPL-teams/Abdysh-Ata.svg','assets/img/KPL-teams/Alai.svg','assets/img/KPL-teams/Lider.svg','assets/img/KPL-teams/FK-Alga-Bishkek.svg','assets/img/KPL-teams/Dordoi.svg','assets/img/KPL-teams/Ilbirs.svg','assets/img/KPL-teams/KaraBalta.svg','assets/img/KPL-teams/Neftchi.svg']
+            .team__item
+              a(href="#" title="#")
+                img(src=val, alt="")
+    nav.nav
+      ul
+        li.active
+          a(href="#") Новости        
+        li
+          a(href="#") клубы
+        li
+          a(href="#") турниры
+            i.fal.fa-angle-down
+          ul
+            li.active
+              a(href="#") Кыргызская премьер-лига
+            li
+              a(href="#") первая лига Кыргызстана
+            li
+              a(href="#") кубок Кыргызстана
+            li
+              a(href="#") супер кубок Кыргызстана
+        li
+          a(href="#") медиа
+        li
+          a(href="#") о кпл 
+            i.fal.fa-angle-down
+          ul
+            li.active
+              a(href="#") персонал
+            li
+              a(href="#") официальные лица
+            li
+              a(href="#") документы
+            li
+              a(href="#") стадионы
+     
+
+
