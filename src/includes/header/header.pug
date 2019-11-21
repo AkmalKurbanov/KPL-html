@@ -2,7 +2,7 @@ header.header
   .container
     .header__wrap
       a.header__logo(href="#")
-        img(src="assets/logo.svg" alt="") 
+        img(src="assets/img/logo.svg" alt="") 
         span Кыргызская <br> Премьер Лига
       .team
         .header__top
@@ -19,7 +19,7 @@ header.header
               li
                 a(href="#") Рус
         .team__wrap
-          each val, index in ['assets/img/KPL-teams/Abdysh-Ata.svg','assets/img/KPL-teams/Alai.svg','assets/img/KPL-teams/Lider.svg','assets/img/KPL-teams/FK-Alga-Bishkek.svg','assets/img/KPL-teams/Dordoi.svg','assets/img/KPL-teams/Ilbirs.svg','assets/img/KPL-teams/KaraBalta.svg','assets/img/KPL-teams/Neftchi.svg']
+          each val, index in ['assets/img/KPL-teams/Abdysh-Ata.png','assets/img/KPL-teams/Alai.png','assets/img/KPL-teams/Lider.png','assets/img/KPL-teams/Alga.png','assets/img/KPL-teams/Dordoi.png','assets/img/KPL-teams/Ilbirs.png','assets/img/KPL-teams/KaraBalta.png','assets/img/KPL-teams/Neftchi.png']
             .team__item
               a(href="#" title="#")
                 img(src=val, alt="")
@@ -27,12 +27,10 @@ header.header
       ul
         li.active
           a(href="#") Новости        
-        li
-          a(href="#") клубы
-            i.fal.fa-angle-down          
-        li
-          a(href="#") турниры
-            i.fal.fa-angle-down
+        li.comprisingTable клубы
+          i.fal.fa-angle-down          
+        li.comprising турниры
+          i.fal.fa-angle-down
           ul
             li.active
               a(href="#") Кыргызская премьер-лига
@@ -44,9 +42,8 @@ header.header
               a(href="#") супер кубок Кыргызстана
         li
           a(href="#") медиа
-        li
-          a(href="#") о кпл 
-            i.fal.fa-angle-down
+        li.comprising о кпл 
+          i.fal.fa-angle-down
           ul
             li.active
               a(href="#") персонал
@@ -66,15 +63,19 @@ header.header
             .club__img
               img(src= logo)  
             .club__name= name 
-        +team('assets/img/KPL-teams/Abdysh-Ata.svg','АБДЫШ-АТА')
-        +team('assets/img/KPL-teams/Alai.svg','АЛАЙ')
-        +team('assets/img/KPL-teams/Lider.svg','АКАДЕМИЯ ЛИДЕР')
-        +team('assets/img/KPL-teams/FK-Alga-Bishkek.svg','АЛГА')
-        +team('assets/img/KPL-teams/Dordoi.svg','ДОРДОЙ')
-        +team('assets/img/KPL-teams/Ilbirs.svg','ИЛБИРС')
-        +team('assets/img/KPL-teams/KaraBalta.svg','КАРА-БАЛТА')
-        +team('assets/img/KPL-teams/Neftchi.svg','НЕФТЧИ')
-
+        +team('assets/img/KPL-teams/Abdysh-Ata.png','АБДЫШ-АТА')
+        +team('assets/img/KPL-teams/Alai.png','АЛАЙ')
+        +team('assets/img/KPL-teams/Lider.png','АКАДЕМИЯ ЛИДЕР')
+        +team('assets/img/KPL-teams/Alga.png','АЛГА')
+        +team('assets/img/KPL-teams/Dordoi.png','ДОРДОЙ')
+        +team('assets/img/KPL-teams/Ilbirs.png','ИЛБИРС')
+        +team('assets/img/KPL-teams/KaraBalta.png','КАРА-БАЛТА')
+        +team('assets/img/KPL-teams/Neftchi.png','НЕФТЧИ')
+    .search 
+      form(action="#")
+        input.search__input(type="search" placeholder="Поиск")
+        button.search__btn(type="submit")
+          i.fas.fa-search
 
 
 

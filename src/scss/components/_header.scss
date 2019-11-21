@@ -127,9 +127,37 @@
       }
     }
 
+    li,
+    li a {
+      font-size: 18px;
+      font-weight: 700;
+      color: $bc;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: $tr;
+
+      &:hover {
+        color: $wc;
+      }
+
+      i {
+        font-size: 23px;
+        right: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .open-icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+    }
+
     li {
       list-style-type: none;
       position: relative;
+      padding: 15px 19px;
 
       &:last-child {
         margin-bottom: 0;
@@ -139,31 +167,8 @@
         }
       }
 
-      &:hover {
-        ul {
-          display: block;
-        }
-      }
-
       a {
-        font-size: 18px;
-        font-weight: 700;
-        color: $bc;
-        text-transform: uppercase;
-        padding: 15px 19px;
         display: block;
-
-        &:hover {
-          color: $wc;
-        }
-
-        i {
-          font-size: 23px;
-          right: 0;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
       }
 
       ul {
@@ -218,6 +223,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: $tr;
+
+    &:hover {
+      color: $wc;
+    }
   }
 }
 
@@ -231,6 +241,7 @@
   box-shadow: $bs;
   padding: 50px 50px;
   box-sizing: border-box;
+  display: none;
 
   .club {
 
@@ -264,6 +275,54 @@
       margin-left: 17px;
       font-weight: 700;
       color: $bc;
+    }
+  }
+}
+
+.search {
+  margin: 28px 0 20px;
+  display: none;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input,
+  &__btn {
+    min-height: 48px;
+    outline: none;
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid $mc;
+    padding-left: 17px;
+    padding-right: 10px;
+    vertical-align: bottom;
+    font-weight: 300;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.38);
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.38);
+    }
+  }
+
+  &__btn {
+    max-width: 48px;
+    width: 100%;
+    background-color: #C4C4C4;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+
+    i {
+      font-size: 17px;
     }
   }
 }

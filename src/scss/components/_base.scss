@@ -13,6 +13,10 @@ a{
   text-decoration: none;
   transition: $tr;
 }
+img{
+  width: 100%;
+  max-width: 100%;
+}
 // flex footer
 .wrapper {
   display: flex;
