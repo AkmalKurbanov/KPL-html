@@ -58,3 +58,21 @@ img{
 
 
 // container end
+
+
+// cols
+.cols-wrap {
+  display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  flex-direction: row;   
+}
+.main-col {
+  max-width: 684px;
+  width: 100%;
+}
+.secondary-col {
+  max-width: 500px;
+  width: 100%;
+}
+// cols end
