@@ -19,63 +19,101 @@ header.header
               li
                 a(href="#") Рус
         .team__wrap
-          each val, index in ['assets/img/KPL-teams/Abdysh-Ata.png','assets/img/KPL-teams/Alai.png','assets/img/KPL-teams/Lider.png','assets/img/KPL-teams/Alga.png','assets/img/KPL-teams/Dordoi.png','assets/img/KPL-teams/Ilbirs.png','assets/img/KPL-teams/KaraBalta.png','assets/img/KPL-teams/Neftchi.png']
+          each val, index in ['assets/img/KPL-teams/Abdysh-Ata.png','assets/img/KPL-teams/Alai.png','assets/img/KPL-teams/lider.png','assets/img/KPL-teams/Alga.png','assets/img/KPL-teams/Dordoi.png','assets/img/KPL-teams/Ilbirs.png','assets/img/KPL-teams/KaraBalta.png','assets/img/KPL-teams/Neftchi.png']
             .team__item
               a(href="#" title="#")
                 img(src=val, alt="")
     nav.nav
-      ul
-        li.active
-          a(href="#") Новости        
-        li.comprisingTable клубы
-          i.fal.fa-angle-down          
-        li.comprising турниры
-          i.fal.fa-angle-down
-          ul
-            li.active
-              a(href="#") Кыргызская премьер-лига
-            li
-              a(href="#") первая лига Кыргызстана
-            li
-              a(href="#") кубок Кыргызстана
-            li
-              a(href="#") супер кубок Кыргызстана
-        li
-          a(href="#") медиа
-        li.comprising о кпл 
-          i.fal.fa-angle-down
-          ul
-            li.active
-              a(href="#") персонал
-            li
-              a(href="#") официальные лица
-            li
-              a(href="#") документы
-            li
-              a(href="#") стадионы
+      ul.nav__list
+        li.nav__item.active
+          a.nav__link(href="#") Новости
+        li.nav__item
+          a.nav__link(href="#") клубы
+            i.fal.fa-angle-down
+          .club-list-wrap.club.sub-block  
+            .club__list
+              mixin team(logo, name)
+                a.club__item(href="#")
+                  .club__img
+                    img(src= logo)  
+                  .club__name= name 
+              +team('assets/img/KPL-teams/Abdysh-Ata.png','АБДЫШ-АТА')
+              +team('assets/img/KPL-teams/Alai.png','АЛАЙ')
+              +team('assets/img/KPL-teams/lider.png','АКАДЕМИЯ ЛИДЕР')
+              +team('assets/img/KPL-teams/Alga.png','АЛГА')
+              +team('assets/img/KPL-teams/Dordoi.png','ДОРДОЙ')
+              +team('assets/img/KPL-teams/Ilbirs.png','ИЛБИРС')
+              +team('assets/img/KPL-teams/KaraBalta.png','КАРА-БАЛТА')
+              +team('assets/img/KPL-teams/Neftchi.png','НЕФТЧИ')
+        li.nav__item
+          a.nav__link(href="#") турниры
+            i.fal.fa-angle-down
+          ul.sub-menu
+            li.sub-menu__item.active
+              a.sub-menu__link(href="#") Кыргызская премьер-лига
+            li.sub-menu__item
+              a.sub-menu__link(href="#") первая лига Кыргызстана
+            li.sub-menu__item
+              a.sub-menu__link(href="#") кубок Кыргызстана
+            li.sub-menu__item
+              a.sub-menu__link(href="#") супер кубок Кыргызстана
+        li.nav__item
+          a.nav__link(href="#") медиа
+        li.nav__item 
+          a.nav__link(href="#") о кпл 
+            i.fal.fa-angle-down
+          ul.sub-menu
+            li.sub-menu__item.active
+              a.sub-menu__link(href="#") персонал
+            li.sub-menu__item
+              a.sub-menu__link(href="#") официальные лица
+            li.sub-menu__item
+              a.sub-menu__link(href="#") документы
+            li.sub-menu__item
+              a.sub-menu__link(href="#") стадионы
       .search-wrap
         .search-btn
           i.fas.fa-search
-    .club-list-wrap.club  
-      .club__list
-        mixin team(logo, name)
-          a.club__item(href="#")
-            .club__img
-              img(src= logo)  
-            .club__name= name 
-        +team('assets/img/KPL-teams/Abdysh-Ata.png','АБДЫШ-АТА')
-        +team('assets/img/KPL-teams/Alai.png','АЛАЙ')
-        +team('assets/img/KPL-teams/Lider.png','АКАДЕМИЯ ЛИДЕР')
-        +team('assets/img/KPL-teams/Alga.png','АЛГА')
-        +team('assets/img/KPL-teams/Dordoi.png','ДОРДОЙ')
-        +team('assets/img/KPL-teams/Ilbirs.png','ИЛБИРС')
-        +team('assets/img/KPL-teams/KaraBalta.png','КАРА-БАЛТА')
-        +team('assets/img/KPL-teams/Neftchi.png','НЕФТЧИ')
+        .search-btn-close
+          i.fal.fa-times
+    
     .search 
       form(action="#")
         input.search__input(type="search" placeholder="Поиск")
         button.search__btn(type="submit")
           i.fas.fa-search
+    .championship      
+      mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam,scoreFirstTeam,scoreSecondTeam)
+        .championship__item.championship__item--past-game
+          .championship__wrap
+            .championship__tour=tour
+            .championship__info 
+              .championship__game-date=gameDate
+              .championship__game-result
+                .championship__team=firstTeam
+                  .team-score=scoreFirstTeam
+                .championship__team=secondTeam
+                  .team-score=scoreSecondTeam
+      +championshipItemInfo('5 тур','Пт, 25.10, 18:00','Абдыш-Ата','Кара-Балта','2','0')._external
+      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Дордой','Илбирс','0','0')
+      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Ак.Лидер','Алай','1','5')
+      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Алга','Нефтчи','11','3')
+
+      mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam)
+        .championship__item(class!=attributes.class)
+          .championship__wrap
+            .championship__tour=tour
+            .championship__info 
+              .championship__game-date=gameDate
+              .championship__game-result
+                .championship__team=firstTeam
+                .championship__team=secondTeam
+      +championshipItemInfo('6 тур','Пт, 25.10, 18:00','Кара-Балта','Дордой')
+      +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Нефтчи','Ак.Лидер')
+      +championshipItemInfo('6 тур','Сб, 31.10, 19:45','Абдыш-Ата','Алга')
+      +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Алай','Илбирс')
+
+
 
 
 
