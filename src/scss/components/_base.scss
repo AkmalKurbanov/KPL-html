@@ -8,15 +8,25 @@ body {
   height: 100%;
   position: relative;
   font-family: 'Montserrat';
+  counter-reset: section;
 }
-a{
+
+a {
   text-decoration: none;
   transition: $tr;
 }
-img{
+
+img {
   width: 100%;
   max-width: 100%;
 }
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
 // flex footer
 .wrapper {
   display: flex;
@@ -31,30 +41,31 @@ img{
 // flex footer end
 
 // container
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1180px;
-    position: relative;
-    @include lg {
-      max-width: 960px;
-    }
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1180px;
+  position: relative;
 
-    @include md {
-      max-width: 720px;
-    }
-
-    @include sm {
-      max-width: 540px;
-    }
-
-    @include xs {
-      max-width: 460px;
-    }
+  @include lg {
+    max-width: 960px;
   }
+
+  @include md {
+    max-width: 720px;
+  }
+
+  @include sm {
+    max-width: 540px;
+  }
+
+  @include xs {
+    max-width: 460px;
+  }
+}
 
 
 // container end
@@ -63,16 +74,99 @@ img{
 // cols
 .cols-wrap {
   display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-  flex-direction: row;   
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
 }
+
 .main-col {
   max-width: 684px;
   width: 100%;
 }
+
 .secondary-col {
   max-width: 500px;
   width: 100%;
 }
+
 // cols end
+
+// heading
+
+.heading {
+  font-weight: 600;
+  color: $tc;
+  font-size: 20px;
+
+  &--heading-ttu {
+    text-transform: uppercase;
+  }
+}
+
+// heading end
+
+// select
+.select-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  span {
+    color: $tc;
+    margin-right: 9px;
+    display: block;
+  }
+
+  .select {
+    position: relative;
+    border: 1px solid #C4C4C4;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 73px;
+    justify-content: center;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      content: "\f107";
+      font-family: "Font Awesome 5 Pro";
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $tc;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      border: 1px solid #C4C4C4;
+      background-color: $wc;
+    }
+
+    &__option,
+    .select_checked {
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      padding-left: 8px;
+      box-sizing: border-box;
+    }
+
+    &__option {
+      transition: $tr;
+      padding: 2.5px 0 2.5px 8px;
+
+      &:hover {
+        background-color: rgba(#ccc, 0.7);
+      }
+    }
+  }
+}
+
+// select end

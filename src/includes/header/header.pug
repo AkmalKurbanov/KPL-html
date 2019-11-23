@@ -90,9 +90,9 @@ header.header
             .championship__info 
               .championship__game-date=gameDate
               .championship__game-result
-                .championship__team=firstTeam
+                a.championship__team(href="#")=firstTeam
                   .team-score=scoreFirstTeam
-                .championship__team=secondTeam
+                a.championship__team(href="#")=secondTeam
                   .team-score=scoreSecondTeam
       +championshipItemInfo('5 тур','Пт, 25.10, 18:00','Абдыш-Ата','Кара-Балта','2','0')._external
       +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Дордой','Илбирс','0','0')

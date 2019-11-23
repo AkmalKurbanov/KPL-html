@@ -1,3 +1,6 @@
+.last-news-main {
+  margin-bottom: 5px;
+}
 .preview {
   position: relative;
   display: flex;
@@ -53,7 +56,7 @@
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
-
+    color: $thc;
     &:hover {
       color: $mc;
     }
