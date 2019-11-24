@@ -1,0 +1,49 @@
+.banner {
+  margin-bottom: 15px;
+  &__wrap {
+    background: linear-gradient(83.89deg, #C9D4DA -1.13%, #C9B4BB 101.68%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 130px;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 30px;
+    color: $bc;
+  }
+
+  &__img {
+    max-width: 150px;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  &__title {
+    h2 {
+      font-size: 30px;
+      line-height: 150%;
+    }
+  }
+
+  &__text {
+    h3 {
+      font-size: 20px;
+      line-height: 150%;
+    }
+  }
+
+  &__link {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 130px;
+    background-size: cover;
+    background-position: center center;
+    span {
+      display: flex;
+      max-width: 96px;
+      width: 100%;
+    }
+  }
+}

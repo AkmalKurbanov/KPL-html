@@ -31,11 +31,29 @@ ul {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 
   .content {
     flex: 1 0 auto;
   }
+}
+
+.overlay {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    opacity: 1;
+    transition: $tr;
+  }
+
 }
 
 // flex footer end
@@ -146,6 +164,7 @@ ul {
       width: 100%;
       border: 1px solid #C4C4C4;
       background-color: $wc;
+      z-index: 2;
     }
 
     &__option,
@@ -170,3 +189,46 @@ ul {
 }
 
 // select end
+
+
+// breadcrumbs
+.breadcrumbs {
+  margin-bottom: 15px;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__item {
+    &:last-child {
+      color: $mc;
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    padding-right: 27px;
+    position: relative;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: $tr;
+
+    &:hover {
+      color: $mc;
+    }
+
+    &:after {
+      position: absolute;
+      content: "\f105";
+      font-family: "Font Awesome 5 Pro";
+      right: 11px;
+      font-size: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// breadcrumbs end

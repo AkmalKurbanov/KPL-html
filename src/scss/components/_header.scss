@@ -1,3 +1,9 @@
+.search-mode {
+  position: relative;
+  z-index: 2;
+  background-color: $wc;
+}
+
 .header {
   padding: 25px 0;
 
@@ -18,11 +24,18 @@
 
     span {
       text-align: center;
-      margin-top: 18px;
+      margin-top: 10px;
       font-size: 22px;
       color: #201e1e;
-      font-weight: 600;
+      font-weight: 700;
     }
+  }
+
+  &__logo-wrap {
+    display: block;
+    max-width: 125px;
+    width: 100%;
+    margin-top: 0 !important;
   }
 
   &__top {
@@ -88,7 +101,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 70%;
+  width: 75%;
 
   &__wrap {
     width: 100%;
@@ -153,13 +166,14 @@
       display: block;
       position: relative;
       padding-right: 19px;
+
       &:hover {
         color: $wc;
       }
 
       i {
         font-size: 23px;
-        right: 0  ;
+        right: 0;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -264,6 +278,7 @@
   padding: 50px 50px;
   box-sizing: border-box;
   display: none;
+  z-index: 1;
 
   .club {
 

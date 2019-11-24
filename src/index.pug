@@ -1,11 +1,14 @@
-doctype html
-html(lang="en")
-  include includes/head.pug
-  body
-    .wrapper
-      .content
-        include includes/header/header.pug
-        include includes/last-news-main-page/last-news.pug
-        include includes/standings/standings.pug
-      include includes/footer/footer.pug
-    include includes/scripts.pug  
+extends layout/main/main
+block title
+  | main
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      include includes/last-news-main-page/last-news
+      include includes/standings/standings
+      include includes/banner/banner
+      include includes/partners/partners
+    include includes/footer/footer
+
+  include includes/scripts  

@@ -1,0 +1,17 @@
+.partners {
+  margin-bottom: 8px;
+
+  &__slider {
+    border-top: 8px solid $tc;
+    border-bottom: 16px solid $mc;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 196px;
+    width: 100%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,12 @@
+.partners
+  .container
+    .partners__slider.swiper-container.partners-js
+      .swiper-wrapper
+        mixin partners(logo) 
+          .partners__item.swiper-slide
+            .partners__logo
+              img(src=logo, alt="")
+        +partners('assets/img/partners/FIFA.png')
+        +partners('assets/img/partners/AFC.png')
+        +partners('assets/img/partners/FFKR.png')
+        +partners('assets/img/partners/Coca-Cola.png')

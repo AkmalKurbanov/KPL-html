@@ -7,7 +7,7 @@
 // @import "../../node_modules/--/--/";
 
 @import "../../node_modules/normalize.css/normalize.css";
-
+@import "../../node_modules/swiper/css/swiper.min.css";
 
 //---------------------------------------------
 
@@ -37,4 +37,6 @@
 @import "components/header";
 @import "components/last-news-main-page/last-news";
 @import "components/standings/standings";
+@import "components/banner/banner";
+@import "components/partners/partners";
 @import "components/footer";

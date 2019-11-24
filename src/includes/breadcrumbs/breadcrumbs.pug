@@ -1,0 +1,10 @@
+mixin breadcrumbs(items, last)
+  .breadcrumbs
+    ul.breadcrumbs__list&attributes(attributes)
+      each item in items
+        li.breadcrumbs__item
+          a(href="#" title=item).breadcrumbs__link= item
+      if last
+        li.breadcrumbs__item= last
+
+

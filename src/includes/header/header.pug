@@ -1,8 +1,9 @@
 header.header
   .container
     .header__wrap
-      a.header__logo(href="#")
-        img(src="assets/img/logo.svg" alt="") 
+      a.header__logo(href="./")
+        span.header__logo-wrap
+          img(src="assets/img/logo.svg" alt="") 
         span Кыргызская <br> Премьер Лига
       .team
         .header__top
@@ -26,8 +27,8 @@ header.header
     nav.nav
       ul.nav__list
         li.nav__item.active
-          a.nav__link(href="#") Новости
-        li.nav__item
+          a.nav__link(href="news.html") Новости
+        li.nav__item.nav__item--submenu
           a.nav__link(href="#") клубы
             i.fal.fa-angle-down
           .club-list-wrap.club.sub-block  
@@ -45,7 +46,7 @@ header.header
               +team('assets/img/KPL-teams/Ilbirs.png','ИЛБИРС')
               +team('assets/img/KPL-teams/KaraBalta.png','КАРА-БАЛТА')
               +team('assets/img/KPL-teams/Neftchi.png','НЕФТЧИ')
-        li.nav__item
+        li.nav__item.nav__item--submenu
           a.nav__link(href="#") турниры
             i.fal.fa-angle-down
           ul.sub-menu
@@ -58,9 +59,9 @@ header.header
             li.sub-menu__item
               a.sub-menu__link(href="#") супер кубок Кыргызстана
         li.nav__item
-          a.nav__link(href="#") медиа
-        li.nav__item 
-          a.nav__link(href="#") о кпл 
+          a.nav__link(href="media.html") медиа
+        li.nav__item.nav__item--submenu 
+          a.nav__link(href="about.html") о кпл 
             i.fal.fa-angle-down
           ul.sub-menu
             li.sub-menu__item.active

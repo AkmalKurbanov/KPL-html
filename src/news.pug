@@ -1,0 +1,18 @@
+extends layout/main/main
+block title
+  | news
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .news
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная'], 'Новости')
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  

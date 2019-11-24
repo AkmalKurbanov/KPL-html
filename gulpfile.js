@@ -23,20 +23,27 @@ gulp.task('scss', function () {
          }
       }))
       .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: 'expand' }))
-      .pipe(rename({ suffix: '.min', prefix: '' }))
+      .pipe(sass({
+         outputStyle: 'expand'
+      }))
+      .pipe(rename({
+         suffix: '.min',
+         prefix: ''
+      }))
       .pipe(autoprefixer({
          browsers: ['last 10 versions'],
       }))
       .pipe(cssmin())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist/assets'))
-      .pipe(browsersync.reload({ stream: true }))
+      .pipe(browsersync.reload({
+         stream: true
+      }))
 });
 
 gulp.task('html', function () {
    gulp.src(['src/**/*.pug'])
-   .pipe(plumber())
+      .pipe(plumber())
       .pipe(pug({
          doctype: 'html',
          pretty: true
@@ -62,6 +69,7 @@ gulp.task('js', function () {
    return gulp
       .src([
          'node_modules/jquery/dist/jquery.js',
+         'node_modules/swiper/js/swiper.min.js',
          'src/js/scripts/*.js'
       ])
       .pipe(plumber({
@@ -74,22 +82,28 @@ gulp.task('js', function () {
       }))
       .pipe(concat('scripts.min.js'))
       .pipe(babel({
-          presets: [['env', {
-              loose: true,
-              modules: false,
-              exclude: ['transform-es2015-typeof-symbol']
-          }]],
-          plugins: ['transform-object-rest-spread']
+         presets: [
+            ['env', {
+               loose: true,
+               modules: false,
+               exclude: ['transform-es2015-typeof-symbol']
+            }]
+         ],
+         plugins: ['transform-object-rest-spread']
       }))
       .pipe(uglify())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist/assets'))
-      .pipe(browsersync.reload({ stream: true }))
+      .pipe(browsersync.reload({
+         stream: true
+      }))
 });
 
 
 gulp.task('clean', function () {
-   return gulp.src('dist', { read: false })
+   return gulp.src('dist', {
+         read: false
+      })
       .pipe(clean());
 });
 
@@ -100,6 +114,6 @@ gulp.task('watch', ['scss', 'browser-sync', 'html', 'js', 'assets'], function ()
    gulp.watch('src/**/*.pug', ['html', browsersync.reload])
 });
 
-gulp.task('build', ['clean','scss', 'html', 'js', 'assets']);
+gulp.task('build', ['clean', 'scss', 'html', 'js', 'assets']);
 
 gulp.task('default', ['watch']);
