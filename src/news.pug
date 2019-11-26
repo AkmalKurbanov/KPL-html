@@ -9,9 +9,77 @@ block main
         .container
           include includes/breadcrumbs/breadcrumbs
           +breadcrumbs(['Главная'], 'Новости')
+          h2.heading.heading--heading-ttu
+            |НОВОСТИ КЫРГЫЗСКОЙ ПРЕМЬЕР-ЛИГИ
+          .cols-wrap
+            .main-col.main-col--news
+              a.news-preview.preview(href="#")
+                img(src="../../assets/img/news/news-main.jpg" alt="")
+                .preview__title-news
+                  |Дордой в погоне за лидером!
+              mixin article(img,date,title,subtitle)
+                .news__article
+                  .news__article-img-wrap
+                    .news__article-img
+                      a(href="#")
+                        img(src=img, alt="")
+                  .news__article-info
+                    .news__article-date
+                      span=date
+                    .news__article-title
+                      a(href="#")=title
+                    .news__article-subtitle
+                      p=subtitle
+              +article('assets/img/news/artcl7.jpg','27.10.2019','Академия Лидер - Нефтчи - 3:3. Обзор матча.','Перестрелка в Оше закончилась ничьей')
+              +article('assets/img/news/artcl8.jpg','27.10.2019','Сарыбеков Азамат пропустит 2 месяца','В последнем туре Азамат получил тяжелую травму')
+              +article('assets/img/news/artcl9.jpg','27.10.2019','Сборная КПЛ 5 тура. Обзор тура, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
+              +article('assets/img/news/artcl10.jpg','27.10.2019','Сборная КПЛ 5 тура. Обзор тура, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
 
+            .secondary-col.secondary-col--news
+              .news__preview-list
+                mixin article(img,date,title,subtitle)
+                  .news__article
+                    .news__article-img-wrap
+                      .news__article-img
+                        a(href="#")
+                          img(src=img, alt="")
+                    .news__article-info
+                      .news__article-date
+                        span=date
+                      .news__article-title
+                        a(href="#")=title
+                      .news__article-subtitle
+                        p=subtitle
+                +article('assets/img/news/artc1.jpg','27.10.2019','Сборная КПЛ 5 тура. Обзор тура, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
+                +article('assets/img/news/artcl2.jpg','27.10.2019','Дордой-Алга - 0:0 Прямая трансляция.','1/2 стадия Кубка Кыргызстана. Бишкек')
+                +article('assets/img/news/artcl3.jpg','27.10.2019','Кара-Балта - Алай - 2:1. Обзор матча.','Сенсационная победа аутсайдера над одним из претендентов на золото')
+                +article('assets/img/news/artcl4.jpg','27.10.2019','Скандал! Фанаты устроили потасовку на трибунах в Канте','Матч чемпионата КПЛ между Абдыш-Атой и Алаем прерван.')
+                +article('assets/img/news/artcl5.jpg','27.10.2019','Сборная КПЛ 4 тура. Обзор тура, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
+                +article('assets/img/news/artcl6.jpg','27.10.2019','Сборная КПЛ 5 тура. Обзор тура, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
 
-
+        
+          .pagination
+            a(href="#").pagination__prev
+              i.fal.fa-angle-left
+            ul.pagination__list
+              li.pagination__item.is-active
+                a(href="#").pagination__number 1
+              li.pagination__item
+                a(href="#").pagination__number 2
+              li.pagination__item
+                a(href="#").pagination__number 3
+              li.pagination__item
+                a(href="#").pagination__number 4
+              li.pagination__item
+                a(href="#").pagination__number 5
+              li.pagination__item
+                a(href="#" title="Show more").pagination__number.is-collapsed ...
+              li.pagination__item
+                a(href="#").pagination__number 13
+              li.pagination__item
+                a(href="#").pagination__number 14
+            a(href="#").pagination__next
+              i.fal.fa-angle-right
 
     include includes/footer/footer
 

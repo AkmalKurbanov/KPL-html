@@ -100,11 +100,23 @@ ul {
 .main-col {
   max-width: 684px;
   width: 100%;
+
+  &--news {
+    max-width: 580px;
+
+    .preview {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .secondary-col {
   max-width: 500px;
   width: 100%;
+
+  &--news {
+    max-width: 100%;
+  }
 }
 
 // cols end
@@ -115,6 +127,7 @@ ul {
   font-weight: 600;
   color: $tc;
   font-size: 20px;
+  margin-bottom: 15px;
 
   &--heading-ttu {
     text-transform: uppercase;
@@ -194,6 +207,7 @@ ul {
 // breadcrumbs
 .breadcrumbs {
   margin-bottom: 15px;
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -214,6 +228,7 @@ ul {
     display: flex;
     align-items: center;
     transition: $tr;
+    color: $tc;
 
     &:hover {
       color: $mc;
@@ -232,3 +247,77 @@ ul {
 }
 
 // breadcrumbs end
+
+// pagination
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 25px 0;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    margin-right: 9px;
+
+    .icon-pagination-prev {
+      color: #888d8e!important;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      .pagination__number {
+        background-color: $thc;
+        color: $wc;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__number {
+    color: #888d8e;
+    font-weight: 500;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $thc;
+      color: $wc;
+    }
+
+    &.is-collapsed {
+      pointer-events: none;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    color: $tc;
+    &:hover {
+      color: #888d8e;
+    }
+  }
+
+  &__prev {
+    margin-right: 9px;
+  }
+
+  &__next {
+    margin-left: 9px;
+  }
+}
+
+// pagination end

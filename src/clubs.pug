@@ -1,0 +1,42 @@
+extends layout/main/main
+block title
+  | clubs
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .clubs
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная'], 'Клубы')
+          .standings__control
+            h2.heading.heading--heading-ttu Турнирная таблица
+            form
+              .select-wrap
+                span Сезон
+                .select
+                  input(type="hidden" class="select-item" name="select-season" value="2019")
+                  .select_checked 2019
+                  ul.select__dropdown
+                    each val in [2019, 2020, 2021, 2022, 2023]
+                      li.select__option(data-value=val)=val
+          .clubs__list
+            mixin clubs(logo,name,city,link,mod)
+              div(class=mod).clubs__item
+                .clubs__logo-wrap
+                  .clubs__logo
+                    img(src=logo, alt="")
+                .clubs__info
+                  .clubs__name=name
+                  .clubs__city=city
+                  a(href=link).more ПОДРОБНЕЕ
+            +clubs('assets/img/KPL-teams/Abdysh-Ata.png','АБДЫШ-АТА','г. Кант','#','clubs__item--abdysh')
+            +clubs('assets/img/KPL-teams/Alai.png','АЛАЙ','г. Ош','#','clubs__item--alai')
+            +clubs('assets/img/KPL-teams/lider.png','АКАДЕМИЯ ЛИДЕР','г. Ош','#','clubs__item--lider')
+            +clubs('assets/img/KPL-teams/Alga.png','Алга','г. Бишкек','#','clubs__item--alga')
+            +clubs('assets/img/KPL-teams/Dordoi.png','Дордой','г. Бишкек','#','clubs__item--dordoi')
+            +clubs('assets/img/KPL-teams/Ilbirs.png','Илбирс','г. Бишкек','#','clubs__item--ilbirs')
+            +clubs('assets/img/KPL-teams/KaraBalta.png','КАРА-БАЛТА','г. Кара-Балта','#','clubs__item--kara')
+            +clubs('assets/img/KPL-teams/Neftchi.png','НЕФТЧИ','г. Кызыл-Кия','#','clubs__item--neftchi')
+    include includes/footer/footer
+  include includes/scripts 

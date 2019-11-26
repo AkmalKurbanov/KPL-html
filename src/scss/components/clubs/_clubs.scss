@@ -1,0 +1,147 @@
+.clubs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 160px;
+    flex-basis: 23.9%;
+    margin-bottom: 16px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url('/assets/img/KPL-teams/clubs-bg.svg');
+      background-repeat: no-repeat;
+      max-width: 180px;
+      width: 100%;
+      height: 95px;
+      z-index: 9;
+      right: 0;
+      opacity: 0.1;
+      bottom: 15px;
+    }
+
+    &--abdysh {
+      .clubs__info {
+        background-color: #009846;
+      }
+    }
+
+    &--alai {
+      .clubs__info {
+        background-color: #0075c5;
+      }
+    }
+
+    &--lider {
+      .clubs__info {
+        background-color: #ff0101;
+      }
+    }
+
+    &--alga {
+      .clubs__info {
+        background-color: #d40000;
+      }
+    }
+
+    &--dordoi {
+      .clubs__info {
+        background-color: #ffcc00;
+
+        * {
+          color: $bc;
+        }
+      }
+    }
+
+    &--ilbirs {
+      .clubs__info {
+        background-color: #254bbc;
+      }
+    }
+
+    &--kara {
+      .clubs__info {
+        background-color: #008f3d;
+      }
+    }
+
+    &--neftchi {
+      .clubs__info {
+        background-color: #00afef;
+      }
+    }
+  }
+
+  &__logo-wrap {
+    display: flex;
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &__info {
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+
+  }
+
+  &__name {
+    text-transform: uppercase;
+    color: $wc;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 150%;
+  }
+
+  &__city {
+    font-size: 14px;
+    font-weight: 600;
+    color: $wc;
+  }
+
+  .more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: $wc;
+    padding-bottom: 3px;
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $wc;
+      opacity: 0;
+      transition: $tr;
+    }
+  }
+
+  &__logo {
+    max-width: 85px;
+    width: 100%;
+  }
+}

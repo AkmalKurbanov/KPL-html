@@ -1,0 +1,200 @@
+.players {
+  &__team-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--abdysh-ata {
+      background-color: #009846;
+
+      svg {
+        .cut {
+          fill: #009846;
+        }
+      }
+    }
+
+    &--alai {
+      background-color: #0075C5;
+
+      svg {
+        .cut {
+          fill: #0075C5;
+        }
+      }
+    }
+
+    &--lider {
+      background-color: #FF0101;
+
+      svg {
+        .cut {
+          fill: #FF0101;
+        }
+      }
+    }
+
+    &--alga {
+      background-color: #D40000;
+
+      svg {
+        .cut {
+          fill: #D40000;
+        }
+      }
+    }
+
+    &--dordoi {
+      background-color: #FFCC00;
+
+      svg {
+        .cut {
+          fill: #FFCC00;
+        }
+      }
+    }
+
+    &--ilbirs {
+      background-color: #254BBC;
+
+      svg {
+        .cut {
+          fill: #254BBC;
+        }
+      }
+    }
+
+    &--kara-balta {
+      background-color: #008F3D;
+
+      svg {
+        .cut {
+          fill: #008F3D;
+        }
+      }
+    }
+
+    &--neftchi {
+      background-color: #00AFEF;
+
+      svg {
+        .cut {
+          fill: #00AFEF;
+        }
+      }
+    }
+
+    .breadcrumbs {
+      padding-top: 10px;
+
+      &__link {
+        color: $wc;
+
+        &:hover {
+          color: $mc;
+        }
+      }
+    }
+  }
+
+  &__part {
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+
+  &__team-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__team-logo {
+    max-width: 198px;
+    width: 100%;
+    margin-right: 60px;
+    margin-left: 50px;
+  }
+
+  &__team-desc {
+
+    h2,
+    li,
+    a {
+      color: $wc;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 41px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        position: relative;
+        padding-bottom: 2px;
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          left: 0;
+          bottom: 0;
+          background-color: $wc;
+          opacity: 0;
+          transition: $tr;
+        }
+
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__team-social {
+    margin-top: 20px;
+
+    ul {
+      li {
+        margin-bottom: 0;
+        margin-right: 15px;
+        display: inline-block;
+
+
+        a {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__team-foto {
+    max-width: 493px;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    svg {
+      position: absolute;
+    }
+  }
+}
