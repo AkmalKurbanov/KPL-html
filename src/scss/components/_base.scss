@@ -9,6 +9,7 @@ body {
   position: relative;
   font-family: 'Montserrat';
   counter-reset: section;
+  color: $tc;
 }
 
 a {
@@ -125,7 +126,6 @@ ul {
 
 .heading {
   font-weight: 600;
-  color: $tc;
   font-size: 20px;
   margin-bottom: 15px;
 
@@ -145,7 +145,6 @@ ul {
   margin-bottom: 20px;
 
   span {
-    color: $tc;
     margin-right: 9px;
     display: block;
   }

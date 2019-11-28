@@ -1,0 +1,154 @@
+.calendar {
+  &__personal {}
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #F1F1F1;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+    padding: 16px;
+
+    &:nth-child(2n) {
+      background-color: $wc;
+    }
+
+    &.home {
+      .calendar__score-wrap {
+        order: 2;
+      }
+
+      .calendar__team-wrap {
+        &:first-child {
+          order: 3;
+          justify-content: flex-start;
+        }
+
+        &:last-child {
+          order: 1;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 50%;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__date {
+    margin-right: 40px;
+
+  }
+
+  &__tour {}
+
+  &__team-name {
+    word-wrap: inherit;
+  }
+
+  &__date,
+  &__tour,
+  &__team-name,
+  &__game-score span {
+    font-weight: 600;
+  }
+
+  &__game-score-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__team {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  &__team-wrap {
+    display: flex;
+    flex-basis: 42%;
+    align-items: center;
+
+    &:first-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__score-wrap {
+    flex-basis: 15%;
+  }
+
+  &__team-logo {
+    max-width: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+  }
+
+  &__game-score {
+    color: $wc;
+    margin: 0 auto;
+    max-width: 64px;
+    width: 100%;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+    }
+
+    .separator {
+      font-size: 17px;
+      margin: 0 6px 0 7px;
+    }
+
+    &.winner {
+      background-color: #5E9E44;
+    }
+
+    &.loser {
+      background-color: #e41d37;
+    }
+
+    &.equal {
+      background-color: #f7ba3a;
+    }
+  }
+
+  &__status {
+    max-width: 47px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

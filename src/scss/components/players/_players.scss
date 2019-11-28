@@ -106,6 +106,8 @@
   &__team-info {
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
   }
 
   &__team-logo {
@@ -200,7 +202,8 @@
 
   &__list-wrap {
     margin-top: 16px;
-    .select-wrap{
+
+    .select-wrap {
       margin-bottom: 15px;
     }
   }
@@ -208,7 +211,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
   }
 
@@ -216,11 +219,30 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
     flex-basis: 23.3%;
     padding: 7px 0 0 8px;
-    margin-bottom: 16px;
     background: #FEFEFE;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    margin-right: 16px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      background-image: url('../../../assets/img/players/bg.png');
+      max-width: 187px;
+      width: 100%;
+      min-height: 94px;
+      background-size: cover;
+      right: 4px;
+      top: 9px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 
   &__player-info {
@@ -277,5 +299,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 }
