@@ -174,6 +174,7 @@
   "personalCalendar": [
 
     {
+      "time": "past-game",
       "date": "15 мар 2019",
       "tour": "Тур 1",
       "nameCurrentTeam": "Алга",
@@ -186,6 +187,8 @@
       "mod": "winner"
     },
     {
+      "time": "past-game",
+      "awayGame": "away-game",
       "date": "21 мар 2019",
       "tour": "Тур 2",
       "nameCurrentTeam": "Алга",
@@ -198,6 +201,8 @@
       "mod": "loser"
     },
     {
+      "time": "past-game",
+      "awayGame": "away-game",
       "date": "1 апр 2019",
       "tour": "Тур 3",
       "nameCurrentTeam": "Алга",
@@ -210,6 +215,7 @@
       "mod": "equal"
     },
     {
+      "time": "past-game",
       "date": "7 апр 2019",
       "tour": "Тур 4",
       "nameCurrentTeam": "Алга",
@@ -222,6 +228,7 @@
       "mod": "winner"
     },
     {
+      "time": "past-game",
       "date": "15 май 2019",
       "tour": "Тур 5",
       "nameCurrentTeam": "Алга",
@@ -234,6 +241,8 @@
       "mod": "winner"
     },
     {
+      "time": "past-game",
+      "awayGame": "away-game",
       "date": "22 май 2019",
       "tour": "Тур 6",
       "nameCurrentTeam": "Алга",
@@ -246,6 +255,8 @@
       "mod": "loser"
     },
     {
+      "time": "past-game",
+      "awayGame": "away-game",
       "date": "29 май 2019",
       "tour": "Тур 7",
       "nameCurrentTeam": "Алга",
@@ -258,6 +269,7 @@
       "mod": "loser"
     },
     {
+      "time": "past-game",
       "date": "10 июн 2019",
       "tour": "1/8 финала",
       "nameCurrentTeam": "Алга",
@@ -266,20 +278,90 @@
       "teamLogo": "assets/img/KPL-teams/Lider.png",
       "scoreCurrentTeam": "3",
       "scoreTeam": "0",
-      "status": "assets/img/logo.svg",
+      "status": "assets/img/players/satus.png",
       "mod": "winner"
     },
     {
-      "date": "10 июн 2019",
-      "tour": "",
+      "date": "17 июн 2019",
+      "upcominGameTime": "21:30",
+      "tour": "Тур 8",
       "nameCurrentTeam": "Алга",
-      "nameTeam": "Академия Лидер",
+      "nameTeam": "Дордой",
       "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
-      "teamLogo": "assets/img/KPL-teams/Lider.png",
-      "scoreCurrentTeam": "3",
-      "scoreTeam": "0",
-      "status": "assets/img/logo.svg",
-      "mod": "winner"
-    }
+      "teamLogo": "assets/img/KPL-teams/Dordoi.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "date": "11 сен 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 9",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Нефтчи",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/Neftchi.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "awayGame": "away-game",
+      "date": "18 сен 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 10",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Илбирс",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/Ilbirs.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "awayGame": "away-game",
+      "date": "28 сен 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 11",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Кара-Балта",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/KaraBalta.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "date": "5 окт 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 12",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Абдыш-Ата",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/Abdysh-Ata.png",
+      "status": "assets/img/logo.svg"
+    },
+     {
+       "date": "12 окт 2019",
+       "upcominGameTime": "19:45",
+       "tour": "Тур 13",
+       "nameCurrentTeam": "Алга",
+       "nameTeam": "Алай",
+       "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+       "teamLogo": "assets/img/KPL-teams/Alai.png",
+       "status": "assets/img/logo.svg"
+     },
+      {
+        "date": "29 окт 2019",
+        "upcominGameTime": "19:45",
+        "tour": "Тур 14",
+        "nameCurrentTeam": "Алга",
+        "nameTeam": "Академия Лидер",
+        "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+        "teamLogo": "assets/img/KPL-teams/lider.png",
+        "status": "assets/img/logo.svg"
+      },
+      {
+        "date": "3 ноя 2019",
+        "upcominGameTime": "19:45",
+        "tour": "Финал",
+        "nameCurrentTeam": "Алга",
+        "nameTeam": "Академия Лидер",
+        "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+        "teamLogo": "assets/img/KPL-teams/lider.png",
+        "status": "assets/img/players/satus.png"
+      }
   ]
 }

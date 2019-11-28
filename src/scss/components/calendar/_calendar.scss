@@ -14,20 +14,18 @@
       background-color: $wc;
     }
 
-    &.home {
-      .calendar__score-wrap {
-        order: 2;
-      }
+    &.away-game {
+      .calendar__team {
+        flex-direction: row-reverse;
 
-      .calendar__team-wrap {
-        &:first-child {
-          order: 3;
-          justify-content: flex-start;
-        }
+        .calendar__team-wrap {
+          &:first-child {
+            justify-content: flex-start;
+          }
 
-        &:last-child {
-          order: 1;
-          justify-content: flex-end;
+          &:last-child {
+            justify-content: flex-end;
+          }
         }
       }
     }
@@ -55,14 +53,17 @@
   &__info {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
 
   &__date {
     margin-right: 40px;
-
+    max-width: 110px;
+    width: 100%;
   }
 
-  &__tour {}
+  &__tour {
+  }
 
   &__team-name {
     word-wrap: inherit;
@@ -142,6 +143,16 @@
 
     &.equal {
       background-color: #f7ba3a;
+    }
+
+    &.upcoming-game {
+      background-color: #DDDDDD;
+
+      span {
+        color: $bc;
+        font-size: 14px;
+        font-weight: 400;
+      }
     }
   }
 

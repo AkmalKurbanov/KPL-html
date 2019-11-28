@@ -75,7 +75,8 @@ block main
             .calendar.calendar__personal
               .calendar__wrap
                 each item in personalCalendar
-                  .calendar__item.home
+                  div(class=item.awayGame).calendar__item
+                    //-тут класс системы домашних и выезных игр(away-game выезная игра)
                     .calendar__block
                       .calendar__info
                         span.calendar__date=item.date
@@ -87,18 +88,22 @@ block main
                             .calendar__team-name=item.nameCurrentTeam
                             .calendar__team-logo
                               img(src=item.currentTeamLogo, alt="")
-                          .calendar__score-wrap    
-                            a(href="#" class=item.mod).calendar__game-score
-                              //- тут классы для определения победителя или проигравшего, ничейный счет,
-                                а также предстоящие игры 
-                                  (
-                                    winner - победитель
-                                    loser - проигравший
-                                    equal -ничейный счет
-                                  )
-                              span=item.scoreCurrentTeam
-                              span.separator :
-                              span=item.scoreTeam
+                          if item.time == 'past-game'    
+                            div(class=item.time).calendar__score-wrap 
+                              a(href="#" class=item.mod).calendar__game-score
+                                //- тут классы для определения победителя или проигравшего, ничейный счет,
+                                  а также предстоящие игры 
+                                    (
+                                      winner - победитель
+                                      loser - проигравший
+                                      equal -ничейный счет
+                                    )
+                                span=item.scoreCurrentTeam
+                                span.separator :
+                                span=item.scoreTeam
+                          else
+                            .calendar__game-score.upcoming-game
+                              span=item.upcominGameTime
                           .calendar__team-wrap 
                             .calendar__team-logo
                               img(src=item.teamLogo, alt="")
