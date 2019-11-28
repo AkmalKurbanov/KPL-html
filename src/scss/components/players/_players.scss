@@ -197,4 +197,85 @@
       position: absolute;
     }
   }
+
+  &__list-wrap {
+    margin-top: 16px;
+    .select-wrap{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-basis: 23.3%;
+    padding: 7px 0 0 8px;
+    margin-bottom: 16px;
+    background: #FEFEFE;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &__player-info {
+    padding-bottom: 13px;
+  }
+
+  &__player-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: $tc;
+    line-height: 150%;
+    margin-bottom: 7px;
+  }
+
+  &__player-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $tc;
+    line-height: 150%;
+    margin-bottom: 3px;
+  }
+
+  &__player-position {
+    font-size: 14px;
+    font-weight: 600;
+    color: $tc;
+    line-height: 150%;
+    margin-bottom: 3px;
+  }
+
+  &__player-date-birth {
+    font-size: 14px;
+    color: $tc;
+    line-height: 150%;
+    margin-bottom: 7px;
+  }
+
+  &__player-citizenship {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: $tc;
+
+    .flag {
+      width: 24px;
+      height: 24px;
+      margin-right: 7px;
+    }
+  }
+
+  &__player-foto {
+    max-width: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 }

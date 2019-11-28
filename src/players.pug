@@ -33,5 +33,40 @@ block main
                 svg(viewBox="0 0 489 290")
                   path.cut(d="M 0,0 V 291 H 125.73242 L 42.5,193 0,92.56816 0.08838835,82.668665 78.03125,0.06250046 Z")
                 img(src="assets/img/players/banner.jpg" alt="")
-          //- include includes/tabs/tabs
-          //- +tabs('Игроки')
+          include includes/tabs/tabs
+          +tabs(['Игроки','Календарь игр'])
+          .players__list-wrap
+            .standings__control
+              h3.heading Список заявленных футболистов
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val            
+            .players__list
+              each tag in player
+                .players__item 
+                  .players__player-info
+                    .players__player-number=player.number
+                    .players__player-name=player.name
+                    .players__player-position=player.position
+                    .players__player-date-birth=player.dateBirth
+                    .players__player-citizenship
+                      .flag
+                        img(src=player.flag, alt="")
+                      .country=player.country
+                  .players__player-foto
+                    img(src=player.foto, alt="")
+
+
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts   

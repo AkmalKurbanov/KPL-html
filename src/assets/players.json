@@ -1,0 +1,30 @@
+{
+  "player": [{
+      "number": "1",
+      "name": "Руслан Амиров",
+      "position": "Голкипер",
+      "dateBirth": "15.02.1993",
+      "flag": "assets/img/country/kg.png",
+      "country": "Кыргызстан",
+      "foto": "assets/img/players/1.png"
+    },
+    {
+      "number": "16",
+      "name": "Руслан Джаныбеков",
+      "position": "Голкипер",
+      "dateBirth": "15.02.1993",
+      "flag": "assets/img/country/kg.png",
+      "country": "Кыргызстан",
+      "foto": "assets/img/players/1.png"
+    },
+    {
+      "number": "16",
+      "name": "Руслан Джаныбеков",
+      "position": "Голкипер",
+      "dateBirth": "15.02.1993",
+      "flag": "assets/img/country/kg.png",
+      "country": "Кыргызстан",
+      "foto": "assets/img/players/1.png"
+    }
+  ]
+}

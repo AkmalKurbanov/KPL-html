@@ -11,6 +11,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const pug = require('gulp-pug');
 const clean = require('gulp-clean');
+const Fs = require('fs');
+const dataFromFile = JSON.parse(Fs.readFileSync('src/assets/players.json'))
 
 gulp.task('scss', function () {
    return gulp.src('src/scss/**/*.scss')
@@ -46,7 +48,8 @@ gulp.task('html', function () {
       .pipe(plumber())
       .pipe(pug({
          doctype: 'html',
-         pretty: true
+         pretty: true,
+         locals: dataFromFile || {}
       }))
       .pipe(gulp.dest('dist'));
 });
@@ -111,6 +114,7 @@ gulp.task('watch', ['scss', 'browser-sync', 'html', 'js', 'assets'], function ()
    gulp.watch('src/scss/**/*.scss', ['scss', browsersync.reload]);
    gulp.watch('src/assets/**/*.*', ['assets', browsersync.reload]);
    gulp.watch('src/js/**/*.js', ['js']);
+   gulp.watch('src/assets/**/*.json');
    gulp.watch('src/**/*.pug', ['html', browsersync.reload])
 });
 

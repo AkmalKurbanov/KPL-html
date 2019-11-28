@@ -142,6 +142,7 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  margin-bottom: 20px;
 
   span {
     color: $tc;
@@ -177,7 +178,7 @@ ul {
       width: 100%;
       border: 1px solid #C4C4C4;
       background-color: $wc;
-      z-index: 2;
+      z-index: 10;
     }
 
     &__option,
@@ -264,7 +265,7 @@ ul {
     margin-right: 9px;
 
     .icon-pagination-prev {
-      color: #888d8e!important;
+      color: #888d8e !important;
     }
 
     &:last-child {
@@ -306,6 +307,7 @@ ul {
   &__prev,
   &__next {
     color: $tc;
+
     &:hover {
       color: #888d8e;
     }
@@ -321,3 +323,58 @@ ul {
 }
 
 // pagination end
+
+// tabs
+.tabs {
+  position: relative;
+  margin-top: -24px;
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: calc(100% - var(--tabsWidth));
+    background-color: $mc;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &__list {
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
+
+
+
+  &__item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      font-weight: 600;
+
+      .tabs__link {
+        background-color: $wc;
+      }
+    }
+  }
+
+  &__link {
+    min-height: 40px;
+    padding: 0 25px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $bc;
+    font-size: 14px;
+  }
+}
+
+// tabs end
