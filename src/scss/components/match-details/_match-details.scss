@@ -1,0 +1,148 @@
+.match-details {
+  &__banner {
+    background-size: cover;
+    background-position: center center;
+    min-height: 341px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__score-wrap {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    width: 100%;
+    min-height: 280px;
+    justify-content: space-between;
+
+    &__match {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__info-team {
+      max-width: 160px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__team-logo-wrap {
+      background-color: #eee;
+      min-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    &__team-logo {
+      max-width: 85px;
+      width: 100%;
+    }
+
+    &__team-name {
+      font-size: 18px;
+      color: $wc;
+      font-weight: 700;
+    }
+
+    &__scoreboard-wrap {
+      max-width: 150px;
+      width: 100%;
+    }
+
+ 
+    &__game-result-wrap {
+      min-height: 100px;
+      height: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__game-result {
+      span {
+        font-size: 40px;
+        color: $wc;
+        font-weight: 700;
+        line-height: 49px;
+      }
+    }
+
+    &__sub-scoreboard {
+      span {
+        color: $wc;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &__game-status {
+      min-height: 30px;
+      width: 100%;
+      max-width: 100%;
+      background-color: #5E9E44;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $wc;
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    &__match-extra-info {
+      min-height: 62px;
+      background-color: #272727;
+      display: flex;
+      flex-direction: row;
+      padding: 5px 0;
+    }
+
+    &__extra-info-item {
+      flex-direction: column;
+      display: flex;
+      flex-basis: 50%;
+      padding: 10px;
+
+      p {
+        color: $wc;
+        font-weight: 500;
+        font-size: 10px;
+        margin-bottom: 5px;
+
+        span {
+          font-size: 11px;
+          font-weight: 700;
+          width: 20px;
+          display: inline-block;
+        }
+      }
+
+      &:first-child {
+        align-items: flex-end;
+        border-right: 1px solid $wc;
+
+        span {
+          margin-left: 6px;
+          text-align: right;
+        }
+      }
+
+      &:last-child {
+        span {
+          margin-right: 6px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

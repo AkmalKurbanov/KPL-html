@@ -18,3 +18,4 @@ var tabsWidth = $('.tabs__list').width();
 document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
 
 // tabs end
+

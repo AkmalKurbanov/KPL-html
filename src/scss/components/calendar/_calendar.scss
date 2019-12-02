@@ -1,5 +1,7 @@
 .calendar {
-  &__personal {}
+  &__personal {
+    margin-top: 16px;
+  }
 
   &__item {
     display: flex;
@@ -7,7 +9,6 @@
     justify-content: space-between;
     align-items: center;
     background: #F1F1F1;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
     padding: 16px;
 
     &:nth-child(2n) {
@@ -62,8 +63,6 @@
     width: 100%;
   }
 
-  &__tour {
-  }
 
   &__team-name {
     word-wrap: inherit;

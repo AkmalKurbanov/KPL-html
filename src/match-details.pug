@@ -1,0 +1,61 @@
+extends layout/main/main
+block title
+  | match details
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .match-details
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная','Кыргызская Премьер Лига'], 'Абдыш-Ата 2 : 0 Кара-Балта')
+          .standings__control
+            h3.heading 5 ТУР. АБДЫШ-АТА 2:0 КАРА-БАЛТА
+            a(href="#").match-details__pdf-generate
+              img(src="assets/img/match-detail/pdf-icon.png", alt="")
+          div(class="match-details__banner" style=" background-image: url('assets/img/match-detail/banner.jpg');")
+            .match-details__score-wrap.score 
+              .score__match
+                .score__info-team
+                  .score__team-logo-wrap
+                    .score__team-logo
+                      img(src="assets/img/KPL-teams/Abdysh-Ata.png", alt="")
+                  .score__team-name Абдыш-Ата
+                .score__scoreboard-wrap
+                  .score__scoreboard
+                    .score__game-result-wrap
+                      .score__game-result
+                        p
+                          span 2 : 
+                          span 1  
+                      .score__sub-scoreboard
+                        span (0 : 
+                        span 0)
+                    .score__game-status Завершен
+                .score__info-team
+                  .score__team-logo-wrap
+                    .score__team-logo
+                      img(src="assets/img/KPL-teams/KaraBalta.png", alt="")
+                  .score__team-name Кара-Балта
+              .score__match-extra-info
+                .score__extra-info-item
+                  p Айбек Тыныстанов
+                    span 13’
+                  p Сергей Перваков
+                    span 89’
+                .score__extra-info-item
+                  p 
+                    span 50’
+                    | Акжол Умаров
+                    
+
+
+
+
+
+
+
+
+
+
+
