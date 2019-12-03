@@ -171,9 +171,173 @@
       "foto": "assets/img/players/18.png"
     }
   ],
-  "personalCalendar": [
 
+
+  "startingLineup1": [{
+    "number": "1",
+    "name": "Карапетян Грант",
+    "foto": "assets/img/players/1.png"
+  }, {
+    "number": "12",
+    "name": "Виктор Айо",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "8",
+    "name": "Мамытов Эламан",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "3",
+    "name": "Кенешов Темирлан",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "10",
+    "name": "Жумалиев Эрлан",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "11",
+    "name": "Сакебаев Нурмат",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "20",
+    "name": "Айбек Тыныстанов",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "21",
+    "name": "Керезбеков Мидин",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "13",
+    "name": "Бакыт уулу Шаршенбек",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "4",
+    "name": "Кольбаев Кайрат",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "6",
+    "name": "Искаков Асылбек",
+    "foto": "assets/img/players/21.png"
+  }],
+
+  "startingLineup2": [{
+      "number": "1",
+      "name": "Карапетян Грант",
+      "foto": "assets/img/players/20.png"
+    },
     {
+      "number": "12",
+      "name": "Виктор Айо",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "8",
+      "name": "Мамытов Эламан",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "3",
+      "name": "Кенешов Темирлан",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "10",
+      "name": "Жумалиев Эрлан",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "11",
+      "name": "Сакебаев Нурмат",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "20",
+      "name": "Айбек Тыныстанов",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "21",
+      "name": "Керезбеков Мидин",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "13",
+      "name": "Бакыт уулу Шаршенбек",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "4",
+      "name": "Кольбаев Кайрат",
+      "foto": "assets/img/players/22.png"
+    },
+    {
+      "number": "6",
+      "name": "Искаков Асылбек",
+      "foto": "assets/img/players/22.png"
+    }
+  ],
+  "substitute1": [{
+    "number": "11",
+    "name": "Сакебаев Нурмат",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "20",
+    "name": "Айбек Тыныстанов",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "21",
+    "name": "Керезбеков Мидин",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "13",
+    "name": "Бакыт уулу Шаршенбек",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "4",
+    "name": "Кольбаев Кайрат",
+    "foto": "assets/img/players/21.png"
+  }, {
+    "number": "6",
+    "name": "Искаков Асылбек",
+    "foto": "assets/img/players/21.png"
+  }],
+
+  "substitute2": [{
+    "number": "11",
+    "name": "Сакебаев Нурмат",
+    "foto": "assets/img/players/22.png"
+  }, {
+    "number": "20",
+    "name": "Айбек Тыныстанов",
+    "foto": "assets/img/players/22.png"
+  }, {
+    "number": "21",
+    "name": "Керезбеков Мидин",
+    "foto": "assets/img/players/22.png"
+  }, {
+    "number": "13",
+    "name": "Бакыт уулу Шаршенбек",
+    "foto": "assets/img/players/22.png"
+  }, {
+    "number": "4",
+    "name": "Кольбаев Кайрат",
+    "foto": "assets/img/players/22.png"
+  }, {
+    "number": "6",
+    "name": "Искаков Асылбек",
+    "foto": "assets/img/players/22.png"
+  }],
+  
+  "coach1": [{
+    "name": "Касымбаев Арзымат",
+    "foto": "assets/img/players/coach1.png"
+  }],
+  "coach2": [{
+    "name": "Касымбаев Арзымат",
+    "foto": "assets/img/players/coach2.png"
+  }],
+
+
+  "personalCalendar": [{
       "time": "past-game",
       "date": "15 мар 2019",
       "tour": "Тур 1",
@@ -333,35 +497,35 @@
       "teamLogo": "assets/img/KPL-teams/Abdysh-Ata.png",
       "status": "assets/img/logo.svg"
     },
-     {
-       "date": "12 окт 2019",
-       "upcominGameTime": "19:45",
-       "tour": "Тур 13",
-       "nameCurrentTeam": "Алга",
-       "nameTeam": "Алай",
-       "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
-       "teamLogo": "assets/img/KPL-teams/Alai.png",
-       "status": "assets/img/logo.svg"
-     },
-      {
-        "date": "29 окт 2019",
-        "upcominGameTime": "19:45",
-        "tour": "Тур 14",
-        "nameCurrentTeam": "Алга",
-        "nameTeam": "Академия Лидер",
-        "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
-        "teamLogo": "assets/img/KPL-teams/lider.png",
-        "status": "assets/img/logo.svg"
-      },
-      {
-        "date": "3 ноя 2019",
-        "upcominGameTime": "19:45",
-        "tour": "Финал",
-        "nameCurrentTeam": "Алга",
-        "nameTeam": "Академия Лидер",
-        "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
-        "teamLogo": "assets/img/KPL-teams/lider.png",
-        "status": "assets/img/players/satus.png"
-      }
+    {
+      "date": "12 окт 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 13",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Алай",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/Alai.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "date": "29 окт 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Тур 14",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Академия Лидер",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/lider.png",
+      "status": "assets/img/logo.svg"
+    },
+    {
+      "date": "3 ноя 2019",
+      "upcominGameTime": "19:45",
+      "tour": "Финал",
+      "nameCurrentTeam": "Алга",
+      "nameTeam": "Академия Лидер",
+      "currentTeamLogo": "assets/img/KPL-teams/Alga.png",
+      "teamLogo": "assets/img/KPL-teams/lider.png",
+      "status": "assets/img/players/satus.png"
+    }
   ]
 }

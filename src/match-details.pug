@@ -47,7 +47,191 @@ block main
                   p 
                     span 50’
                     | Акжол Умаров
-                    
+          .match-details__composition.composition
+            .composition__list-wrap        
+              .composition__list
+                .composition__team
+                  .composition__team-logo
+                    img(src="assets/img/KPL-teams/Abdysh-Ata.png", alt="")
+                  .composition__team-info
+                    .composition__team-name Абдыш-Ата                  
+                    .composition__team-city г. Кант
+                .composition__caption
+                  h2 Стартовый состав
+                each item in startingLineup1
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      span=item.number
+                      =item.name
+                .composition__caption
+                  h2 Запасные игроки
+                each item in substitute1
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      span=item.number
+                      =item.name
+                .composition__caption
+                  h2 Тренер
+                each item in coach1
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      =item.name
+              .composition__time-line-wrap
+                .composition__line-progress
+                  .composition__line-progress-wrap
+                    .event 
+                      .event__first-team
+                        .event__name-player
+                          p Айбек Тыныстанов 
+                        .event__icon
+                          img(src="assets/img/match-detail/goal.png", alt="") 
+                      .event__time
+                        span 13
+                    .event 
+                      .event__first-team
+                        .event__name-player
+                          p Айбек Тыныстанов 
+                        .event__icon
+                          img(src="assets/img/match-detail/yellow-card.png", alt="") 
+                      .event__time
+                        span 20
+                    .event
+                      .event__second-team
+                        .event__icon
+                          img(src="assets/img/match-detail/yellow-card.png", alt="") 
+                        .event__name-player
+                          p Айбек Тыныстанов 
+                      .event__time
+                        span 26
+                    .event 
+                      .event__second-team
+                        .event__icon
+                          img(src="assets/img/match-detail/red-card.png", alt="") 
+                        .event__name-player
+                          p Мирлан Кокуев
+                      .event__time
+                        span 40
+                    .event
+                      .event__first-team
+                        .event__name-player
+                          p Азамат Азаматов 
+                        .event__icon
+                          img(src="assets/img/match-detail/yellow-card.png", alt="") 
+                      .event__time
+                        span 45
+                    .event 
+                      .event__second-team
+                        .event__icon
+                          img(src="assets/img/match-detail/goal.png", alt="") 
+                        .event__name-player
+                          p Акжол Умаров
+                      .event__time
+                        span 50
+                    .event 
+                      .event__first-team 
+                        .event__name-player
+                          p Айбек Тыныстанов 
+                          p Максим Иванов
+                        .event__icon
+                          img(src="assets/img/match-detail/substitute.png", alt="") 
+                      .event__time
+                        span 61
+                    .event 
+                      .event__first-team 
+                        .event__name-player
+                          p Айбек Тыныстанов 
+                          p Максим Иванов
+                        .event__icon
+                          img(src="assets/img/match-detail/substitute.png", alt="") 
+                      .event__time
+                        span 70
+                    .event 
+                      .event__first-team
+                        .event__name-player
+                          p Сергей Перваков 
+                        .event__icon
+                          img(src="assets/img/match-detail/goal.png", alt="") 
+                      .event__time
+                        span 89
+                .judge-list
+                  .judge-list__caption
+                    h2 Судейская бригада
+                  .judge-list__wrap
+                    p Арбитр: <br> Иванов Юрий
+                    p Ассистент 1: <br> Ардашева Александра
+                    p Ассистент 2: <br> Козорезов Дмитрий
+                    p 4-й арбитр: <br> Копиевський Виктор
+                    p Делегат:  <br> Прозоровский Михаил
+                    p Наблюдатель арбитража: <br> Ярменчук Игорь
+
+
+
+              .composition__list
+                .composition__team
+                  .composition__team-logo
+                    img(src="assets/img/KPL-teams/lider.png", alt="")
+                  .composition__team-info
+                    .composition__team-name Кара-Балта                 
+                    .composition__team-city г. Кара-Балта
+                .composition__caption
+                  h2 Стартовый состав
+                each item in startingLineup2
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      span=item.number
+                      =item.name
+                .composition__caption
+                  h2 Запасные игроки
+                each item in substitute2
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      span=item.number
+                      =item.name
+                .composition__caption
+                  h2 Тренер
+                each item in coach2
+                  .composition__item
+                    .composition__player-wrap
+                      .composition__player
+                        img(src=item.foto, alt="")
+                    .composition__player-name
+                      =item.name
+
+
+
+
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  
+
+
+
+
+
+
+
+
+
+
 
 
 
