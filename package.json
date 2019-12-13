@@ -1,10 +1,10 @@
 {
-  "name": "Project",
+  "name": "KPL",
   "version": "1.0.0",
-  "description": "Project",
+  "description": "Kyrgyz Premier League",
   "main": "index.js",
   "dependencies": {
-    "gulp-uncss": "^1.0.6",
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   },

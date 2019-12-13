@@ -73,6 +73,7 @@ gulp.task('js', function () {
       .src([
          'node_modules/jquery/dist/jquery.js',
          'node_modules/swiper/js/swiper.min.js',
+         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
          'src/js/scripts/*.js'
       ])
       .pipe(plumber({

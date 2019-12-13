@@ -267,7 +267,7 @@
       align-items: center;
       position: relative;
       min-height: 45px;
-
+      margin-bottom: 20px;
       &__time {
         width: 40px;
         height: 40px;
@@ -279,6 +279,7 @@
         margin: auto;
         background-color: #25282A;
         position: absolute;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
 
@@ -350,7 +351,7 @@
     &:before {
       position: absolute;
       content: '';
-      width: 1px;
+      width: 2px;
       background-color: $wc;
       height: calc(100% - 15px);
       top: 0;

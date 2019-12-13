@@ -1,0 +1,38 @@
+extends layout/main/main
+block title
+  | news detail
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .news
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная'], 'Новости')
+          h2.heading.heading--heading-ttu
+            |СБОРНАЯ КПЛ 5 ТУРА. ОБЗОР ТУРА, ЛУЧШИЕ ИГРОКИ
+          .news__detail
+            .news__date
+              i.far.fa-clock
+              | 21.10.2019
+            .cols-wrap
+              .main-col
+                p Определились финалисты розыгрыша Кубка Кыргызстана по футболу сезона 2019 года.
+                p 25 сентября в Бишкеке и Кочкор-Ате прошли ответные матчи полуфинальной стадии турнира.
+                p «Дордой» в Бишкеке со счетом 4:1 обыграл «Алгу». Первая игра между этими командами также завершилась в пользу подопечных Александра Крестинина — 3:2.
+                p В Кочкор-Ате местный «Нефтчи» со счетом 5:1 обыграл «Лидер. Итоговый счет этого противостояния 7:1.
+                p Главный приз 27 октября разыграют «Дордой» и «Нефтчи».
+                p Обладатель Кубка Кыргызстана 2019 года получит право выступить в плей-офф Кубка АФК.
+              .secondary-col
+              
+                .news-preview.preview
+                  img(src="../../assets/img/news/news-detail.jpg" alt="")
+            a.news-preview.preview(data-fancybox href="https://www.youtube.com/watch?v=0ivRp2HrJo4")
+                img(src="../../assets/img/news/news-main.jpg" alt="")
+                .preview__title-news
+                  |Абдыш-Ата 1 : 1 Алга
+            
+
+    include includes/footer/footer
+
+  include includes/scripts  
