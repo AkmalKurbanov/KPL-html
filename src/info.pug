@@ -1,0 +1,203 @@
+extends layout/main/main
+block title
+  | info
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .info
+        .container
+          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/tabs/tabs
+          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          .info__wrap
+            .standings__control
+              h3.heading Список заявленных футболистов
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val  
+            .standings__table
+              table
+                thead
+                  mixin table(team, ...tds)
+                    tr
+                      th
+                      th=team
+                      each td in tds
+                        th= td
+                  +table('Команда', 'И', 'В', 'Н','П','ЗМ','ПМ','РМ','О')
+                tbody
+                  mixin table(number,logo,team, ...tds)
+                    tr
+                      td=number
+                      td
+                        a(href="#" class="standings__wrapper")
+                          span.logo-team
+                            img(src=logo)
+                          =team
+                      each td in tds
+                        td= td
+                  +table('1','assets/img/KPL-teams/Alga.png','Алга', '12', '11', '1','0','36','6','30','34')
+                  +table('2','assets/img/KPL-teams/Dordoi.png','Дордой', '12', '7', '3','2','24','8','16','24')
+                  +table('3','assets/img/KPL-teams/Neftchi.png','Нефтчи', '12', '7', '2','3','24','8','16','23')
+                  +table('4','assets/img/KPL-teams/Ilbirs.png','Илбирс', '12', '6', '4','2','23','11','12','22')
+                  +table('5','assets/img/KPL-teams/KaraBalta.png','Кара-Балта', '12', '6', '2','4','14','13','1','20')
+                  +table('6','assets/img/KPL-teams/Abdysh-Ata.png','Абдыш-Ата', '12', '4', '4','4','11','16','-5','16')
+                  +table('7','assets/img/KPL-teams/Alai.png','Алай', '12', '4', '2','6','9','23','-14','14')
+                  +table('8','assets/img/KPL-teams/lider.png','Академия Лидер', '12', '3', '2','7','12','17','-5','11')
+
+            .standings__control
+              h3.heading Бомбардиры
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val  
+
+            .standings__table.bombardier
+              table
+                thead
+                  mixin table(team, ...tds)
+                    tr
+                      th
+                      th=team
+                      each td in tds
+                        th= td
+                  +table('Игрок', 'Голов', 'С пенальти', 'Игр сыграно')
+                tbody
+                  tr
+                    td 1
+                    td
+                      .standings__wrapper.active
+                        .bombardier__foto
+                          img(src="assets/img/players/17.png", alt="")
+                        span.logo-team
+                          img(src="assets/img/KPL-teams/Alga.png")
+                        span.name-player Абдыжапаров Асланбек
+                    td 11
+                    td 0
+                    td 12
+
+                  mixin table(number,logo,team,bombardier, ...tds)
+                    tr
+                      td=number
+                      td
+                        .standings__wrapper
+                          .bombardier__foto
+                            img(src=bombardier)
+                          span.logo-team
+                            img(src=logo)
+                          span.name-player=team
+                      each td in tds
+                        td= td
+                  +table('2','assets/img/KPL-teams/Dordoi.png','Мирлан Мурзаев','assets/img/players/8.png','11','1','13')
+                  +table('3','assets/img/KPL-teams/Neftchi.png','Давид Маких','assets/img/players/9.png','9', '0','12')
+                  +table('4','assets/img/KPL-teams/Ilbirs.png','Мирбек Исманкулов','assets/img/players/3.png','9', '3','12')
+                  +table('5','assets/img/KPL-teams/KaraBalta.png','Атабек Уморов','assets/img/players/4.png','8', '1','12')
+                  +table('6','assets/img/KPL-teams/Abdysh-Ata.png','Антон Землянухин','assets/img/players/5.png','7','4','12')
+                  +table('7','assets/img/KPL-teams/Alai.png','Сергей Калашинац','assets/img/players/6.png','6', '2','12')
+                  +table('8','assets/img/KPL-teams/lider.png','Айбек Турсунали улуу','assets/img/players/7.png','6','0','12')
+
+            .standings__control
+              h3.heading Календарь
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val
+            .calendar.calendar--common
+              mixin calendarItem(tour,date,status)
+                div(class="calendar__item calendar__item--common " + status)
+                  .calendar__header=tour 
+                    |тур
+                  .calendar__body
+                    .calendar__date=date
+                    .calendar__result-game
+                      mixin calendar(nameFirstTeam,logoFirstTeam,scoreFirstTeam,nameSecondTeam,logoSecondTeam,scoreSecondTeam)
+                        .calendar__result-game-item
+                          .calendar__team
+                            .calendar__team-name=nameFirstTeam
+                            .calendar__team-logo
+                              img(src=logoFirstTeam)
+                          .calendar__game-score
+                            span=scoreFirstTeam
+                            span.separator :
+                            span=scoreSecondTeam
+                          .calendar__team
+                            .calendar__team-logo
+                              img(src=logoSecondTeam)
+                            .calendar__team-name=nameSecondTeam
+
+                      +calendar('Ак. Лидер','assets/img/KPL-teams/lider.png','2','Абдыш-Ата','assets/img/KPL-teams/Abdysh-Ata.png','0')
+                      +calendar('Алга','assets/img/KPL-teams/Alga.png','2','Дордой','assets/img/KPL-teams/Dordoi.png','0')
+                      +calendar('Кара-Балта','assets/img/KPL-teams/KaraBalta.png','2','Алай','assets/img/KPL-teams/Alai.png','0')
+                      +calendar('Нефтчи','assets/img/KPL-teams/Neftchi.png','2','Илбирс','assets/img/KPL-teams/Ilbirs.png','0')
+              +calendarItem('1 ','15.02.1993','passed')      
+              +calendarItem('2 ','15.02.1993','passed')      
+              +calendarItem('3 ','15.02.1993','passed')      
+              +calendarItem('4 ','15.02.1993','passed')      
+              +calendarItem('5 ','15.02.1993','upcoming')      
+              +calendarItem('6 ','15.02.1993','upcoming')      
+              +calendarItem('7 ','15.02.1993','upcoming')      
+              +calendarItem('8 ','15.02.1993','upcoming')      
+            .standings__control
+              h3.heading Статистика
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val
+            .calendar.calendar--common
+              mixin statistics(tour,status)
+                div(class="calendar__item calendar__item--common " + status)
+                  .calendar__header=tour 
+                    |тур
+                  .calendar__body
+                    table
+                      tbody
+                        tr
+                          td Кол-во матчей в туре
+                          td 4
+                        tr
+                          td Кол-во матчей в туре
+                          td 15 000
+                        tr
+                          td Кол-во матчей в туре
+                          td 6
+                        tr
+                          td 
+                            .img-wrap
+                          td
+                          td
+                          td
+              +statistics('1 ','statistics')      
+              +statistics('2 ','statistics')      
+              +statistics('3 ','statistics')      
+              +statistics('4 ','statistics')      
+              +statistics('5 ','statistics')      
+              +statistics('6 ','statistics')      
+              +statistics('7 ','statistics')      
+              +statistics('8 ','statistics')
+              +statistics('9 ','statistics')
+
+    include includes/footer/footer
+
+  include includes/scripts  

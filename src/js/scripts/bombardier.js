@@ -1,4 +1,4 @@
-$('.bombardier__list-item').on('click', function () {
+$('.bombardier__list-item, .standings__wrapper').on('click', function () {
   $(this).toggleClass('active');
-  $('.bombardier__list-item').not(this).removeClass('active');
+  $('.bombardier__list-item, .standings__wrapper').not(this).removeClass('active');
 });

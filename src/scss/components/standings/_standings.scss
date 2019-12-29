@@ -6,10 +6,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 16px 0 25px;
 
     .heading,
     form {
       flex-basis: 50%;
+      margin: 0;
     }
   }
 
@@ -115,17 +117,6 @@
               text-align: left;
             }
 
-            a {
-              display: inline-flex;
-              align-items: center;
-              flex-direction: row;
-              color: $tc;
-              height: 100%;
-
-              &:hover {
-                color: $mc;
-              }
-            }
 
             .logo-team {
               display: flex;
@@ -137,6 +128,19 @@
           }
         }
       }
+    }
+  }
+
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    color: $tc;
+    height: 100%;
+
+    &:hover {
+      color: $mc;
+      cursor: pointer;
     }
   }
 }

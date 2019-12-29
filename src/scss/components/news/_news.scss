@@ -102,11 +102,26 @@
 
   &__date {
     margin-bottom: 30px;
-    i{
+
+    i {
       font-size: 12px;
       margin-right: 7px;
     }
+
     font-size: 14px;
     font-weight: 500;
+  }
+}
+
+.last-news {
+  margin-top: 30px;
+
+  &__wrap {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    .news__article {
+      flex-basis: 45%;
+    }
   }
 }

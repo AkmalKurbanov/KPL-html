@@ -1,0 +1,60 @@
+extends layout/main/main
+block title
+  | online
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .online
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная','Новости'], 'Сборная КПЛ 5 тура. Обзор тура, лучшие игроки')
+          h2.heading.heading--heading-ttu
+            |ТРАНСЛЯЦИЯ МАТЧЕЙ КЫРГЫЗСКОЙ ПРЕМЬЕР-ЛИГИ
+          .online__wrap(style="background-image: url('assets/img/banner-online.jpg')")
+            mixin matchOnline(logo1,name1,score1,extraScore1,logo2,name2,score2,extraScore2,statusGame)
+              .match-details
+                .match-details__score-wrap.score 
+                  .score__match
+                    .score__info-team
+                      .score__team-logo-wrap
+                        .score__team-logo
+                          img(src=logo1, alt="")
+                      .score__team-name=name1
+                    .score__scoreboard-wrap
+                      .score__scoreboard
+                        .score__game-result-wrap
+                          .score__game-result
+                            p
+                              span 
+                                =score1  
+                                |: 
+                              span
+                                =score2
+                          .score__sub-scoreboard
+                            span=extraScore1 
+                              |:  
+                            span=extraScore2
+                        .score__game-status=statusGame
+                        a(href="#").score__game-link 
+                          i.far.fa-play-circle 
+                          |Cмотреть
+                    .score__info-team
+                      .score__team-logo-wrap
+                        .score__team-logo
+                          img(src=logo2, alt="")
+                      .score__team-name=name2
+            +matchOnline('assets/img/KPL-teams/Abdysh-Ata.png','Абдыш-Ата','2 ','0 ','assets/img/KPL-teams/KaraBalta.png','Кара-Балта','1 ','0 ' ,'Начался')
+            +matchOnline('assets/img/KPL-teams/Alai.png','Алай','0 ','0 ','assets/img/KPL-teams/Dordoi.png','Дордой','0 ','0 ','Начался')
+            +matchOnline('assets/img/KPL-teams//Ilbirs.png','Илбирс','0 ','0 ','assets/img/KPL-teams/lider.png','Ак.Лидер','0 ','0 ','Разминка')
+            +matchOnline('assets/img/KPL-teams/Alga.png','Алга','0 ','0 ','assets/img/KPL-teams/Neftchi.png','Нефтчи','0 ','0 ','Разминка')
+
+
+
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  

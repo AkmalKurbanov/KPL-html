@@ -1,0 +1,19 @@
+.online {
+  &__wrap {
+    padding: 55px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+  }
+
+  .match-details {
+    flex-basis: 45%;
+
+    .score {
+      min-height: 180px;
+      margin-bottom: 40px;
+    }
+  }
+}
+

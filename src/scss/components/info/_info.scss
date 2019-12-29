@@ -1,0 +1,64 @@
+.info {
+  .tabs__item.active {
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .bombardier {
+    padding-left: 0;
+  }
+
+  .standings__table {
+    table {
+      thead {
+        tr {
+          th {
+            text-align: right;
+
+            &:nth-child(2) {
+              text-align: left;
+              width: auto;
+              text-transform: inherit;
+            }
+
+            &:last-child {
+              padding-right: 68px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:first-child {
+            background-color: $sc;
+          }
+        }
+
+        td {
+          &:last-child {
+            padding-right: 68px;
+          }
+
+          .bombardier__foto {
+            max-width: 77px;
+            width: 100%;
+            margin-left: 30px;
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .standings__wrapper.active {
+    pointer-events: none;
+
+    .bombardier__foto {
+      display: flex;
+    }
+  }
+}
+

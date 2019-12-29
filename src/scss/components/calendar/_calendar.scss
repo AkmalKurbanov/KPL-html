@@ -11,6 +11,11 @@
     background: #F1F1F1;
     padding: 16px;
 
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
     &:nth-child(2n) {
       background-color: $wc;
     }
@@ -29,6 +34,17 @@
           }
         }
       }
+    }
+
+    &--common {
+      background-color: transparent;
+      flex-direction: column;
+      align-items: stretch;
+      flex-basis: 32.4%;
+      padding: 0;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 16px;
+      margin-right: 16px;
     }
   }
 
@@ -160,5 +176,89 @@
     width: 100%;
     display: flex;
     align-items: center;
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 20px;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+  }
+
+  .passed {
+    .calendar__header {
+      background-color: #C4C4C4;
+    }
+  }
+
+  .upcoming {
+    .calendar__header {
+      background-color: #5E9E44;
+      color: $wc;
+    }
+  }
+
+  .statistics {
+    .calendar__header {
+      background-color: #CFB54B;
+      color: $tc;
+    }
+  }
+
+  &__body {
+    padding: 10px 25px;
+
+    .calendar__game-score {
+      span {
+        color: $tc;
+        font-size: 14px;
+      }
+
+      .separator {
+        color: $tc;
+      }
+    }
+
+    .calendar__team-name {
+      font-size: 14px;
+    }
+
+    .calendar__date {
+      margin-right: 0;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 400 !important;
+    }
+
+    .calendar__team {
+      &:first-child {
+        justify-content: flex-end;
+      }
+
+      &:last-child {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &--common {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &__result-game {
+    width: 100%;
+  }
+
+  &__result-game-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
