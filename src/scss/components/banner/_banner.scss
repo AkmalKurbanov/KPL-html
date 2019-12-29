@@ -1,5 +1,6 @@
 .banner {
   margin-bottom: 15px;
+
   &__wrap {
     background: linear-gradient(83.89deg, #C9D4DA -1.13%, #C9B4BB 101.68%);
     display: flex;
@@ -10,6 +11,22 @@
     padding-left: 40px;
     padding-right: 30px;
     color: $bc;
+
+    &--other {
+      background: $bc;
+
+      .banner__title {
+        h2 {
+          color: $wc;
+        }
+      }
+
+      .banner__text {
+        h3 {
+          color: $wc;
+        }
+      }
+    }
   }
 
   &__img {
@@ -40,6 +57,7 @@
     min-height: 130px;
     background-size: cover;
     background-position: center center;
+
     span {
       display: flex;
       max-width: 96px;
