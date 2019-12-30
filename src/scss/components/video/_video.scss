@@ -1,0 +1,45 @@
+.video {
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__frame-wrap {
+    max-width: 880px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 46.9%;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__last-video {
+    h3 {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__last-video-list {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      opacity: 0;
+      width: 0;
+    }
+
+  
+
+    .media {
+      margin-bottom: 20px;
+    }
+  }
+}

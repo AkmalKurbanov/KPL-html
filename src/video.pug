@@ -1,0 +1,64 @@
+extends layout/main/main
+block title
+  | video
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      include includes/banner-other/banner
+      .video
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная','Медиа','Видеосюжеты'], 'Абдыш-Ата 1 : 1 Алга')
+          h2.heading.heading--heading-ttu
+            |Абдыш-Ата 1 : 1 Алга
+          .date
+            i.far.fa-clock
+            | 21.10.2019
+          .video__wrap
+            .video__frame-wrap
+              <iframe class="video-js" width="880" height="553" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            .video__last-video
+              h3 Последние видео
+              .video__last-video-list
+                mixin media(headingMedia,preview,link)
+                  .media__item.media
+                    a.preview.preview--media.video-linkJs(href=link)
+                      img(src=preview)
+                      .preview__title-news=headingMedia
+                +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/7.jpg','https://www.youtube.com/embed/FSlM_4eMhB0')
+                +media('Кара-Балта 3 : 1 Алай','assets/img/media/5.jpg','https://www.youtube.com/embed/9kCzkS8nAQ4')
+          h2.heading.heading--heading-ttu
+            |Фото по теме  
+          mixin media(headingMedia,preview,type)
+            .media__item.media
+              a.preview.preview--media(href="#")
+                i.far.fa-image(class=type)
+                img(src=preview)
+                .preview__title-news=headingMedia
+          +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/3.jpg','far fa-image')
+          .last-news
+            h2.heading.heading--heading-ttu
+              |НОВОСТИ ПО ТЕМЕ
+            .last-news__wrap
+              mixin article(img,date,title,subtitle)
+                .news__article
+                  .news__article-img-wrap
+                    .news__article-img
+                      a(href="#")
+                        img(src=img, alt="")
+                  .news__article-info
+                    .news__article-date
+                      span=date
+                    .news__article-title
+                      a(href="#")=title
+                    .news__article-subtitle
+                      p=subtitle   
+              +article('assets/img/news/artcl7.jpg','27.10.2019','Абдыш-Ата и Алга расписали ничью Обзор матча, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
+              
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  

@@ -20,44 +20,32 @@ block main
               li.active
                 a(href="#") Все
           .media__wrap
-            mixin mediaImg(headingMedia,preview,content1,content2,content3,galleryCount)
+            mixin media(headingMedia,preview,type)
               .media__item
-                a.preview.preview--media(data-fancybox=galleryCount href=preview)
-                  i.far.fa-image
+                a.preview.preview--media(href="#")
+                  i.far.fa-image(class=type)
                   img(src=preview)
                   .preview__title-news=headingMedia
-                a.preview--media-hidden(data-fancybox=galleryCount href=content1)
-                  img(src=content1)
-                a.preview--media-hidden(data-fancybox=galleryCount href=content2)
-                  img(src=content2)
-                a.preview--media-hidden(data-fancybox=galleryCount href=content3)
-                  img(src=content3)
-            mixin mediaVideo(headingMedia,preview,linkVideo)
-              .media__item
-                a.preview.preview--media(data-fancybox href=linkVideo)
-                  i.fas.fa-play-circle
-                  img(src=preview)
-                  .preview__title-news=headingMedia
-            +mediaImg('Красивейший гол 3-го тура','assets/img/media/1.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery1')
-            +mediaImg('Абдыш-Ата 1 : 1 Алга','assets/img/media/2.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery2')
-            +mediaVideo('Абдыш-Ата 1 : 1 Алга','assets/img/media/3.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Абдыш-Ата 1 : 1 Алга','assets/img/media/4.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Красивейший гол 3-го тура','assets/img/media/5.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaImg('Алай 2 : 1 Дордой','assets/img/media/6.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery3')
-            +mediaImg('Абдыш-Ата 1 : 1 Алга','assets/img/media/7.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery4')
-            +mediaVideo('Илбирс 6 : 1 Ак. Лидер','assets/img/media/8.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaImg('Красивейший гол 3-го тура','assets/img/media/9.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery5')
-            +mediaImg('Алай 2 : 1 Дордой','assets/img/media/10.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery6')
-            +mediaVideo('Абдыш-Ата 1 : 1 Алга','assets/img/media/11.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Илбирс 6 : 1 Ак. Лидер','assets/img/media/12.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Красивейший гол 3-го тура','assets/img/media/13.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Алай 2 : 1 Дордой','assets/img/media/14.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaImg('Абдыш-Ата 1 : 1 Алга','assets/img/media/15.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery7')
-            +mediaVideo('Илбирс 6 : 1 Ак. Лидер','assets/img/media/16.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Красивейший гол 3-го тура','assets/img/media/17.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaVideo('Алай 2 : 1 Дордой','assets/img/media/18.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
-            +mediaImg('Абдыш-Ата 1 : 1 Алга','assets/img/media/19.jpg','assets/img/media/3.jpg','assets/img/media/3.jpg','assets/img/media/4.jpg','gallery8')
-            +mediaVideo('Илбирс 6 : 1 Ак. Лидер','assets/img/media/20.jpg','https://www.youtube.com/watch?v=o3QU_n8pNzE')
+            +media('Красивейший гол 3-го тура','assets/img/media/1.jpg','far fa-image')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/2.jpg','far fa-image')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/3.jpg','fas fa-play-circle')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/4.jpg','fas fa-play-circle')
+            +media('Красивейший гол 3-го тура','assets/img/media/5.jpg','fas fa-play-circle')
+            +media('Алай 2 : 1 Дордой','assets/img/media/6.jpg','fas fa-play-circle')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/7.jpg','far fa-image')
+            +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/8.jpg','fas fa-play-circle')
+            +media('Красивейший гол 3-го тура','assets/img/media/9.jpg','far fa-image')
+            +media('Алай 2 : 1 Дордой','assets/img/media/10.jpg','far fa-image')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/11.jpg','fas fa-play-circle')
+            +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/12.jpg','fas fa-play-circle')
+            +media('Красивейший гол 3-го тура','assets/img/media/13.jpg','fas fa-play-circle')
+            +media('Алай 2 : 1 Дордой','assets/img/media/14.jpg','fas fa-play-circle')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/15.jpg','far fa-image')
+            +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/16.jpg','fas fa-play-circle')
+            +media('Красивейший гол 3-го тура','assets/img/media/17.jpg','fas fa-play-circle')
+            +media('Алай 2 : 1 Дордой','assets/img/media/18.jpg','fas fa-play-circle')
+            +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/19.jpg','far fa-image')
+            +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/20.jpg','far fa-image')
 
           include includes/pagination/pagination
 

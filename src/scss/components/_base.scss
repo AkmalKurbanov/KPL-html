@@ -128,6 +128,7 @@ ul {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 20px;
+
   &--heading-ttu {
     text-transform: uppercase;
   }
@@ -141,7 +142,7 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  
+
 
   span {
     margin-right: 9px;
@@ -376,6 +377,8 @@ ul {
 }
 
 // tabs end
+
+// media
 .media {
   display: flex;
   justify-content: space-between;
@@ -418,7 +421,21 @@ ul {
   }
 }
 
-.banner-secondary {
-  min-height: 290px;
-  background-size: cover;
+// media end
+
+
+
+// date
+.date {
+  margin-bottom: 30px;
+
+  i {
+    font-size: 12px;
+    margin-right: 7px;
+  }
+
+  font-size: 14px;
+  font-weight: 500;
 }
+
+// date end
