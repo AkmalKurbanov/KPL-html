@@ -1,0 +1,36 @@
+extends layout/main/main
+block title
+  | employees
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      include includes/banner-other/banner
+      .employees
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная','О КПЛ'], 'Сотрудники')
+          h2.heading.heading--heading-ttu
+            |СОТРУДНИКИ
+            
+          .employees__wrap
+            mixin employees(position,name,photo)
+              .employees__item
+                .employees__position=position
+                .employees__name=name
+                .employees__photo
+                  img(src=photo)
+            +employees('Президент','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Директор','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Бухгалтер','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Маркетолог','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Начальник отдела пресс-службы','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Ведущий специалист отела соревнований','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+            +employees('Менеджер по связям с общественностью','Молдоканов Айбек Исмаилович','assets/img/employees/1.png')
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  
