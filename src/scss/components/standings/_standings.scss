@@ -19,7 +19,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    .heading{
+      flex-basis: 54%;
+    }
     &-zone {
       margin-left: 10px;
 
@@ -27,7 +29,7 @@
         color: $thc;
         font-weight: 600;
         position: relative;
-
+        font-size: 14px;
         &:hover {
           &:after {
             opacity: 0;
@@ -124,6 +126,75 @@
               max-width: 28px;
               width: 100%;
               margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &--otherKind-table {
+      table {
+        thead {
+          tr {
+            th {
+              text-transform: inherit;
+
+              &:nth-child(2) {
+                width: auto;
+              }
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            &:first-child {
+              background-color: $sc;
+
+              td {
+                a {
+                  &:hover {
+                    color: $mc;
+                  }
+                }
+              }
+            }
+
+            .status {
+              width: 55%;
+            }
+
+            td {
+              text-align: left;
+              padding: 0 15px;
+
+              &:first-child {
+                font-weight: 400;
+              }
+
+              .link {
+                color: $tc;
+                position: relative;
+                padding-bottom: 2px;
+
+                &:hover {
+                  color: $mc;
+
+                  &:after {
+                    background-color: $mc;
+                  }
+                }
+
+                &:after {
+                  position: absolute;
+                  content: '';
+                  width: 100%;
+                  height: 1px;
+                  left: 0;
+                  bottom: 0;
+                  background-color: $tc;
+                }
+              }
             }
           }
         }

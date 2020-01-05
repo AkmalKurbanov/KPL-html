@@ -1,0 +1,38 @@
+extends layout/main/main
+block title
+  | documents
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .documents
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная', 'О КПЛ'], 'Документы')
+          h2.heading.heading--heading-ttu
+            |ДОКУМЕНТЫ
+
+          .standings__table.standings__table--otherKind-table
+            table
+              tbody
+                mixin table(date,link,title,...tds)
+                  tr
+                    td=date
+                    td
+                      a(href=link class="link")=title    
+                    td
+                      a(href=link) 
+                        i.far.fa-file
+                +table('01.07.2019','#','Регламент Кыргызской Премьер-Лиги сезона 2019-2020 гг.')
+                +table('01.07.2019','#','Регламент Первенства Кыргызстана по футболу среди молодёжных команд сезона 2019-2020 гг.')
+                +table('01.07.2019','#','Коммерческий регламент Кыргызской Премьер-Лиги сезона 2019-2020 гг.')
+                +table('01.07.2019','#','Приложение к Техническому регламенту проведения Матчей КПЛ сезона 2019-2020 гг.')
+                +table('01.07.2019','#','Положение об индивидуальных наградах Кыргызской Премьер-Лиги')
+                +table('01.07.2019','#','Положение о турнире за Суперкубок Кыргызской Республики по футболу')
+                +table('01.07.2019','#','Рапорт Инспектора')
+                +table('01.07.2019','#','Протокол организационного совещания по проведению матча КПЛ 2018/19')
+          include includes/pagination/pagination
+
+    include includes/footer/footer
+
+  include includes/scripts  

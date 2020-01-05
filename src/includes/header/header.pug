@@ -1,6 +1,11 @@
 header.header
   .container
     .header__wrap
+      .hamburger
+        ul
+         li
+         li
+         li
       a.header__logo(href="./")
         span.header__logo-wrap
           img(src="assets/img/logo.svg" alt="") 
@@ -78,41 +83,42 @@ header.header
         .search-btn-close
           i.fal.fa-times
 
-    .search 
+    .search#search 
       form(action="#")
         input.search__input(type="search" placeholder="Поиск")
         button.search__btn(type="submit")
           i.fas.fa-search
-    .championship      
-      mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam,scoreFirstTeam,scoreSecondTeam)
-        .championship__item.championship__item--past-game
-          .championship__wrap
-            .championship__tour=tour
-            .championship__info 
-              .championship__game-date=gameDate
-              .championship__game-result
-                a.championship__team(href="#")=firstTeam
-                  .team-score=scoreFirstTeam
-                a.championship__team(href="#")=secondTeam
-                  .team-score=scoreSecondTeam
-      +championshipItemInfo('5 тур','Пт, 25.10, 18:00','Абдыш-Ата','Кара-Балта','2','0')._external
-      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Дордой','Илбирс','0','0')
-      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Ак.Лидер','Алай','1','5')
-      +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Алга','Нефтчи','11','3')
+    .championship.swiper-container.championship-js
+      .championship__wrapper.swiper-wrapper     
+        mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam,scoreFirstTeam,scoreSecondTeam)
+          .championship__item.championship__item--past-game.swiper-slide
+            .championship__wrap
+              .championship__tour=tour
+              .championship__info 
+                .championship__game-date=gameDate
+                .championship__game-result
+                  a.championship__team(href="#")=firstTeam
+                    .team-score=scoreFirstTeam
+                  a.championship__team(href="#")=secondTeam
+                    .team-score=scoreSecondTeam
+        +championshipItemInfo('5 тур','Пт, 25.10, 18:00','Абдыш-Ата','Кара-Балта','2','0')._external
+        +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Дордой','Илбирс','0','0')
+        +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Ак.Лидер','Алай','1','5')
+        +championshipItemInfo('5 тур','Сб, 25.10, 18:00','Алга','Нефтчи','11','3')
 
-      mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam)
-        .championship__item(class!=attributes.class)
-          .championship__wrap
-            .championship__tour=tour
-            .championship__info 
-              .championship__game-date=gameDate
-              .championship__game-result
-                .championship__team=firstTeam
-                .championship__team=secondTeam
-      +championshipItemInfo('6 тур','Пт, 25.10, 18:00','Кара-Балта','Дордой')
-      +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Нефтчи','Ак.Лидер')
-      +championshipItemInfo('6 тур','Сб, 31.10, 19:45','Абдыш-Ата','Алга')
-      +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Алай','Илбирс')
+        mixin championshipItemInfo(tour, gameDate,firstTeam,secondTeam)
+          .championship__item(class!=attributes.class).swiper-slide
+            .championship__wrap
+              .championship__tour=tour
+              .championship__info 
+                .championship__game-date=gameDate
+                .championship__game-result
+                  .championship__team=firstTeam
+                  .championship__team=secondTeam
+        +championshipItemInfo('6 тур','Пт, 25.10, 18:00','Кара-Балта','Дордой')
+        +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Нефтчи','Ак.Лидер')
+        +championshipItemInfo('6 тур','Сб, 31.10, 19:45','Абдыш-Ата','Алга')
+        +championshipItemInfo('6 тур','Сб, 25.10, 18:00','Алай','Илбирс')
 
 
 

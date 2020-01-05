@@ -1,0 +1,50 @@
+extends layout/main/main
+block title
+  | referee
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .referee
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная', 'О КПЛ'], 'Арбитры и комиссары')
+          h2.heading.heading--heading-ttu
+            |АРБИТРЫ И КОМИССАРЫ
+            ul
+              li
+                a(href="#") Арбитры
+              li
+                a(href="#") Комиссары
+              li
+                a(href="#") Инспекторы
+              li.active
+                a(href="#") Все
+          .standings__table.standings__table--otherKind-table
+            table
+              thead
+                mixin table(...ths)
+                  tr
+                    each th in ths
+                      th= th
+                +table('Имя', 'Дата рождения', 'Проживает', 'Категория')
+              tbody
+                mixin table(...tds)
+                  tr
+                    each td in tds
+                      td= td
+                +table('Абусуев Рашид Алимгереевич','12.02.1985', 'г. Бишкек', 'Арбитр FIFA с 2000. Начало судейства 1989.')
+                +table('Аверьянов Антон Иванович','12.02.1985', 'г. Каракол', 'Региональная категория. Начало судейства 1996')
+                +table('Амелин Алексей Владимирович','12.02.1985', 'г. Кара-Балта', 'Региональная категория')
+                +table('Безбородов Владислав Юрьевич','12.02.1985', 'г. Джалал-Абад','')
+                +table('Березнев Дмитрий Александрович','12.02.1985', 'г. Ош','Судья ФИФА')
+                +table('Бобровский Ян Александрович','12.02.1985', 'г. Кызыл-Кия','1 категория')
+                +table('Болотенков Андрей Владимирович','12.02.1985', 'г. Талас','Региональная категория. Начало судейства 1996')
+                +table('Васильев Станислав Александрович','12.02.1985', 'г. Кант','Региональная категория.')
+
+
+          include includes/pagination/pagination
+
+    include includes/footer/footer
+
+  include includes/scripts  

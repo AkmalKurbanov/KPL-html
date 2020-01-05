@@ -13,7 +13,14 @@
     <div class="content">
       <header class="header">
         <div class="container">
-          <div class="header__wrap"><a class="header__logo" href="./"><span class="header__logo-wrap"><img src="assets/img/logo.svg" alt=""></span><span>Кыргызская <br> Премьер Лига</span></a>
+          <div class="header__wrap">
+            <div class="hamburger">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div><a class="header__logo" href="./"><span class="header__logo-wrap"><img src="assets/img/logo.svg" alt=""></span><span>Кыргызская <br> Премьер Лига</span></a>
             <div class="team">
               <div class="header__top">
                 <div class="social">
@@ -91,105 +98,107 @@
               <div class="search-btn-close"><i class="fal fa-times"></i></div>
             </div>
           </nav>
-          <div class="search"> 
+          <div class="search" id="search"> 
             <form action="#">
               <input class="search__input" type="search" placeholder="Поиск">
               <button class="search__btn" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
-          <div class="championship">     
-                        <div class="championship__item championship__item--past-game">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">5 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Пт, 25.10, 18:00</div>
-                              <div class="championship__game-result"><a class="championship__team" href="#">Абдыш-Ата
-                                  <div class="team-score">2</div></a><a class="championship__team" href="#">Кара-Балта
-                                  <div class="team-score">0</div></a></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="championship__item championship__item--past-game">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">5 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 25.10, 18:00</div>
-                              <div class="championship__game-result"><a class="championship__team" href="#">Дордой
-                                  <div class="team-score">0</div></a><a class="championship__team" href="#">Илбирс
-                                  <div class="team-score">0</div></a></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="championship__item championship__item--past-game">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">5 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 25.10, 18:00</div>
-                              <div class="championship__game-result"><a class="championship__team" href="#">Ак.Лидер
-                                  <div class="team-score">1</div></a><a class="championship__team" href="#">Алай
-                                  <div class="team-score">5</div></a></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="championship__item championship__item--past-game">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">5 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 25.10, 18:00</div>
-                              <div class="championship__game-result"><a class="championship__team" href="#">Алга
-                                  <div class="team-score">11</div></a><a class="championship__team" href="#">Нефтчи
-                                  <div class="team-score">3</div></a></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="championship__item">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">6 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Пт, 25.10, 18:00</div>
-                              <div class="championship__game-result">
-                                <div class="championship__team">Кара-Балта</div>
-                                <div class="championship__team">Дордой</div>
+          <div class="championship swiper-container championship-js">
+            <div class="championship__wrapper swiper-wrapper">    
+                            <div class="championship__item championship__item--past-game swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">5 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Пт, 25.10, 18:00</div>
+                                  <div class="championship__game-result"><a class="championship__team" href="#">Абдыш-Ата
+                                      <div class="team-score">2</div></a><a class="championship__team" href="#">Кара-Балта
+                                      <div class="team-score">0</div></a></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="championship__item">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">6 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 25.10, 18:00</div>
-                              <div class="championship__game-result">
-                                <div class="championship__team">Нефтчи</div>
-                                <div class="championship__team">Ак.Лидер</div>
+                            <div class="championship__item championship__item--past-game swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">5 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 25.10, 18:00</div>
+                                  <div class="championship__game-result"><a class="championship__team" href="#">Дордой
+                                      <div class="team-score">0</div></a><a class="championship__team" href="#">Илбирс
+                                      <div class="team-score">0</div></a></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="championship__item">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">6 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 31.10, 19:45</div>
-                              <div class="championship__game-result">
-                                <div class="championship__team">Абдыш-Ата</div>
-                                <div class="championship__team">Алга</div>
+                            <div class="championship__item championship__item--past-game swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">5 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 25.10, 18:00</div>
+                                  <div class="championship__game-result"><a class="championship__team" href="#">Ак.Лидер
+                                      <div class="team-score">1</div></a><a class="championship__team" href="#">Алай
+                                      <div class="team-score">5</div></a></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="championship__item">
-                          <div class="championship__wrap">
-                            <div class="championship__tour">6 тур</div>
-                            <div class="championship__info"> 
-                              <div class="championship__game-date">Сб, 25.10, 18:00</div>
-                              <div class="championship__game-result">
-                                <div class="championship__team">Алай</div>
-                                <div class="championship__team">Илбирс</div>
+                            <div class="championship__item championship__item--past-game swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">5 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 25.10, 18:00</div>
+                                  <div class="championship__game-result"><a class="championship__team" href="#">Алга
+                                      <div class="team-score">11</div></a><a class="championship__team" href="#">Нефтчи
+                                      <div class="team-score">3</div></a></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                            <div class="championship__item swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">6 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Пт, 25.10, 18:00</div>
+                                  <div class="championship__game-result">
+                                    <div class="championship__team">Кара-Балта</div>
+                                    <div class="championship__team">Дордой</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="championship__item swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">6 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 25.10, 18:00</div>
+                                  <div class="championship__game-result">
+                                    <div class="championship__team">Нефтчи</div>
+                                    <div class="championship__team">Ак.Лидер</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="championship__item swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">6 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 31.10, 19:45</div>
+                                  <div class="championship__game-result">
+                                    <div class="championship__team">Абдыш-Ата</div>
+                                    <div class="championship__team">Алга</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="championship__item swiper-slide">
+                              <div class="championship__wrap">
+                                <div class="championship__tour">6 тур</div>
+                                <div class="championship__info"> 
+                                  <div class="championship__game-date">Сб, 25.10, 18:00</div>
+                                  <div class="championship__game-result">
+                                    <div class="championship__team">Алай</div>
+                                    <div class="championship__team">Илбирс</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+            </div>
           </div>
         </div>
       </header>
@@ -336,5 +345,6 @@
       </div>
     </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="assets/scripts.min.js"></script>
 </body>

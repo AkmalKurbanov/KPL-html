@@ -1,0 +1,43 @@
+extends layout/main/main
+block title
+  | stadiums
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .stadium
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная'], 'Стадионы')
+          h2.heading.heading--heading-ttu
+            |СТАДИОНЫ
+          .stadium__map
+            #map
+          .standings__table.standings__table--otherKind-table
+            table
+              thead
+                mixin table(...ths)
+                  tr
+                    each th in ths
+                      th= th
+                +table('Название', 'Город', 'Статус')
+              tbody
+                mixin table(stadium,link,city,status,...tds)
+                  tr
+                    td
+                      a(href=link class="link")=stadium    
+                    td=city
+                    td.status=status
+                +table('Стадион им. Д.Омурзакова', '#','Бишкек','Категория: 1. Освещение: 1628 люкс. Газон натуральный(105х68 м). Подогрев. Вместимость: 19241.')
+                +table('Локомотив','#','Бишкек','Категория: 1. Газон натуральный(68х105 м). Вместимость: 25716.')
+                +table('Алга Бишкек','#','Бишкек','Газон искусственный. Вместимость: 45000.')
+                +table('Абдыш-Ата','#','Кант','Газон натуральный(68х105 м). Вместимость: 45000.')
+                +table('Дордой Арена','#','Бишкек','Газон натуральный. Подогрев. Вместимость: 43700.')
+                +table('СК “Манас”','#','Кара-Балта','Газон искусственный. Вместимость: 45000.')
+                +table('Газпром','#','Бишкек','Газон искусственный. Вместимость: 45000.')
+
+          include includes/pagination/pagination
+
+    include includes/footer/footer
+
+  include includes/scripts  

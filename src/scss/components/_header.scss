@@ -1,9 +1,3 @@
-.search-mode {
-  position: relative;
-  z-index: 2;
-  background-color: $wc;
-}
-
 .header {
   padding: 25px 0;
 
@@ -13,6 +7,15 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 24px;
+    position: relative;
+
+    @include lg {
+      margin-bottom: 20px;
+    }
+
+    @include md {
+      margin-bottom: 15px;
+    }
   }
 
   &__logo {
@@ -22,20 +25,65 @@
     align-items: center;
     text-decoration: none;
 
+    @include xs {
+      flex-direction: row;
+      align-items: center;
+      margin-left: 45px;
+    }
+
     span {
       text-align: center;
       margin-top: 10px;
       font-size: 22px;
       color: #201e1e;
       font-weight: 700;
+
+      @include lg {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+
+      @include md {
+        font-size: 16px;
+      }
+
+      @include sm {
+        font-size: 15px;
+      }
+
+      @include xs {
+        text-align: left;
+        padding-left: 17px;
+        margin: 0;
+        font-size: 16px;
+      }
     }
   }
 
   &__logo-wrap {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 125px;
     width: 100%;
     margin-top: 0 !important;
+
+    @include lg {
+      max-width: 90px;
+    }
+
+    @include md {
+      max-width: 80px;
+    }
+
+    @include sm {
+      max-width: 70px;
+    }
+
+    @include xs {
+      max-width: 60;
+      padding-left: 0 !important;
+      display: flex;
+    }
   }
 
   &__top {
@@ -52,6 +100,10 @@
       display: inline-block;
       margin-left: 9px;
 
+      @include md {
+        margin-left: 5px;
+      }
+
       &:first-child {
         margin-left: 0;
       }
@@ -59,6 +111,18 @@
       a {
         color: #333333;
         font-size: 26px;
+
+        @include lg {
+          font-size: 20px;
+        }
+
+        @include md {
+          font-size: 18px;
+        }
+
+        @include sm {
+          font-size: 16px;
+        }
 
         &:hover {
           color: $mc;
@@ -70,6 +134,14 @@
 
 .lang {
   margin-left: 40px;
+
+  @include lg {
+    margin-left: 30px;
+  }
+
+  @include md {
+    margin-left: 20px;
+  }
 
   ul {
     .active {
@@ -103,6 +175,22 @@
   align-items: flex-end;
   width: 75%;
 
+  @include lg {
+    width: 65%;
+  }
+
+  @include md {
+    width: 60%;
+  }
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include xs {
+    display: none;
+  }
+
   &__wrap {
     width: 100%;
     display: flex;
@@ -114,6 +202,22 @@
   &__item {
     a {
       display: block;
+      max-width: 85px;
+      width: 100%;
+
+      @include lg {
+        max-width: 70px;
+      }
+
+      @include md {
+        max-width: 50px;
+      }
+
+      @include sm {
+        max-width: 44px;
+      }
+
+
     }
   }
 }
@@ -124,6 +228,18 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0 30px 0 50px;
+
+  @include lg {
+    padding: 0 20px 0 30px;
+  }
+
+  @include md {
+    padding: 0 10px;
+  }
+
+  @include xs {
+    display: none;
+  }
 
   &__list {
     margin: 0;
@@ -167,6 +283,20 @@
       position: relative;
       padding-right: 19px;
 
+      @include lg {
+        font-size: 17px;
+      }
+
+      @include md {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      @include sm {
+        font-size: 12px;
+        font-weight: 500;
+      }
+
       &:hover {
         color: $wc;
       }
@@ -177,9 +307,16 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+
+        @include sm {
+          font-size: 16px;
+          right: 5px;
+        }
       }
 
       &--open {
+        color: $wc;
+
         i {
           transform: translateY(-50%) rotate(-180deg);
         }
@@ -198,6 +335,19 @@
       display: none;
       z-index: 2;
 
+      @include lg {
+        padding: 25px 20px;
+      }
+
+      @include md {
+        padding: 15px 20px;
+      }
+
+      @include sm {
+        padding: 10px 15px;
+        min-width: 230px;
+      }
+
       &:hover {
         color: $bc !important;
       }
@@ -214,6 +364,18 @@
         line-height: 20px;
         list-style: none;
 
+        @include lg {
+          margin-bottom: 10px;
+        }
+
+        @include md {
+          margin-bottom: 7px;
+        }
+
+        @include sm {
+          margin: 0;
+        }
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -225,6 +387,19 @@
         text-transform: uppercase;
         color: $bc;
         font-weight: 700;
+
+        @include lg {
+          font-size: 14px;
+        }
+
+        @include md {
+          font-size: 13px;
+        }
+
+        @include sm {
+          font-size: 10px;
+          font-weight: 500;
+        }
 
         &:hover {
           color: $mc;
@@ -240,6 +415,10 @@
   justify-content: flex-end;
   max-width: 140px;
   width: 100%;
+
+  @include lg {
+    max-width: 60px;
+  }
 
   .search-btn,
   .search-btn-close {
@@ -271,14 +450,26 @@
   position: absolute;
   max-width: calc(100% - 30px);
   left: 50%;
-  padding-top: 15px;
   margin-top: 15px;
   transform: translateX(-50%);
   box-shadow: $bs;
-  padding: 50px 50px;
+  padding: 50px;
   box-sizing: border-box;
   display: none;
   z-index: 1;
+
+  @include lg {
+    padding: 30px;
+  }
+
+  @include md {
+    padding: 20px;
+  }
+
+  @include sm {
+    padding: 15px;
+  }
+
 
   .club {
 
@@ -297,6 +488,21 @@
       padding: 15px;
       min-height: 130px;
 
+      @include lg {
+        padding: 10px;
+        min-height: 100px;
+      }
+
+      @include md {
+        flex-basis: 33.33%;
+        min-height: 95px;
+      }
+
+      @include sm {
+        min-height: 75px;
+      }
+
+
       &:hover {
         box-shadow: $bs;
       }
@@ -306,18 +512,42 @@
       max-width: 85px;
       width: 100%;
       text-align: center;
+
+      @include lg {
+        max-width: 70px;
+      }
+
+      @include md {
+        max-width: 60px;
+      }
+
+      @include sm {
+        max-width: 45px;
+      }
     }
 
     &__name {
       margin-left: 17px;
       font-weight: 700;
       color: $bc;
+
+      @include lg {
+        font-size: 15px;
+      }
+
+      @include md {
+        font-size: 13px;
+      }
+
+      @include sm {
+        font-size: 10px;
+        margin-left: 10px;
+      }
     }
   }
 }
 
 .search {
-  padding: 28px 0 35px;
   display: none;
   overflow: hidden;
   position: absolute;
@@ -329,6 +559,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   &__input,
@@ -370,19 +601,69 @@
   }
 }
 
-.championship {
+.search-open {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.championship {
   border-bottom: 16px solid $mc;
 
-  &__item {
-    max-width: 136px;
-    width: 100%;
 
-    padding: 8px 0 10px 10px;
+  // &__wrapper {
+  //   display: flex;
+  //   flex-direction: row;
+
+  //   @include md {
+  //     flex-wrap: wrap;
+  //   }
+
+  // }
+
+  &__item {
+    padding: 8px 0 8px 8px;
+
+    // @include md {
+    //   max-width: 172.5px;
+
+    //   &:first-child {
+    //     .championship__item {
+    //       padding-left: 8px;
+    //     }
+    //   }
+
+    //   &:nth-child(4n) {
+    //     .championship__wrap {
+    //       border: none;
+    //     }
+    //   }
+
+    //   &:nth-child(5n) {
+    //     padding-left: 0;
+
+    //     .championship__item {
+    //       padding-left: 8px;
+    //     }
+    //   }
+    // }
+
+    // @include sm {
+    //   max-width: 127.5px;
+
+    //   &:nth-child(4n) {
+    //     .championship__wrap {
+    //       border: none;
+    //     }
+    //   }
+    // }
 
     &:first-child {
       padding-left: 0;
+
+      .championship__info {
+        padding-left: 8px;
+      }
     }
 
     &:last-child {
@@ -397,6 +678,14 @@
       .championship__tour {
         background-color: #acabab;
       }
+
+      .championship__team {
+        &:hover {
+          color: $mc;
+        }
+      }
+
+
     }
   }
 
@@ -416,7 +705,12 @@
   }
 
   &__info {
-    padding: 0 17px 0 8px;
+    padding: 0 8px;
+
+    @include lg {
+      padding-left: 0;
+      padding-right: 3px;
+    }
   }
 
   &__game-date {
@@ -425,7 +719,7 @@
     margin-top: 3px;
   }
 
-  
+
 
   &__team {
     font-weight: 700;
@@ -435,8 +729,29 @@
     align-items: center;
     margin-top: 5px;
 
+    @include lg {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
     .team-score {
       margin-left: 13px;
     }
   }
+
+  .swiper-wrapper {
+    .swiper-slide-duplicate-prev {
+      .championship__wrap {
+        border: none;
+      }
+    }
+  }
+
+}
+
+.search-mode {
+  position: relative;
+  z-index: 2;
+  background-color: $wc;
+  padding-bottom: 0;
 }

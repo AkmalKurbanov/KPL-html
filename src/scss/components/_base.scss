@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -82,7 +83,7 @@ ul {
   }
 
   @include xs {
-    max-width: 460px;
+    max-width: 100%;
   }
 }
 
@@ -131,6 +132,59 @@ ul {
 
   &--heading-ttu {
     text-transform: uppercase;
+
+    ul {
+      display: inline-block;
+      padding-left: 30px;
+
+      li {
+        display: inline-block;
+        margin-right: 12px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          font-size: 14px;
+          color: $tc;
+          position: relative;
+          font-weight: 400;
+
+          &:hover {
+            color: $mc;
+
+            &:before {
+              width: 0;
+            }
+          }
+
+          &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: $tc;
+            transition: $tr;
+          }
+        }
+      }
+
+      .active {
+        font-weight: 600;
+        pointer-events: none;
+
+        a {
+          font-weight: 600;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 

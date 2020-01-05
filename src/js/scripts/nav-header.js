@@ -2,7 +2,6 @@ $(function () {
     $('.nav__item--submenu').children('a').on('click', function (e) {
         event.preventDefault();
         $(this).toggleClass('nav__link--open');
-        $(this).parent().parent().parent().next().fadeOut(300);
         $(this).next().fadeToggle(300);
         $('.nav__link').not(this).next().fadeOut(300);
         $('.nav__link').not(this).removeClass('nav__link--open');
@@ -10,6 +9,7 @@ $(function () {
         $('.search-btn').fadeIn(300);
         $('.wrapper').removeClass('overlay');
         $('.header').removeClass('search-mode');
+        $('.search').removeClass('search-open');
     });
 
     $('.nav__item').on('click', function (e) {
@@ -22,7 +22,7 @@ $(function () {
         $(this).hide();
         $('.search-btn-close').css('display', 'flex');
         $('.sub-menu,.sub-block').fadeOut(300);
-        $('.search').fadeToggle(300);
+        $('.search').addClass('search-open');
         $('.nav__link').removeClass('nav__link--open');
         $('.wrapper').addClass('overlay');
         $('.header').addClass('search-mode');
@@ -31,10 +31,13 @@ $(function () {
     $('.search-btn-close').on('click', function () {
         $(this).hide();
         $('.search-btn').css('display', 'flex');
-        $('.search').toggle();
+        $('.search').removeClass('search-open');
         $('.wrapper').removeClass('overlay');
         $('.header').removeClass('search-mode');
     });
 
 });
 
+
+var championship = $('.championship').height() + 16;
+$('#search').css('height', championship)

@@ -5,6 +5,15 @@
 
   .bombardier {
     padding-left: 0;
+
+    tbody {
+      tr {
+        &:first-child {
+          background-color: $sc;
+        }
+      }
+    }
+
   }
 
   .standings__table {
@@ -28,11 +37,6 @@
       }
 
       tbody {
-        tr {
-          &:first-child {
-            background-color: $sc;
-          }
-        }
 
         td {
           &:last-child {
@@ -88,7 +92,7 @@
     font-size: 20px;
   }
 
- 
+
 
   &__row {
     display: flex;
