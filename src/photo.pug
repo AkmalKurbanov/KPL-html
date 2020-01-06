@@ -1,0 +1,81 @@
+extends layout/main/main
+block title
+  | photo
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      include includes/banner-other/banner
+      .photo
+        .container
+          include includes/breadcrumbs/breadcrumbs
+          +breadcrumbs(['Главная','Медиа','Фотоальбомы'], 'Абдыш-Ата 1:1 Алга')
+          h2.heading.heading--heading-ttu
+            |Абдыш-Ата 1 : 1 Алга
+          .date.date
+            i.far.fa-clock
+            | 21.10.2019
+          .author
+            | Фото: Жумабек Турусбеков
+          .media
+            .media__wrap
+              mixin media(headingMedia,preview)
+                .media__item
+                  a.preview.preview--media(data-fancybox="gallery" href=preview)
+                    img(src=preview)
+              +media('Красивейший гол 3-го тура','assets/img/media/1.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/2.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/3.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/4.jpg')
+              +media('Красивейший гол 3-го тура','assets/img/media/5.jpg')
+              +media('Алай 2 : 1 Дордой','assets/img/media/6.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/7.jpg')
+              +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/8.jpg')
+              +media('Красивейший гол 3-го тура','assets/img/media/9.jpg')
+              +media('Алай 2 : 1 Дордой','assets/img/media/10.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/11.jpg')
+              +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/12.jpg')
+              +media('Красивейший гол 3-го тура','assets/img/media/13.jpg')
+              +media('Алай 2 : 1 Дордой','assets/img/media/14.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/15.jpg')
+              +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/16.jpg')
+              +media('Красивейший гол 3-го тура','assets/img/media/17.jpg')
+              +media('Алай 2 : 1 Дордой','assets/img/media/18.jpg')
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/19.jpg')
+              +media('Илбирс 6 : 1 Ак. Лидер','assets/img/media/20.jpg')
+          h2.heading.heading--heading-ttu
+            |Фото по теме  
+          .media  
+            .media__wrap
+              mixin media(headingMedia,preview,type)
+                .media__item
+                  a.preview.preview--media(href="#")
+                    i.far.fa-image(class=type)
+                    img(src=preview)
+                    .preview__title-news=headingMedia
+              +media('Абдыш-Ата 1 : 1 Алга','assets/img/media/3.jpg','far fa-image')
+          .last-news
+            h2.heading.heading--heading-ttu
+              |НОВОСТИ ПО ТЕМЕ
+            .last-news__wrap
+              mixin article(img,date,title,subtitle)
+                .news__article
+                  .news__article-img-wrap
+                    .news__article-img
+                      a(href="#")
+                        img(src=img, alt="")
+                  .news__article-info
+                    .news__article-date
+                      span=date
+                    .news__article-title
+                      a(href="#")=title
+                    .news__article-subtitle
+                      p=subtitle   
+              +article('assets/img/news/artcl7.jpg','27.10.2019','Абдыш-Ата и Алга расписали ничью Обзор матча, лучшие игроки.','Божович дисквалифицирован на пять матчей КПЛ, Айтмурзаев - на два.')
+
+
+
+
+    include includes/footer/footer
+
+  include includes/scripts  

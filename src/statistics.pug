@@ -1,0 +1,71 @@
+extends layout/main/main
+block title
+  | statistics
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .info
+        .container
+          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/tabs/tabs
+          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          .info__wrap
+            .standings__control
+              h3.heading Статистика
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val
+            .statistics
+              mixin statistics(tour)
+                .statistics__item
+                  .statistics__header=tour 
+                    |тур
+                  .statistics__body
+                    .statistics__row
+                      span Кол-во матчей в туре
+                      span 4
+                    .statistics__row
+                      span Зрители
+                      span 15 000
+                    .statistics__row
+                      span Голы
+                      span 6
+                    .statistics__row
+                      .statistics__row-item
+                        .statistics__total
+                          .statistics__icon-wrap
+                            img(src="assets/img/match-detail/yellow-card.png")
+                          span 11
+                        .statistics__total
+                          .statistics__icon-wrap
+                            img(src="assets/img/match-detail/red-card.png")
+                          span 1
+                        .statistics__total
+                          .statistics__icon-wrap
+                            img(src="assets/img/match-detail/penalty.png")
+                          span 2
+                        .statistics__total
+                          .statistics__icon-wrap
+                            img(src="assets/img/match-detail/penalty2.png")
+                          span 0
+              
+              +statistics('1 ')      
+              +statistics('2 ')      
+              +statistics('3 ')      
+              +statistics('4 ')      
+              +statistics('5 ')      
+              +statistics('6 ')      
+              +statistics('7 ')      
+              +statistics('8 ')
+              +statistics('9 ')
+
+    include includes/footer/footer
+
+  include includes/scripts  

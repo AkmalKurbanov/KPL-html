@@ -84,6 +84,7 @@ ul {
 
   @include xs {
     max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -97,11 +98,19 @@ ul {
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
+
+  @include sm {
+    flex-direction: column;
+  }
 }
 
 .main-col {
   max-width: 684px;
   width: 100%;
+
+  @include xs {
+    margin-bottom: 20px;
+  }
 
   &--news {
     max-width: 580px;
@@ -197,10 +206,18 @@ ul {
   align-items: center;
   justify-content: flex-end;
 
+  @include xs {
+    flex-direction: column;
+  }
 
   span {
     margin-right: 9px;
     display: block;
+
+    @include xs {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
   }
 
   .select {
@@ -232,6 +249,7 @@ ul {
       border: 1px solid #C4C4C4;
       background-color: $wc;
       z-index: 10;
+      box-sizing: content-box;
     }
 
     &__option,
@@ -440,7 +458,7 @@ ul {
 
   .preview {
     &--media {
-      max-width: 280px;
+      max-width: 272.5px;
       width: 100%;
       display: flex;
       position: relative;
@@ -457,7 +475,8 @@ ul {
 
       .preview__title-news {
         font-size: 14px;
-        height: 39px;
+        min-height: 39px;
+        background: rgba(0, 0, 0, .5);
       }
 
       i {
@@ -480,8 +499,9 @@ ul {
 
 
 // date
-.date {
-  margin-bottom: 30px;
+.date,
+.author {
+  margin-bottom: 20px;
 
   i {
     font-size: 12px;
@@ -490,6 +510,10 @@ ul {
 
   font-size: 14px;
   font-weight: 500;
+
+  &--photo {
+    margin-bottom: 15px;
+  }
 }
 
 // date end

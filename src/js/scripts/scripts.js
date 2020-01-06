@@ -35,7 +35,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       }, {
         // Тип маркера.
         iconLayout: 'default#image',
-        iconImageHref: '/assets/img/map-marker.svg',
+        iconImageHref: 'assets/img/map-marker.svg',
         // Размеры маркера.
         iconImageSize: [35, 48],
         // Смещение левого верхнего угла иконки относительно
@@ -48,7 +48,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
         balloonContent: 'г.Бишкек, ул.​Осмонова, 1 Пишпек ж/м, Ленинский район,'
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '/assets/img/map-marker.svg',
+        iconImageHref: 'assets/img/map-marker.svg',
         iconImageSize: [35, 48],
         iconImageOffset: [-24, -24],
       });
@@ -58,7 +58,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       balloonContent: 'г.Бишкек, ул.​Карасаева 41​, Октябрьский район'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/img/map-marker.svg',
+      iconImageHref: 'assets/img/map-marker.svg',
       iconImageSize: [35, 48],
       iconImageOffset: [-24, -24],
     });
@@ -68,7 +68,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       balloonContent: 'г.Кант,​ ул.Московская 7'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/img/map-marker.svg',
+      iconImageHref: 'assets/img/map-marker.svg',
       iconImageSize: [35, 48],
       iconImageOffset: [-24, -24],
     });
@@ -77,7 +77,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       balloonContent: 'г.Бишкек, ул.Тоголок Молдо 17'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/img/map-marker.svg',
+      iconImageHref: 'assets/img/map-marker.svg',
       iconImageSize: [35, 48],
       iconImageOffset: [-5, -38]
     });
@@ -86,7 +86,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       balloonContent: 'г.Кара-Балта'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/img/map-marker.svg',
+      iconImageHref: 'assets/img/map-marker.svg',
       iconImageSize: [35, 48],
       iconImageOffset: [-24, -24],
     });
@@ -95,7 +95,7 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
       balloonContent: 'г.Бишкек'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/img/map-marker.svg',
+      iconImageHref: 'assets/img/map-marker.svg',
       iconImageSize: [35, 48],
       iconImageOffset: [-24, -24],
     });

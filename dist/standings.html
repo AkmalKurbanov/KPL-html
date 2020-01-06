@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>referee
+  <title>standings
   </title>
   <link rel="stylesheet" href="assets/styles.min.css">
   <link link rel="icon" href="favicon.ico">
@@ -203,96 +203,152 @@
           </div>
         </div>
       </header>
-      <div class="referee">
+      <div class="info">
         <div class="container">
-                    <div class="breadcrumbs">
-                      <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="О КПЛ">О КПЛ</a></li>
-                        <li class="breadcrumbs__item">Арбитры и комиссары</li>
+          <div class="banner-secondary" style="background-image: url('assets/img/banner-other.jpg');"></div>
+                    <div class="tabs">
+                      <ul class="tabs__list">
+                        <li class="tabs__item"><a class="tabs__link" href="#">Таблица</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#">Календарь игр</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#">Бомбардиры</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#">Статистика</a></li>
                       </ul>
                     </div>
-          <h2 class="heading heading--heading-ttu">АРБИТРЫ И КОМИССАРЫ
-            <ul>
-              <li><a href="#">Арбитры</a></li>
-              <li><a href="#">Комиссары</a></li>
-              <li><a href="#">Инспекторы</a></li>
-              <li class="active"><a href="#">Все</a></li>
-            </ul>
-          </h2>
-          <div class="standings__table standings__table--otherKind-table">
-            <table>
-              <thead>
-                                <tr>
-                                  <th>Имя</th>
-                                  <th>Дата рождения</th>
-                                  <th>Проживает</th>
-                                  <th>Категория</th>
-                                </tr>
-              </thead>
-              <tbody>
-                                <tr>
-                                  <td>Абусуев Рашид Алимгереевич</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Бишкек</td>
-                                  <td>Арбитр FIFA с 2000. Начало судейства 1989.</td>
-                                </tr>
-                                <tr>
-                                  <td>Аверьянов Антон Иванович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Каракол</td>
-                                  <td>Региональная категория. Начало судейства 1996</td>
-                                </tr>
-                                <tr>
-                                  <td>Амелин Алексей Владимирович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кара-Балта</td>
-                                  <td>Региональная категория</td>
-                                </tr>
-                                <tr>
-                                  <td>Безбородов Владислав Юрьевич</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Джалал-Абад</td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <td>Березнев Дмитрий Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Ош</td>
-                                  <td>Судья ФИФА</td>
-                                </tr>
-                                <tr>
-                                  <td>Бобровский Ян Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кызыл-Кия</td>
-                                  <td>1 категория</td>
-                                </tr>
-                                <tr>
-                                  <td>Болотенков Андрей Владимирович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Талас</td>
-                                  <td>Региональная категория. Начало судейства 1996</td>
-                                </tr>
-                                <tr>
-                                  <td>Васильев Станислав Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кант</td>
-                                  <td>Региональная категория.</td>
-                                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="pagination"><a class="pagination__prev" href="#"><i class="fal fa-angle-left"></i></a>
-            <ul class="pagination__list">
-              <li class="pagination__item is-active"><a class="pagination__number" href="#">1</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">2</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">3</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">4</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">5</a></li>
-              <li class="pagination__item"><a class="pagination__number is-collapsed" href="#" title="Show more">...</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">13</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">14</a></li>
-            </ul><a class="pagination__next" href="#"><i class="fal fa-angle-right"></i></a>
+          <div class="info__wrap">
+            <div class="standings__control">
+              <h3 class="heading">Турнирная таблица</h3>
+              <form>
+                <div class="select-wrap"><span>Сезон</span>
+                  <div class="select">
+                    <input class="select-item" type="hidden" name="select-season" value="2019">
+                    <div class="select_checked">2019</div>
+                    <ul class="select__dropdown">
+                      <li class="select__option" data-value="2019">2019</li>
+                      <li class="select__option" data-value="2020">2020</li>
+                      <li class="select__option" data-value="2021">2021</li>
+                      <li class="select__option" data-value="2022">2022</li>
+                      <li class="select__option" data-value="2023">2023</li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="standings__table">
+              <table>
+                <thead>
+                                    <tr>
+                                      <th></th>
+                                      <th>Команда</th>
+                                      <th>И</th>
+                                      <th>В</th>
+                                      <th>Н</th>
+                                      <th>П</th>
+                                      <th>ЗМ</th>
+                                      <th>ПМ</th>
+                                      <th>РМ</th>
+                                      <th>О</th>
+                                    </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Alga.png"></span>Алга</a></td>
+                                      <td>12</td>
+                                      <td>11</td>
+                                      <td>1</td>
+                                      <td>0</td>
+                                      <td>36</td>
+                                      <td>6</td>
+                                      <td>30</td>
+                                      <td>34</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Dordoi.png"></span>Дордой</a></td>
+                                      <td>12</td>
+                                      <td>7</td>
+                                      <td>3</td>
+                                      <td>2</td>
+                                      <td>24</td>
+                                      <td>8</td>
+                                      <td>16</td>
+                                      <td>24</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Neftchi.png"></span>Нефтчи</a></td>
+                                      <td>12</td>
+                                      <td>7</td>
+                                      <td>2</td>
+                                      <td>3</td>
+                                      <td>24</td>
+                                      <td>8</td>
+                                      <td>16</td>
+                                      <td>23</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Ilbirs.png"></span>Илбирс</a></td>
+                                      <td>12</td>
+                                      <td>6</td>
+                                      <td>4</td>
+                                      <td>2</td>
+                                      <td>23</td>
+                                      <td>11</td>
+                                      <td>12</td>
+                                      <td>22</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/KaraBalta.png"></span>Кара-Балта</a></td>
+                                      <td>12</td>
+                                      <td>6</td>
+                                      <td>2</td>
+                                      <td>4</td>
+                                      <td>14</td>
+                                      <td>13</td>
+                                      <td>1</td>
+                                      <td>20</td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Abdysh-Ata.png"></span>Абдыш-Ата</a></td>
+                                      <td>12</td>
+                                      <td>4</td>
+                                      <td>4</td>
+                                      <td>4</td>
+                                      <td>11</td>
+                                      <td>16</td>
+                                      <td>-5</td>
+                                      <td>16</td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/Alai.png"></span>Алай</a></td>
+                                      <td>12</td>
+                                      <td>4</td>
+                                      <td>2</td>
+                                      <td>6</td>
+                                      <td>9</td>
+                                      <td>23</td>
+                                      <td>-14</td>
+                                      <td>14</td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td><a class="standings__wrapper" href="#"><span class="logo-team"><img src="assets/img/KPL-teams/lider.png"></span>Академия Лидер</a></td>
+                                      <td>12</td>
+                                      <td>3</td>
+                                      <td>2</td>
+                                      <td>7</td>
+                                      <td>12</td>
+                                      <td>17</td>
+                                      <td>-5</td>
+                                      <td>11</td>
+                                    </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

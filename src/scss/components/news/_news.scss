@@ -108,9 +108,11 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .news__article {
-      flex-basis: 45%;
+      flex-basis: 50%;
     }
   }
 }
+

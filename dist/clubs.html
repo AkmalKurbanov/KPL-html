@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>referee
+  <title>clubs
   </title>
   <link rel="stylesheet" href="assets/styles.min.css">
   <link link rel="icon" href="favicon.ico">
@@ -203,96 +203,105 @@
           </div>
         </div>
       </header>
-      <div class="referee">
+      <div class="clubs">
         <div class="container">
                     <div class="breadcrumbs">
                       <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="О КПЛ">О КПЛ</a></li>
-                        <li class="breadcrumbs__item">Арбитры и комиссары</li>
+                        <li class="breadcrumbs__item">Клубы</li>
                       </ul>
                     </div>
-          <h2 class="heading heading--heading-ttu">АРБИТРЫ И КОМИССАРЫ
-            <ul>
-              <li><a href="#">Арбитры</a></li>
-              <li><a href="#">Комиссары</a></li>
-              <li><a href="#">Инспекторы</a></li>
-              <li class="active"><a href="#">Все</a></li>
-            </ul>
-          </h2>
-          <div class="standings__table standings__table--otherKind-table">
-            <table>
-              <thead>
-                                <tr>
-                                  <th>Имя</th>
-                                  <th>Дата рождения</th>
-                                  <th>Проживает</th>
-                                  <th>Категория</th>
-                                </tr>
-              </thead>
-              <tbody>
-                                <tr>
-                                  <td>Абусуев Рашид Алимгереевич</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Бишкек</td>
-                                  <td>Арбитр FIFA с 2000. Начало судейства 1989.</td>
-                                </tr>
-                                <tr>
-                                  <td>Аверьянов Антон Иванович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Каракол</td>
-                                  <td>Региональная категория. Начало судейства 1996</td>
-                                </tr>
-                                <tr>
-                                  <td>Амелин Алексей Владимирович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кара-Балта</td>
-                                  <td>Региональная категория</td>
-                                </tr>
-                                <tr>
-                                  <td>Безбородов Владислав Юрьевич</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Джалал-Абад</td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <td>Березнев Дмитрий Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Ош</td>
-                                  <td>Судья ФИФА</td>
-                                </tr>
-                                <tr>
-                                  <td>Бобровский Ян Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кызыл-Кия</td>
-                                  <td>1 категория</td>
-                                </tr>
-                                <tr>
-                                  <td>Болотенков Андрей Владимирович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Талас</td>
-                                  <td>Региональная категория. Начало судейства 1996</td>
-                                </tr>
-                                <tr>
-                                  <td>Васильев Станислав Александрович</td>
-                                  <td>12.02.1985</td>
-                                  <td>г. Кант</td>
-                                  <td>Региональная категория.</td>
-                                </tr>
-              </tbody>
-            </table>
+          <div class="standings__control">
+            <h2 class="heading heading--heading-ttu">КЛУБЫ</h2>
+            <form>
+              <div class="select-wrap"><span>Сезон</span>
+                <div class="select">
+                  <input class="select-item" type="hidden" name="select-season" value="2019">
+                  <div class="select_checked">2019</div>
+                  <ul class="select__dropdown">
+                    <li class="select__option" data-value="2019">2019</li>
+                    <li class="select__option" data-value="2020">2020</li>
+                    <li class="select__option" data-value="2021">2021</li>
+                    <li class="select__option" data-value="2022">2022</li>
+                    <li class="select__option" data-value="2023">2023</li>
+                  </ul>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="pagination"><a class="pagination__prev" href="#"><i class="fal fa-angle-left"></i></a>
-            <ul class="pagination__list">
-              <li class="pagination__item is-active"><a class="pagination__number" href="#">1</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">2</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">3</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">4</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">5</a></li>
-              <li class="pagination__item"><a class="pagination__number is-collapsed" href="#" title="Show more">...</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">13</a></li>
-              <li class="pagination__item"><a class="pagination__number" href="#">14</a></li>
-            </ul><a class="pagination__next" href="#"><i class="fal fa-angle-right"></i></a>
+          <div class="clubs__list">
+                        <div class="clubs__item--abdysh clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Abdysh-Ata.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">АБДЫШ-АТА</div>
+                            <div class="clubs__city">г. Кант</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--alai clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Alai.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">АЛАЙ</div>
+                            <div class="clubs__city">г. Ош</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--lider clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/lider.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">АКАДЕМИЯ ЛИДЕР</div>
+                            <div class="clubs__city">г. Ош</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--alga clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Alga.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">Алга</div>
+                            <div class="clubs__city">г. Бишкек</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--dordoi clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Dordoi.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">Дордой</div>
+                            <div class="clubs__city">г. Бишкек</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--ilbirs clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Ilbirs.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">Илбирс</div>
+                            <div class="clubs__city">г. Бишкек</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--kara clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/KaraBalta.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">КАРА-БАЛТА</div>
+                            <div class="clubs__city">г. Кара-Балта</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
+                        <div class="clubs__item--neftchi clubs__item">
+                          <div class="clubs__logo-wrap">
+                            <div class="clubs__logo"><img src="assets/img/KPL-teams/Neftchi.png" alt=""></div>
+                          </div>
+                          <div class="clubs__info">
+                            <div class="clubs__name">НЕФТЧИ</div>
+                            <div class="clubs__city">г. Кызыл-Кия</div><a class="more" href="#">ПОДРОБНЕЕ</a>
+                          </div>
+                        </div>
           </div>
         </div>
       </div>

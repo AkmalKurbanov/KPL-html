@@ -10,7 +10,7 @@ block main
           .cols-wrap
             .main-col
               a(href="#").news-preview.preview
-                img(src="../../assets/img/news/main.jpg", alt="")
+                img(src="assets/img/news/main.jpg", alt="")
                 .preview__title-news Льву Яшину - 90 лет!
             .secondary-col
               .main-news-list
@@ -36,10 +36,11 @@ block main
             .main-col            
               .standings__type            
                 h2.heading.heading--heading-ttu КЫРГЫЗСКАЯ ПРЕМЬЕР-ЛИГА
-                .standings__type-zone
-                  a(href="#") НАЦ.ЛИГА, Зона А
-                .standings__type-zone
-                  a(href="#") НАЦ.ЛИГА, Зона B
+                .standings__type-zone-wrap
+                  .standings__type-zone
+                    a(href="#") НАЦ.ЛИГА, Зона А
+                  .standings__type-zone
+                    a(href="#") НАЦ.ЛИГА, Зона B
               .standings__table
 
                 table
@@ -82,18 +83,18 @@ block main
                     li Голы
                   .bombardier__list-item.active
                     .bombardier__info
-                      .bombardier__foto
+                      .bombardier__photo
                         img(src="assets/img/players/17.png", alt="")
                       a(href="#")
                         .bombardier__logo-team
                           img(src="assets/img/KPL-teams/Alga.png")
                         .bombardier__name Абдыжапаров Асланбек
                     .bombardier__score 11 
-                  mixin bombardiers(foto,teamLogo,name,score)  
+                  mixin bombardiers(photo,teamLogo,name,score)  
                     .bombardier__list-item
                       .bombardier__info
-                        .bombardier__foto
-                          img(src=foto, alt="")
+                        .bombardier__photo
+                          img(src=photo, alt="")
                         a(href="#")
                           .bombardier__logo-team
                             img(src=teamLogo)
@@ -107,7 +108,7 @@ block main
                   +bombardiers('assets/img/players/8.png','assets/img/KPL-teams/Alai.png','Сергей Калашинац', '6')
 
 
-      
+
 
       include includes/banner/banner
       include includes/partners/partners

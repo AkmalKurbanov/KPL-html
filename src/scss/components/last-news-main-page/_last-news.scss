@@ -5,8 +5,8 @@
   &__title-news {
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    height: 80px;
+    padding: 10px 10px 10px 20px;
+    min-height: 80px;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     bottom: 0;
@@ -16,6 +16,17 @@
     font-size: 30px;
     font-weight: 600;
     color: $wc;
+
+    @include lg {
+      font-size: 20px;
+      min-height: 60px;
+    }
+
+    @include md {
+      font-size: 15px;
+      min-height: 48px;
+      padding-left: 15px;
+    }
   }
 }
 
@@ -27,6 +38,20 @@
   flex-direction: column;
   padding-bottom: 10px;
   box-sizing: border-box;
+
+  @include lg {
+    padding-bottom: 5px;
+  }
+
+  @include sm {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  @include xs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   ul {
     text-align: left;
@@ -42,6 +67,24 @@
         transition: $tr;
         display: block;
 
+        @include lg {
+          font-size: 13px;
+          padding: 3.4px 0 3.5px 20px;
+        }
+
+        @include md {
+          font-size: 11px;
+          padding: 3px 0 3px 15px;
+        }
+
+        @include sm {
+          padding-left: 5px;
+        }
+
+        @include xs {
+          text-decoration: underline;
+        }
+
         &:hover {
           background-color: $mc;
         }
@@ -54,6 +97,13 @@
     font-size: 14px;
     text-transform: uppercase;
     color: $thc;
+
+    @include sm {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
 
     &:hover {
       color: $mc;

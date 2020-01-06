@@ -1,0 +1,91 @@
+extends layout/main/main
+block title
+  | match-calendar
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .players
+        .container
+          .players__team-banner.players__team-banner--alga
+            //-тут классы под цвет баннера и лого команды("--abdysh-ata","--alai","--lider","--alga","--dordoi","--ilbirs","--kara-balta","--neftchi")
+            .players__part
+              include includes/breadcrumbs/breadcrumbs
+              +breadcrumbs(['Главная','Клубы'], 'Алга')
+              .players__team-info
+                .players__team-logo
+                  img(src="assets/img/KPL-teams/Alga1.png" alt="")
+                .players__team-desc
+                  h2 АЛГА
+                  ul
+                    li Дата организации: 1960 г
+                    li Тренер: Азаматов Азамат Азаматович
+                    li Стадион: Арена ФЦ ФФКР
+                    li Официальный сайт: 
+                      a(href="www.fcalga.kg") www.fcalga.kg
+                  .players__team-social
+                    ul
+                      li: a(href="#"): i.fab.fa-instagram
+                      li: a(href="#"): i.fab.fa-facebook-square
+                      li: a(href="#"): i.fab.fa-twitter
+            .players__part
+              .players__team-foto
+                svg(viewBox="0 0 489 290")
+                  path.cut(d="M 0,0 V 291 H 125.73242 L 42.5,193 0,92.56816 0.08838835,82.668665 78.03125,0.06250046 Z")
+                img(src="assets/img/players/banner.jpg" alt="")
+          include includes/tabs/tabs
+          +tabs(['Игроки','Календарь игр'])
+          .calendar.calendar__personal
+            .standings__control
+              h3.heading Календарь
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val 
+            .calendar__wrap
+              each item in personalCalendar
+                div(class=item.awayGame).calendar__item
+                  //-тут класс системы домашних и выезных игр(away-game выезная игра)
+                  .calendar__block
+                    .calendar__info
+                      span.calendar__date=item.date
+                      span.calendar__tour=item.tour
+                  .calendar__block    
+                    .calendar__game-score-wrap
+                      .calendar__team
+                        .calendar__team-wrap
+                          .calendar__team-name=item.nameCurrentTeam
+                          .calendar__team-logo
+                            img(src=item.currentTeamLogo, alt="")
+                        if item.time == 'past-game'    
+                          div(class=item.time).calendar__score-wrap 
+                            a(href="#" class=item.mod).calendar__game-score
+                              //- тут классы для определения победителя или проигравшего, ничейный счет,
+                                а также предстоящие игры 
+                                  (
+                                    winner - победитель
+                                    loser - проигравший
+                                    equal -ничейный счет
+                                  )
+                              span=item.scoreCurrentTeam
+                              span.separator :
+                              span=item.scoreTeam
+                        else
+                          .calendar__game-score.upcoming-game
+                            span=item.upcominGameTime
+                        .calendar__team-wrap 
+                          .calendar__team-logo
+                            img(src=item.teamLogo, alt="")
+                          .calendar__team-name=item.nameTeam
+                  .calendar__block
+                    .calendar__status
+                      img(src=item.status, alt="")   
+              
+    include includes/footer/footer
+
+  include includes/scripts  

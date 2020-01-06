@@ -1,5 +1,11 @@
 .header {
-  padding: 25px 0;
+  padding: 25px 0 15px;
+
+  @include xs {
+    padding-bottom: 0;
+  }
+
+
 
   &__wrap {
     display: flex;
@@ -15,6 +21,10 @@
 
     @include md {
       margin-bottom: 15px;
+    }
+
+    @include xs {
+      padding: 0 15px;
     }
   }
 
@@ -610,53 +620,12 @@
 .championship {
   border-bottom: 16px solid $mc;
 
-
-  // &__wrapper {
-  //   display: flex;
-  //   flex-direction: row;
-
-  //   @include md {
-  //     flex-wrap: wrap;
-  //   }
-
-  // }
+  @include xs {
+    border-top: 16px solid $mc;
+  }
 
   &__item {
     padding: 8px 0 8px 8px;
-
-    // @include md {
-    //   max-width: 172.5px;
-
-    //   &:first-child {
-    //     .championship__item {
-    //       padding-left: 8px;
-    //     }
-    //   }
-
-    //   &:nth-child(4n) {
-    //     .championship__wrap {
-    //       border: none;
-    //     }
-    //   }
-
-    //   &:nth-child(5n) {
-    //     padding-left: 0;
-
-    //     .championship__item {
-    //       padding-left: 8px;
-    //     }
-    //   }
-    // }
-
-    // @include sm {
-    //   max-width: 127.5px;
-
-    //   &:nth-child(4n) {
-    //     .championship__wrap {
-    //       border: none;
-    //     }
-    //   }
-    // }
 
     &:first-child {
       padding-left: 0;

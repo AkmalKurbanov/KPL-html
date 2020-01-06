@@ -1,0 +1,64 @@
+extends layout/main/main
+block title
+  | tournament-calendar
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .info
+        .container
+          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/tabs/tabs
+          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          .info__wrap
+            .standings__control
+              h3.heading Календарь
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val
+            .calendar.calendar--common
+              mixin calendarItem(tour,date,status)
+                div(class="calendar__item calendar__item--common " + status)
+                  .calendar__header=tour 
+                    |тур
+                  .calendar__body
+                    .calendar__date=date
+                    .calendar__result-game
+                      mixin calendar(nameFirstTeam,logoFirstTeam,scoreFirstTeam,nameSecondTeam,logoSecondTeam,scoreSecondTeam)
+                        .calendar__result-game-item
+                          .calendar__team
+                            .calendar__team-name=nameFirstTeam
+                            .calendar__team-logo
+                              img(src=logoFirstTeam)
+                          .calendar__game-score
+                            span=scoreFirstTeam
+                            span.separator :
+                            span=scoreSecondTeam
+                          .calendar__team
+                            .calendar__team-logo
+                              img(src=logoSecondTeam)
+                            .calendar__team-name=nameSecondTeam
+
+                      +calendar('Ак. Лидер','assets/img/KPL-teams/lider.png','2','Абдыш-Ата','assets/img/KPL-teams/Abdysh-Ata.png','0')
+                      +calendar('Алга','assets/img/KPL-teams/Alga.png','2','Дордой','assets/img/KPL-teams/Dordoi.png','0')
+                      +calendar('Кара-Балта','assets/img/KPL-teams/KaraBalta.png','2','Алай','assets/img/KPL-teams/Alai.png','0')
+                      +calendar('Нефтчи','assets/img/KPL-teams/Neftchi.png','2','Илбирс','assets/img/KPL-teams/Ilbirs.png','0')
+              +calendarItem('1 ','15.02.1993','passed')      
+              +calendarItem('2 ','15.02.1993','passed')      
+              +calendarItem('3 ','15.02.1993','passed')      
+              +calendarItem('4 ','15.02.1993','passed')      
+              +calendarItem('5 ','15.02.1993','upcoming')      
+              +calendarItem('6 ','15.02.1993','upcoming')      
+              +calendarItem('7 ','15.02.1993','upcoming')      
+              +calendarItem('8 ','15.02.1993','upcoming')      
+            
+
+    include includes/footer/footer
+
+  include includes/scripts  

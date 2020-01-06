@@ -1,0 +1,74 @@
+extends layout/main/main
+block title
+  | bombardiers
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .info
+        .container
+          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/tabs/tabs
+          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          .info__wrap
+            .standings__control
+              h3.heading Бомбардиры
+              form
+                .select-wrap
+                  span Сезон
+                  .select
+                    input(type="hidden" class="select-item" name="select-season" value="2019")
+                    .select_checked 2019
+                    ul.select__dropdown
+                      each val in [2019, 2020, 2021, 2022, 2023]
+                        li.select__option(data-value=val)=val  
+
+            .standings__table.bombardier
+              table
+                thead
+                  mixin table(team, ...tds)
+                    tr
+                      th
+                      th=team
+                      each td in tds
+                        th= td
+                  +table('Игрок', 'Голов', 'С пенальти', 'Игр сыграно')
+                tbody
+                  tr
+                    td 1
+                    td
+                      .standings__wrapper.active
+                        .bombardier__foto
+                          img(src="assets/img/players/17.png", alt="")
+                        span.logo-team
+                          img(src="assets/img/KPL-teams/Alga.png")
+                        span.name-player Абдыжапаров Асланбек
+                    td 11
+                    td 0
+                    td 12
+
+                  mixin table(number,logo,team,bombardier, ...tds)
+                    tr
+                      td=number
+                      td
+                        .standings__wrapper
+                          .bombardier__foto
+                            img(src=bombardier)
+                          span.logo-team
+                            img(src=logo)
+                          span.name-player=team
+                      each td in tds
+                        td= td
+                  +table('2','assets/img/KPL-teams/Dordoi.png','Мирлан Мурзаев','assets/img/players/8.png','11','1','13')
+                  +table('3','assets/img/KPL-teams/Neftchi.png','Давид Маких','assets/img/players/9.png','9', '0','12')
+                  +table('4','assets/img/KPL-teams/Ilbirs.png','Мирбек Исманкулов','assets/img/players/3.png','9', '3','12')
+                  +table('5','assets/img/KPL-teams/KaraBalta.png','Атабек Уморов','assets/img/players/4.png','8', '1','12')
+                  +table('6','assets/img/KPL-teams/Abdysh-Ata.png','Антон Землянухин','assets/img/players/5.png','7','4','12')
+                  +table('7','assets/img/KPL-teams/Alai.png','Сергей Калашинац','assets/img/players/6.png','6', '2','12')
+                  +table('8','assets/img/KPL-teams/lider.png','Айбек Турсунали улуу','assets/img/players/7.png','6','0','12')
+
+            
+
+    include includes/footer/footer
+
+  include includes/scripts  

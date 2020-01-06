@@ -1,6 +1,10 @@
 .standings {
   margin-bottom: 25px;
 
+  @include xs {
+    margin-bottom: 0;
+  }
+
   &__control {
     display: flex;
     flex-direction: row;
@@ -8,10 +12,24 @@
     justify-content: space-between;
     margin: 16px 0 25px;
 
+    @include lg {
+      margin: 16px 0 16px;
+    }
+
+    @include xs {
+      padding: 0 15px;
+    }
+
     .heading,
     form {
       flex-basis: 50%;
       margin: 0;
+    }
+
+    form {
+      @include xs {
+        flex-basis: 30%;
+      }
     }
   }
 
@@ -19,17 +37,52 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .heading{
-      flex-basis: 54%;
+    margin-bottom: 20px;
+
+    @include sm {
+      flex-direction: column;
     }
+
+    @include xs {
+      padding: 0 15px;
+    }
+
+    .heading {
+      flex-basis: 54%;
+
+      @include sm {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-zone-wrap {
+      display: flex;
+      flex-direction: row;
+    }
+
     &-zone {
       margin-left: 10px;
+
+      @include lg {
+        margin-left: 20px;
+      }
+
+      &:first-child {
+        @include sm {
+          margin-left: 0;
+        }
+      }
 
       a {
         color: $thc;
         font-weight: 600;
         position: relative;
         font-size: 14px;
+
+        @include xs {
+          font-size: 12px;
+        }
+
         &:hover {
           &:after {
             opacity: 0;
@@ -47,6 +100,10 @@
           transition: $tr;
         }
       }
+    }
+
+    form {
+      flex-basis: 25%;
     }
   }
 
@@ -88,6 +145,8 @@
             background-color: $mc;
 
             td {
+
+
               a {
                 &:hover {
                   color: $thc;
@@ -111,6 +170,8 @@
             padding: 0 12px;
             text-align: right;
 
+
+
             &:first-child {
               font-weight: 600;
             }
@@ -126,6 +187,10 @@
               max-width: 28px;
               width: 100%;
               margin-right: 20px;
+
+              @include lg {
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -214,6 +279,26 @@
       cursor: pointer;
     }
   }
+
+  .cols-wrap {
+    @include lg {
+      flex-direction: column;
+
+      .main-col {
+        max-width: 100%;
+      }
+
+      .secondary-col {
+        max-width: 100%;
+
+        .bombardier {
+          @include lg {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .bombardier {
@@ -246,6 +331,10 @@
     box-sizing: border-box;
     cursor: pointer;
 
+    @include lg {
+      padding: 0 15px;
+    }
+
     &:nth-child(2n) {
       background-color: $sc;
     }
@@ -275,7 +364,7 @@
           margin-left: 0;
         }
 
-        .bombardier__foto {
+        .bombardier__photo {
           max-width: 77px;
           width: 100%;
           margin-left: 30px;
@@ -304,13 +393,17 @@
       width: 100%;
       color: $tc;
 
+      @include lg {
+        margin-left: 20px;
+      }
+
       &:hover {
         color: $mc;
       }
     }
   }
 
-  &__foto {
+  &__photo {
     display: none;
   }
 
@@ -320,5 +413,15 @@
     margin-right: 20px;
     display: flex;
     align-items: center;
+
+    @include lg {
+      margin-right: 10px;
+    }
+  }
+
+  &__name {
+    @include lg {
+      font-size: 14px;
+    }
   }
 }
