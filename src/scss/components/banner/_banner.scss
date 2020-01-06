@@ -1,6 +1,10 @@
 .banner {
   margin-bottom: 15px;
 
+  @include xs {
+    margin-bottom: 0;
+  }
+
   &__wrap {
     background: linear-gradient(83.89deg, #C9D4DA -1.13%, #C9B4BB 101.68%);
     display: flex;
@@ -11,6 +15,23 @@
     padding-left: 40px;
     padding-right: 30px;
     color: $bc;
+
+    @include lg {
+      padding-left: 30px;
+      min-height: 100px;
+    }
+
+    @include md {
+      padding-left: 20px;
+      padding-right: 20px;
+      min-height: 100px;
+      min-height: 80px;
+    }
+
+    @include sm {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
     &--other {
       background: $bc;
@@ -33,19 +54,64 @@
     max-width: 150px;
     width: 100%;
     margin-right: 5px;
+
+    @include lg {
+      max-width: 80px;
+    }
+
+    @include md {
+      max-width: 70px;
+    }
+
+    @include sm {
+      max-width: 50px;
+    }
+
+    @include xs {
+      max-width: 40px;
+      margin: 0;
+    }
   }
 
   &__title {
     h2 {
       font-size: 30px;
       line-height: 150%;
+
+      @include lg {
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      @include md {
+        font-size: 14px;
+        line-height: 120%;
+      }
+
+      @include xs {
+        font-size: 13px;
+      }
     }
   }
 
   &__text {
+    @include sm {
+      display: none;
+    }
+
     h3 {
       font-size: 20px;
       line-height: 150%;
+
+      @include lg {
+        font-size: 16px;
+        line-height: 120%;
+      }
+
+      @include md {
+        font-size: 11px;
+        line-height: 120%;
+      }
     }
   }
 
@@ -57,12 +123,32 @@
     min-height: 130px;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
+
+    @include lg {
+      min-height: 100px;
+    }
+
+    @include md {
+      max-width: 200px;
+      background-size: contain;
+      min-height: 80px;
+    }
+
+    @include xs {
+      background: none !important;
+      max-width: 30px;
+    }
 
     span {
       display: flex;
       max-width: 96px;
       width: 100%;
       align-items: center;
+
+      @include md {
+        max-width: 70px;
+      }
     }
   }
 }

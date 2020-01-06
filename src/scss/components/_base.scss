@@ -108,7 +108,7 @@ ul {
   max-width: 684px;
   width: 100%;
 
-  @include xs {
+  @include lg {
     margin-bottom: 20px;
   }
 
@@ -138,6 +138,10 @@ ul {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 20px;
+
+  @include xs {
+    font-size: 16px;
+  }
 
   &--heading-ttu {
     text-transform: uppercase;
@@ -208,6 +212,7 @@ ul {
 
   @include xs {
     flex-direction: column;
+    align-items: flex-end;
   }
 
   span {

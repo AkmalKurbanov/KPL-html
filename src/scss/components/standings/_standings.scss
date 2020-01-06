@@ -18,12 +18,20 @@
 
     @include xs {
       padding: 0 15px;
+      align-items: flex-end;
     }
 
     .heading,
     form {
       flex-basis: 50%;
       margin: 0;
+    }
+
+    .heading {
+      @include xs {
+        flex-basis: 70%;
+        font-size: 16px;
+      }
     }
 
     form {
@@ -49,7 +57,7 @@
 
     .heading {
       flex-basis: 54%;
-
+      margin: 0;
       @include sm {
         margin-bottom: 10px;
       }
@@ -116,21 +124,41 @@
 
       thead {
         tr {
-          &:first-child {
-            th {
-              text-align: left;
-              padding: 0 15px;
-            }
-          }
-
           th {
             font-weight: 600;
             text-transform: uppercase;
             padding-bottom: 10px !important;
+            padding: 0 12px;
+            text-align: right;
+
+            @include sm {
+              font-size: 12px;
+              padding-bottom: 5px !important;
+            }
+
+            @media screen and (max-width: 440px) {
+              display: none;
+
+              &:first-child,
+              &:nth-child(2),
+              &:nth-child(3),
+              &:last-child {
+                display: table-cell !important;
+                font-size: 15px;
+              }
+            }
+
+            &:first-child {
+              @include sm {
+                padding: 0;
+              }
+            }
 
             &:nth-child(2) {
+              text-align: left !important;
               width: 67.6%;
               text-transform: inherit;
+              padding-left: 0;
             }
           }
         }
@@ -145,8 +173,6 @@
             background-color: $mc;
 
             td {
-
-
               a {
                 &:hover {
                   color: $thc;
@@ -170,14 +196,50 @@
             padding: 0 12px;
             text-align: right;
 
+            @include sm {
+              font-size: 12px;
+              height: 40px;
+              padding: 0;
+              text-align: center;
+            }
 
+            @media screen and (max-width: 440px) {
+              display: none;
+              
+              &:first-child,
+              &:nth-child(2),
+              &:nth-child(3),
+              &:last-child {
+                display: table-cell !important;
+                text-align: right;
+                padding-right: 12px;
+                font-size: 15px;
+              }
+            }
 
             &:first-child {
               font-weight: 600;
+              padding-right: 25px;
+
+              @include sm {
+                padding-left: 15px;
+                padding-right: 10px;
+              }
             }
 
             &:nth-child(2) {
               text-align: left;
+              padding: 0;
+
+              @include sm {
+                padding-right: 0;
+              }
+            }
+
+            &:last-child {
+              @include sm {
+                padding-right: 12px;
+              }
             }
 
 
