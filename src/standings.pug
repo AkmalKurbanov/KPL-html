@@ -7,9 +7,9 @@ block main
       include includes/header/header
       .info
         .container
-          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/KPL-banner/banner
           include includes/tabs/tabs
-          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          +tabs(['Таблица','Календарь игр','Бомбардиры'],'Статистика')
           .info__wrap
             .standings__control
               h3.heading Турнирная таблица
@@ -52,7 +52,7 @@ block main
                   +table('7','assets/img/KPL-teams/Alai.png','Алай', '12', '4', '2','6','9','23','-14','14')
                   +table('8','assets/img/KPL-teams/lider.png','Академия Лидер', '12', '3', '2','7','12','17','-5','11')
 
-            
+
     include includes/footer/footer
 
   include includes/scripts  

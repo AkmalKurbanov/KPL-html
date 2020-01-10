@@ -7,34 +7,7 @@ block main
       include includes/header/header
       .players
         .container
-          .players__team-banner.players__team-banner--alga
-            //-тут классы под цвет баннера и лого команды("--abdysh-ata","--alai","--lider","--alga","--dordoi","--ilbirs","--kara-balta","--neftchi")
-            .players__part
-              include includes/breadcrumbs/breadcrumbs
-              +breadcrumbs(['Главная','Клубы'], 'Алга')
-              .players__team-info
-                .players__team-logo
-                  img(src="assets/img/KPL-teams/Alga1.png" alt="")
-                .players__team-desc
-                  h2 АЛГА
-                  ul
-                    li Дата организации: 1960 г
-                    li Тренер: Азаматов Азамат Азаматович
-                    li Стадион: Арена ФЦ ФФКР
-                    li Официальный сайт: 
-                      a(href="www.fcalga.kg") www.fcalga.kg
-                  .players__team-social
-                    ul
-                      li: a(href="#"): i.fab.fa-instagram
-                      li: a(href="#"): i.fab.fa-facebook-square
-                      li: a(href="#"): i.fab.fa-twitter
-            .players__part
-              .players__team-foto
-                svg(viewBox="0 0 489 290")
-                  path.cut(d="M 0,0 V 291 H 125.73242 L 42.5,193 0,92.56816 0.08838835,82.668665 78.03125,0.06250046 Z")
-                img(src="assets/img/players/banner.jpg" alt="")
-          include includes/tabs/tabs
-          +tabs(['Игроки','Календарь игр'])
+          include includes/banner-team/banner-team
           .calendar.calendar__personal
             .standings__control
               h3.heading Календарь

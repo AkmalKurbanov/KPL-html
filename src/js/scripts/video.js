@@ -4,6 +4,8 @@ $('.video-linkJs ').on('click', function (e) {
 });
 $('.video-js').attr('src', $('.video-linkJs').attr('href'));
 
-var heightFrame = $('.video-js').height();
-var heightFrame = (heightFrame - 35.5);
-$('.video__last-video-list').css('height', heightFrame);
+if ($('.video').width() > 976) {
+  var heightFrame = $('.video-js').height();
+  var heightFrame = (heightFrame - 35.5);
+  $('.video__last-video-list').css('height', heightFrame);
+}

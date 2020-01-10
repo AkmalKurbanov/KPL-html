@@ -13,6 +13,11 @@ body {
   color: $tc;
 }
 
+.body-scroll {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 a {
   text-decoration: none;
   transition: $tr;
@@ -115,6 +120,10 @@ ul {
   &--news {
     max-width: 580px;
 
+    @include xs {
+      margin-bottom: 8px;
+    }
+
     .preview {
       margin-bottom: 22px;
     }
@@ -127,6 +136,10 @@ ul {
 
   &--news {
     max-width: 100%;
+
+    @include xs {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -141,6 +154,7 @@ ul {
 
   @include xs {
     font-size: 16px;
+    padding: 0 15px;
   }
 
   &--heading-ttu {
@@ -150,9 +164,18 @@ ul {
       display: inline-block;
       padding-left: 30px;
 
+      @include xs {
+        padding-left: 0;
+        margin-top: 10px;
+      }
+
       li {
         display: inline-block;
         margin-right: 12px;
+
+        @include sm {
+          margin-right: 5px;
+        }
 
         &:last-child {
           margin-right: 0;
@@ -163,6 +186,10 @@ ul {
           color: $tc;
           position: relative;
           font-weight: 400;
+
+          @include sm {
+            font-size: 13px;
+          }
 
           &:hover {
             color: $mc;
@@ -285,16 +312,41 @@ ul {
 .breadcrumbs {
   margin-bottom: 15px;
 
+  @include xs {
+    padding: 10px 15px 0;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+
+    * {
+      font-size: 14px;
+
+      @include lg {
+        font-size: 13px;
+      }
+
+      @include md {
+        font-size: 12px;
+      }
+
+      @include sm {
+        font-size: 11px;
+      }
+    }
   }
 
   &__item {
     &:last-child {
       color: $mc;
       pointer-events: none;
+    }
+
+    @include xs {
+      padding-bottom: 2px;
     }
   }
 
@@ -319,6 +371,15 @@ ul {
       font-size: 14px;
       top: 50%;
       transform: translateY(-50%);
+
+      @include lg {
+        transform: translateY(-35%);
+        font-size: 13px;
+      }
+
+      @include xs {
+        transform: translateY(-45%);
+      }
     }
   }
 }
@@ -332,6 +393,10 @@ ul {
   align-items: center;
   margin: 25px 0;
 
+  @include xs {
+    padding: 0 15px;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -339,6 +404,10 @@ ul {
 
   &__item {
     margin-right: 9px;
+
+    @include xs {
+      margin-right: 5px;
+    }
 
     .icon-pagination-prev {
       color: #888d8e !important;
@@ -405,6 +474,10 @@ ul {
   position: relative;
   margin-top: -24px;
 
+  @include xs {
+    margin-top: 0;
+  }
+
   &:after {
     position: absolute;
     content: '';
@@ -414,13 +487,25 @@ ul {
     right: 0;
     bottom: 0;
     z-index: -1;
+
+    @include xs {
+      display: none;
+    }
   }
 
   &__list {
     margin-left: 8px;
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     position: relative;
+
+    @include xs {
+      width: 100%;
+      justify-content: flex-start;
+      padding-left: 4px !important;
+      margin: 0;
+    }
   }
 
 
@@ -428,8 +513,14 @@ ul {
   &__item {
     margin-right: 8px;
 
+    @include xs {
+      margin-right: 3px;
+    }
+
+
     &:last-child {
       margin-right: 0;
+      border-right: none;
     }
 
     &.active {
@@ -437,6 +528,7 @@ ul {
 
       .tabs__link {
         background-color: $wc;
+        box-shadow: none;
       }
     }
   }
@@ -450,6 +542,28 @@ ul {
     justify-content: center;
     color: $bc;
     font-size: 14px;
+
+    @include lg {
+      padding: 0 20px;
+      font-size: 13px;
+    }
+
+    @include md {
+      padding: 0 15px;
+      font-size: 12px;
+    }
+
+    @include sm {
+      min-height: 35px;
+      padding: 0 10px;
+      font-size: 11px;
+    }
+
+    @include xs {
+      min-height: 30px;
+      font-size: 10px;
+      padding: 0 5px;
+    }
   }
 }
 
@@ -457,16 +571,30 @@ ul {
 
 // media
 .media {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
 
   .preview {
+
     &--media {
       max-width: 272.5px;
       width: 100%;
       display: flex;
       position: relative;
+
+      @include lg {
+        max-width: 217.5px;
+      }
+
+      @include md {
+        max-width: 216.67px;
+      }
+
+      @include sm {
+        max-width: 247.51px;
+      }
+
+      @include xs {
+        max-width: 100%;
+      }
 
       &:before {
         position: absolute;
@@ -482,6 +610,15 @@ ul {
         font-size: 14px;
         min-height: 39px;
         background: rgba(0, 0, 0, .5);
+
+        @include lg {
+          font-size: 13px;
+          padding: 10px;
+        }
+
+        @include md {
+          font-size: 12px;
+        }
       }
 
       i {
@@ -507,6 +644,10 @@ ul {
 .date,
 .author {
   margin-bottom: 20px;
+
+  @include xs {
+    padding: 0 15px;
+  }
 
   i {
     font-size: 12px;

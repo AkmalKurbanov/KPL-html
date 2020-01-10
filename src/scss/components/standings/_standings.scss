@@ -5,6 +5,8 @@
     margin-bottom: 0;
   }
 
+
+
   &__control {
     display: flex;
     flex-direction: row;
@@ -21,16 +23,18 @@
       align-items: flex-end;
     }
 
-    .heading,
     form {
-      flex-basis: 50%;
+      flex-basis: 30%;
       margin: 0;
     }
 
     .heading {
+      flex-basis: 70%;
+      margin-bottom: 0;
+
       @include xs {
-        flex-basis: 70%;
         font-size: 16px;
+        padding: 0;
       }
     }
 
@@ -58,8 +62,13 @@
     .heading {
       flex-basis: 54%;
       margin: 0;
+
       @include sm {
         margin-bottom: 10px;
+      }
+
+      @include xs {
+        padding: 0;
       }
     }
 
@@ -205,13 +214,12 @@
 
             @media screen and (max-width: 440px) {
               display: none;
-              
+
               &:first-child,
               &:nth-child(2),
               &:nth-child(3),
               &:last-child {
                 display: table-cell !important;
-                text-align: right;
                 padding-right: 12px;
                 font-size: 15px;
               }
@@ -260,11 +268,25 @@
     }
 
     &--otherKind-table {
+      @include xs {
+        padding: 0 5px;
+      }
+
       table {
         thead {
           tr {
             th {
               text-transform: inherit;
+              text-align: left;
+
+              @include md {
+                font-size: 14px;
+              }
+
+              @include xs {
+                font-size: 7px !important;
+                padding: 5px !important;
+              }
 
               &:nth-child(2) {
                 width: auto;
@@ -293,7 +315,21 @@
 
             td {
               text-align: left;
-              padding: 0 15px;
+              padding: 5px 15px;
+
+              @include lg {
+                font-size: 13px;
+              }
+
+              @include sm {
+                font-size: 10px;
+              }
+
+              @include xs {
+                font-size: 7px !important;
+                text-align: left !important;
+                padding: 5px !important;
+              }
 
               &:first-child {
                 font-weight: 400;

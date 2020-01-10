@@ -1,7 +1,12 @@
 .employees {
+
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+
+    @include xs {
+      padding: 0 15px;
+    }
   }
 
   &__item {
@@ -15,14 +20,52 @@
     margin-right: 17px;
     margin-bottom: 17px;
 
+    @include lg {
+      flex-basis: 32.11%;
+      min-height: 220px;
+      padding-top: 15px;
+      padding-left: 15px;
+
+      @include md {
+        flex-basis: 48.77%;
+        min-height: 220px;
+        padding-top: 15px;
+        padding-left: 15px;
+      }
+
+      @include sm {
+        flex-basis: 48.3%;
+        min-height: 180px;
+      }
+
+      @include xs {
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+        flex-basis: 100%;
+        min-height: 180px;
+      }
+    }
+
+
     &:nth-child(3n) {
       margin-right: 0;
+
+      @include md {
+        margin-right: 17px;
+      }
+    }
+
+    &:nth-child(2n) {
+
+      @include md {
+        margin-right: 0;
+      }
     }
 
     &:before {
       position: absolute;
       content: '';
-      background-image: url('/assets/img/KPL-teams/clubs-bg.svg');
+      background-image: url('../assets/img/KPL-teams/clubs-bg.svg');
       background-repeat: no-repeat;
       max-width: 180px;
       width: 100%;
@@ -39,18 +82,44 @@
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 15px;
-    z-index: 1;
+    z-index: 12;
     position: relative;
     max-width: 60%;
     line-height: 150%;
+
+    @include lg {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    @include md {
+      font-size: 14px;
+    }
+
+    @include sm {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
   }
 
   &__name {
     font-weight: 600;
-    z-index: 1;
+    z-index: 12;
     position: relative;
     max-width: 60%;
     line-height: 150%;
+
+    @include lg {
+      font-size: 12px;
+    }
+
+    @include md {
+      font-size: 14px;
+    }
+
+    @include sm {
+      font-size: 11px;
+    }
   }
 
   &__photo {
@@ -61,7 +130,15 @@
     align-items: flex-end;
     max-width: 185px;
     width: 100%;
-  
+    z-index: 11;
+
+    @include lg {
+      max-width: 150px;
+    }
+
+    @include sm {
+      max-width: 120px;
+    }
   }
 
 }

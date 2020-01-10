@@ -5,15 +5,138 @@
     flex-wrap: wrap;
     justify-content: space-between;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @include lg {
+      padding: 40px 40px 0;
+    }
+
+    @include md {
+      padding: 20px 20px 0;
+    }
+
+    @include xs {
+      padding: 15px 15px 0;
+    }
   }
 
   .match-details {
     flex-basis: 45%;
 
+    @include lg {
+      flex-basis: 48%;
+    }
+
+    @include md {
+      flex-basis: 48.4%;
+    }
+
+    @include sm {
+      flex-basis: 100%;
+    }
+
     .score {
       min-height: 180px;
       margin-bottom: 40px;
+
+      @include lg {
+        min-height: 150px;
+        margin-bottom: 18px;
+      }
+
+      @include xs {
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .score__team-logo-wrap {
+    @include lg {
+      min-height: 100px;
+    }
+
+    @include md {
+      margin-bottom: 15px;
+    }
+  }
+
+  .score__team-logo {
+    @include lg {
+      width: 60px;
+    }
+
+    @include sm {
+      width: 70px;
+    }
+
+    @include xs {
+      width: 70px;
+    }
+  }
+
+  .score__game-result-wrap {
+    @include lg {
+      min-height: 70px;
+    }
+  }
+
+  .score__game-result {
+    span {
+      @include lg {
+        font-size: 25px;
+        line-height: normal;
+      }
+
+      @include lg {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .score__scoreboard-wrap {
+    @include xs {
+      max-width: 85px;
+    }
+  }
+
+  .score__sub-scoreboard {
+
+    span {
+      @include lg {
+        font-size: 16px;
+        line-height: normal;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .score__team-name {
+    padding: 0 5px;
+
+    @include lg {
+      font-size: 13px;
+      line-height: normal;
+      font-weight: 600;
+    }
+
+    @include md {
+      font-size: 10px;
+    }
+  }
+
+  .score__game-link {
+    @include lg {
+      margin-top: 9px;
+    }
+
+    i {
+      @include xs {
+        display: none;
+      }
     }
   }
 }
-

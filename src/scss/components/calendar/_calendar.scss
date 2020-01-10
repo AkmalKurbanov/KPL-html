@@ -11,9 +11,13 @@
     background: #F1F1F1;
     padding: 16px;
 
+    @include md {
+      justify-content: center;
+      flex-direction: column;
+    }
 
-    &:nth-child(3n) {
-      margin-right: 0;
+    @include xs {
+      padding: 11px;
     }
 
     &:nth-child(2n) {
@@ -45,6 +49,39 @@
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
       margin-bottom: 16px;
       margin-right: 16px;
+
+      @include lg {
+        flex-basis: 32.1%;
+      }
+
+      @include md {
+        flex-basis: 48.84%;
+      }
+
+      @include sm {
+        flex-basis: 48.43%;
+      }
+
+      @include xs {
+        flex-basis: 100%;
+        margin-right: 0 !important;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+
+        @include md {
+          margin-right: 16px;
+        }
+      }
+
+      &:nth-child(2n) {
+        @include md {
+          margin-right: 0;
+        }
+      }
+
+
     }
   }
 
@@ -53,12 +90,23 @@
     flex-basis: 25%;
     justify-content: center;
 
+    @include md {
+      flex-basis: auto;
+      width: 100%;
+      max-width: 100%;
+    }
+
     &:first-child {
       justify-content: flex-start;
+
     }
 
     &:last-child {
       justify-content: flex-end;
+
+      @include md {
+        display: none;
+      }
     }
 
     &:nth-child(2) {
@@ -71,12 +119,26 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+
+    @include md {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    @include xs {
+      font-size: 12px;
+    }
   }
 
   &__date {
     margin-right: 40px;
     max-width: 110px;
     width: 100%;
+
+    @include xs {
+      width: auto;
+      margin-right: 30px;
+    }
   }
 
 
@@ -111,6 +173,10 @@
     flex-basis: 42%;
     align-items: center;
 
+    @include xs {
+      font-size: 12px;
+    }
+
     &:first-child {
       display: flex;
       justify-content: flex-end;
@@ -119,6 +185,11 @@
 
   &__score-wrap {
     flex-basis: 15%;
+    padding: 0 10px;
+
+    @include xs {
+      padding: 0 5px;
+    }
   }
 
   &__team-logo {
@@ -127,13 +198,17 @@
     display: flex;
     align-items: center;
     margin: 0 7px;
+
+    @include sm {
+      max-width: 20px;
+      margin: 0 4px;
+    }
   }
 
   &__game-score {
     color: $wc;
     margin: 0 auto;
-    max-width: 64px;
-    width: 100%;
+    width: 64px;
     min-height: 32px;
     display: flex;
     justify-content: center;
@@ -141,6 +216,10 @@
 
     span {
       font-size: 20px;
+
+      @include xs {
+        font-size: 16px;
+      }
     }
 
     .separator {
@@ -185,6 +264,20 @@
     display: flex;
     align-items: center;
     padding-left: 25px;
+
+    @include lg {
+      padding-left: 15px;
+      min-height: 45px;
+    }
+
+    @include sm {
+      font-size: 17px;
+      min-height: 40px;
+    }
+
+    @include xs {
+      padding-left: 10px;
+    }
   }
 
   .passed {
@@ -205,10 +298,24 @@
   &__body {
     padding: 10px 25px;
 
+    @include lg {
+      padding: 15px;
+    }
+
+
+    @include md {
+      padding: 10px 15px;
+    }
+
+
     .calendar__game-score {
       span {
         color: $tc;
         font-size: 14px;
+
+        @include md {
+          font-size: 12px;
+        }
       }
 
       .separator {
@@ -218,6 +325,18 @@
 
     .calendar__team-name {
       font-size: 14px;
+
+      @include lg {
+        font-size: 12px;
+      }
+
+      @include sm {
+        font-size: 10px;
+      }
+
+      @include xs {
+        font-size: 12px;
+      }
     }
 
     .calendar__date {
@@ -225,6 +344,18 @@
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 400 !important;
+
+      @include lg {
+        margin-bottom: 10px;
+      }
+
+      @include sm {
+        font-size: 12px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
     }
 
     .calendar__team {
@@ -236,11 +367,22 @@
         justify-content: flex-start;
       }
     }
+
+    .calendar__team-logo {
+      // @include xs {
+      //   min-width: 24px;
+      //   margin: 0 7px;
+      // }
+    }
   }
 
   &--common {
     flex-wrap: wrap;
     display: flex;
+
+    @include xs {
+      padding: 0 15px;
+    }
   }
 
   &__result-game {
@@ -251,6 +393,10 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
+
+    @include lg {
+      margin-bottom: 10px;
+    }
 
     &:last-child {
       margin-bottom: 0;

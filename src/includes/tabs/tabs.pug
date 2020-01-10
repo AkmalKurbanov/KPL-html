@@ -1,6 +1,9 @@
-mixin tabs(items,active)
+mixin tabs(items, last)
   .tabs
-    ul.tabs__list
+    ul.tabs__list&attributes(attributes)
       each item in items
-        li(class=active).tabs__item
-          a(href="#").tabs__link=item
+        li.tabs__item
+          a(href="#" title=item).tabs__link= item
+      if last
+        li.tabs__item.active
+          a(href="#").tabs__link= last

@@ -10,10 +10,28 @@
   .bombardier {
     padding-left: 0;
 
+    thead {
+      tr {
+        th {
+          @media screen and (max-width: 440px) {
+            display: table-cell;
+          }
+        }
+      }
+    }
+
     tbody {
       tr {
         &:first-child {
           background-color: $sc;
+        }
+
+        td {
+          @media screen and (max-width: 440px) {
+            display: table-cell;
+            font-size: 13px !important;
+            text-align: center;
+          }
         }
       }
     }
@@ -27,6 +45,15 @@
           th {
             text-align: right;
 
+            @include md {
+              font-size: 13px;
+            }
+
+            @include sm {
+              padding: 0 10px;
+              text-align: center;
+            }
+
             &:nth-child(2) {
               text-align: left;
               width: auto;
@@ -35,6 +62,18 @@
 
             &:last-child {
               padding-right: 68px;
+
+              @include lg {
+                padding-right: 50px;
+              }
+
+              @include md {
+                padding-right: 20px;
+              }
+
+              @include sm {
+                padding-right: 10px;
+              }
             }
           }
         }
@@ -43,11 +82,43 @@
       tbody {
 
         td {
-          &:last-child {
-            padding-right: 68px;
+          @include sm {
+            padding: 0 10px;
           }
 
-          .bombardier__foto {
+          &:first-child {
+            @include md {
+              padding-right: 10px;
+            }
+
+            @include xs {
+              padding-left: 12px;
+            }
+          }
+
+          &:last-child {
+            padding-right: 68px;
+
+            @include lg {
+              padding-right: 50px;
+            }
+
+            @include md {
+              padding-right: 20px;
+            }
+
+            @include sm {
+              padding-right: 10px;
+            }
+          }
+
+          .name-player {
+            @include xs {
+              font-size: 11px;
+            }
+          }
+
+          .bombardier__photo {
             max-width: 77px;
             width: 100%;
             margin-left: 30px;
@@ -55,6 +126,18 @@
             align-items: flex-end;
             height: 100%;
             display: none;
+
+            @include lg {
+              max-width: 50px;
+            }
+
+            @include md {
+              margin-left: 10px;
+            }
+
+            @include sm {
+              opacity: 0;
+            }
           }
         }
       }
@@ -63,8 +146,13 @@
 
   .standings__wrapper.active {
     pointer-events: none;
+    padding-top: 10px;
 
-    .bombardier__foto {
+    @include lg {
+      padding-top: 5px;
+    }
+
+    .bombardier__photo {
       display: flex;
     }
   }
@@ -74,14 +162,46 @@
   display: flex;
   flex-wrap: wrap;
 
+  @include xs {
+    padding: 0 15px;
+  }
+
   &__item {
     flex-basis: 32.4%;
     margin-bottom: 16px;
     margin-right: 16px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
 
+    @include lg {
+      flex-basis: 32.1%;
+    }
+
+    @include md {
+      flex-basis: 48.84%;
+    }
+
+    @include sm {
+      flex-basis: 48.43%;
+    }
+
+    @include xs {
+      flex-basis: 100%;
+      margin-right: 0 !important;
+    }
+
     &:nth-child(3n) {
       margin-right: 0;
+
+      @include md {
+        margin-right: 16px;
+      }
+    }
+
+    &:nth-child(2n) {
+
+      @include md {
+        margin-right: 0;
+      }
     }
   }
 
@@ -94,6 +214,20 @@
     align-items: center;
     font-weight: 600;
     font-size: 20px;
+
+    @include lg {
+      padding-left: 15px;
+      min-height: 45px;
+    }
+
+    @include sm {
+      font-size: 17px;
+      min-height: 40px;
+    }
+
+    @include xs {
+      padding-left: 10px;
+    }
   }
 
 
@@ -107,6 +241,15 @@
     background-color: $sc;
     min-height: 55px;
 
+    @include lg {
+      padding: 0 15px;
+    }
+
+    @include sm {
+      padding: 0 15px;
+      min-height: 40px;
+    }
+
     &:nth-child(2n) {
       background-color: $wc;
     }
@@ -114,6 +257,10 @@
     span {
       font-size: 14px;
       font-weight: 600;
+
+      @include sm {
+        font-size: 12px;
+      }
     }
   }
 

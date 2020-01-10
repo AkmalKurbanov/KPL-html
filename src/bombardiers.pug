@@ -7,9 +7,9 @@ block main
       include includes/header/header
       .info
         .container
-          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/KPL-banner/banner
           include includes/tabs/tabs
-          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          +tabs(['Таблица','Календарь игр','Бомбардиры'],'Статистика')
           .info__wrap
             .standings__control
               h3.heading Бомбардиры
@@ -32,13 +32,13 @@ block main
                       th=team
                       each td in tds
                         th= td
-                  +table('Игрок', 'Голов', 'С пенальти', 'Игр сыграно')
+                  +table('Игрок', 'Голов', 'Пенальти', 'Игры')
                 tbody
                   tr
                     td 1
                     td
                       .standings__wrapper.active
-                        .bombardier__foto
+                        .bombardier__photo
                           img(src="assets/img/players/17.png", alt="")
                         span.logo-team
                           img(src="assets/img/KPL-teams/Alga.png")
@@ -52,7 +52,7 @@ block main
                       td=number
                       td
                         .standings__wrapper
-                          .bombardier__foto
+                          .bombardier__photo
                             img(src=bombardier)
                           span.logo-team
                             img(src=logo)
@@ -67,7 +67,7 @@ block main
                   +table('7','assets/img/KPL-teams/Alai.png','Сергей Калашинац','assets/img/players/6.png','6', '2','12')
                   +table('8','assets/img/KPL-teams/lider.png','Айбек Турсунали улуу','assets/img/players/7.png','6','0','12')
 
-            
+
 
     include includes/footer/footer
 

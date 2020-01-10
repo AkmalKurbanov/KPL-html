@@ -12,13 +12,8 @@ block main
           +breadcrumbs(['Главная'], 'Медиа')
           h2.heading.heading--heading-ttu
             |ВСЕ МЕДИА-ФАЙЛЫ
-            ul
-              li
-                a(href="#") Видео
-              li
-                a(href="#") Фотографии
-              li.active
-                a(href="#") Все
+            include includes/tabs-category/tabs-category
+            +tabs-category(['Видео','Фотографии'], 'Все')
           .media__wrap
             mixin media(headingMedia,preview,type)
               .media__item

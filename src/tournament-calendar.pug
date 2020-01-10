@@ -7,9 +7,9 @@ block main
       include includes/header/header
       .info
         .container
-          .banner-secondary(style="background-image: url('assets/img/banner-other.jpg');")
+          include includes/KPL-banner/banner
           include includes/tabs/tabs
-          +tabs(['Таблица','Календарь игр','Бомбардиры','Статистика'])
+          +tabs(['Таблица','Календарь игр','Бомбардиры'],'Статистика')
           .info__wrap
             .standings__control
               h3.heading Календарь

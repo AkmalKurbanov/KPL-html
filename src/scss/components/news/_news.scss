@@ -1,12 +1,28 @@
 .news {
+  .cols-wrap {
+    @include xs {
+      padding: 0 15px;
+    }
+  }
+
   &__preview-list {
     padding-left: 23px;
+
+    @include sm {
+      padding-left: 0;
+    }
   }
 
   &__article {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+
+    @include xs {
+      margin-bottom: 8px;
+      border-bottom: 1px solid #CCCCCC;
+      padding: 5px 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -15,10 +31,37 @@
 
   &__article-img-wrap {
     margin-right: 24px;
+
+    @include lg {
+      margin-right: 18px;
+    }
+
+    @include md {
+      margin-right: 15px;
+    }
+
+    @include xs {
+      margin-right: 7px;
+    }
+
   }
 
   &__article-img {
-    width: 180px;
+    width: 172.5px;
+
+    @include lg {
+      max-width: 160px;
+    }
+
+    @include md {
+      max-width: 130px;
+    }
+
+    @include xs {
+      max-width: 100px;
+    }
+
+
 
     a {
       width: 100%;
@@ -50,23 +93,64 @@
   }
 
   &__article-date {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+
+    @include lg {
+      margin-bottom: 5px;
+    }
+
+    @include xs {
+      margin-bottom: 0;
+    }
 
     span {
       font-size: 11px;
       font-weight: 700;
       color: $bc;
+
+      @include xs {
+        font-size: 10px;
+      }
     }
   }
 
   &__article-title {
     margin-bottom: 10px;
 
+    @include md {
+      margin-bottom: 5px;
+    }
+
+    @include sm {
+      margin-bottom: 10px;
+    }
+
+    @include xs {
+      margin-bottom: 3px;
+    }
+
     a {
       font-size: 20px;
       font-weight: 600;
       color: $tc;
       line-height: 150%;
+
+      @include lg {
+        font-size: 15px;
+        line-height: normal;
+      }
+
+      @include md {
+        font-size: 12px;
+      }
+
+      @include sm {
+        font-size: 16px;
+      }
+
+      @include xs {
+        font-size: 11px;
+      }
 
       &:hover {
         color: $mc;
@@ -77,25 +161,89 @@
   &__article-subtitle {
     color: $tc;
     line-height: 150%;
+
+    @include lg {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    @include md {
+      font-size: 13px;
+      line-height: normal;
+    }
+
+    @include sm {
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    @include xs {
+      line-height: normal;
+      font-size: 11px;
+    }
   }
 
   &__detail {
-
-    .main-col,
-    .secondary-col {
-      flex-basis: 50%;
-      width: 100%;
-      max-width: 100%;
+    @include xs {
+      padding: 0 15px;
     }
 
-    .main-col {
-      padding-right: 20px;
+    .cols-wrap {
+      @include xs {
+        padding: 0;
+      }
 
-      p {
-        font-size: 14px;
-        margin-bottom: 25px;
-        font-weight: 600;
-        line-height: 150%;
+      .main-col,
+      .secondary-col {
+        flex-basis: 50%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .main-col {
+        padding-right: 20px;
+
+        @include lg {
+          flex-basis: 60%;
+        }
+
+        @include md {
+          flex-basis: 65%;
+        }
+
+        @include sm {
+          order: 2;
+        }
+
+
+
+        p {
+          font-size: 14px;
+          margin-bottom: 25px;
+          font-weight: 600;
+          line-height: 150%;
+        }
+      }
+
+      .secondary-col {
+        @include lg {
+          flex-basis: 40%;
+        }
+
+        @include md {
+          flex-basis: 35%;
+        }
+
+        @include sm {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .media__wrap,
+    .heading {
+      @include xs {
+        padding: 0;
       }
     }
   }
@@ -104,15 +252,28 @@
 .last-news {
   margin-top: 30px;
 
+  @include xs {
+    padding: 0 15px;
+  }
+
   &__wrap {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include sm {
+      flex-direction: column;
+    }
+
     .news__article {
       flex-basis: 50%;
     }
   }
-}
 
+  .heading {
+    @include xs {
+      padding: 0;
+    }
+  }
+}

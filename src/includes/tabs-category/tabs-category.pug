@@ -1,0 +1,10 @@
+mixin tabs-category(items, last)
+  ul&attributes(attributes)
+    each item in items
+      li
+        a(href="#" title=item)= item
+    if last
+      li.active
+        a(href="#")= last
+
+

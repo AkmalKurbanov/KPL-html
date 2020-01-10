@@ -3,6 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include xs {
+      padding: 0 15px;
+    }
   }
 
   &__item {
@@ -13,6 +17,26 @@
     flex-basis: 23.9%;
     margin-bottom: 16px;
     position: relative;
+
+    @include lg {
+      min-height: 145px;
+    }
+
+    @include md {
+      min-height: 105px;
+    }
+
+    @include sm {
+      flex-basis: 48.5%;
+    }
+
+    @include xs {
+      flex-basis: 100%;
+      max-width: 400px;
+      min-height: 150px;
+      margin: auto;
+      margin-bottom: 16px;
+    }
 
     &:before {
       position: absolute;
@@ -26,6 +50,18 @@
       right: 0;
       opacity: 0.1;
       bottom: 15px;
+      background-size: contain;
+
+      @include md {
+        max-width: 140px;
+        height: 70px;
+      }
+
+      @include xs {
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &--abdysh {
@@ -97,6 +133,9 @@
     align-items: flex-start;
     padding-left: 15px;
 
+    @include md {
+      padding-left: 10px;
+    }
   }
 
   &__name {
@@ -105,12 +144,40 @@
     font-weight: 600;
     margin-bottom: 8px;
     line-height: 150%;
+
+    @include lg {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    @include md {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+
+    @include xs {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   &__city {
     font-size: 14px;
     font-weight: 600;
     color: $wc;
+
+    @include lg {
+      font-size: 12px;
+    }
+
+    @include md {
+      font-size: 10px;
+    }
+
+    @include xs {
+      font-size: 12px;
+    }
+
   }
 
   .more {
@@ -138,11 +205,27 @@
       background-color: $wc;
       opacity: 0;
       transition: $tr;
+
+      @include sm {
+        opacity: 1;
+      }
     }
   }
 
   &__logo {
     max-width: 85px;
     width: 100%;
+
+    @include lg {
+      max-width: 70px;
+    }
+
+    @include md {
+      max-width: 50px;
+    }
+
+    @include xs {
+      max-width: 80px;
+    }
   }
 }

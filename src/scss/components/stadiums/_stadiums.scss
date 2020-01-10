@@ -1,23 +1,60 @@
 .stadium {
+
+
   &__map {
+    margin-bottom: 20px;
+
     #map {
       width: 100%;
       height: 400px;
+
+      @include lg {
+        height: 350px;
+      }
+
+      @include md {
+        height: 300px;
+      }
+
+      @include sm {
+        height: 280px;
+      }
     }
   }
 
-  .main-col {
-    max-width: 606px;
-    margin-right: 75px;
-    font-size: 12px;
-    line-height: 150%;
-  }
+  .cols-wrap {
+    @include md {
+      flex-direction: column;
+    }
 
-  .secondary-col {
-    .stadium__map {
-      margin-top: 15px;
-      #map{
-        height: 280px;
+    @include xs {
+      padding: 0 15px;
+    }
+
+    .main-col {
+      max-width: 606px;
+      margin-right: 75px;
+      font-size: 12px;
+      line-height: 150%;
+
+      @include md {
+        order: 2;
+        margin-right: 0;
+        max-width: 100%;
+      }
+    }
+
+    .secondary-col {
+      @include md {
+        max-width: 100%;
+      }
+
+      .stadium__map {
+        margin-top: 15px;
+
+        #map {
+          height: 280px;
+        }
       }
     }
   }

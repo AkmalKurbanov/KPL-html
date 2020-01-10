@@ -4,14 +4,34 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 25px;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    @include xs {
+      padding: 0 15px;
+    }
   }
 
   &__frame-wrap {
     max-width: 857px;
     width: 100%;
     position: relative;
-    padding-bottom: 46.9%;
+    padding-bottom: 41.9%;
     height: 0;
+
+    @include lg {
+      max-width: 693px;
+      padding-bottom: 42%;
+    }
+
+    @include md {
+      max-width: 453px;
+      max-width: 100%;
+      padding-bottom: 57%;
+      margin-bottom: 15px;
+    }
 
     iframe {
       position: absolute;
@@ -36,10 +56,26 @@
       width: 0;
     }
 
-  
+
 
     .media {
-      margin-bottom: 20px;
+      .media__wrap {
+        flex-direction: column;
+
+        @include md {
+          flex-direction: row;
+        }
+
+        @include xs {
+          padding: 0;
+        }
+      }
+
+      .media__item {
+        @media (min-width: 992px) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

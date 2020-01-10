@@ -11,15 +11,8 @@ block main
           +breadcrumbs(['Главная', 'О КПЛ'], 'Арбитры и комиссары')
           h2.heading.heading--heading-ttu
             |АРБИТРЫ И КОМИССАРЫ
-            ul
-              li
-                a(href="#") Арбитры
-              li
-                a(href="#") Комиссары
-              li
-                a(href="#") Инспекторы
-              li.active
-                a(href="#") Все
+            include includes/tabs-category/tabs-category
+            +tabs-category(['Арбитры','Комиссары','Инспекторы'], 'Все')
           .standings__table.standings__table--otherKind-table
             table
               thead

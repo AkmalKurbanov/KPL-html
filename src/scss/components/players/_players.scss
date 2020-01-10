@@ -4,6 +4,8 @@
     flex-direction: row;
     justify-content: space-between;
 
+
+
     &--abdysh-ata {
       background-color: #009846;
 
@@ -98,8 +100,23 @@
   }
 
   &__part {
+    @include md {
+      display: none;
+    }
+
     &:first-child {
       padding-left: 20px;
+
+      @include md {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+      }
+
+      @include xs {
+        padding-left: 0;
+      }
     }
   }
 
@@ -108,6 +125,17 @@
     flex-direction: row;
     position: relative;
     z-index: 1;
+
+    @include md {
+      padding: 0 15px 35px;
+    }
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 60px;
+    }
   }
 
   &__team-logo {
@@ -115,6 +143,25 @@
     width: 100%;
     margin-right: 60px;
     margin-left: 50px;
+
+    @include lg {
+      margin: 0 20px;
+      max-width: 130px;
+    }
+
+    @include md {
+      max-width: 180px;
+      margin-right: 50px;
+    }
+
+    @include sm {
+      max-width: 110px;
+      margin-right: 20px;
+    }
+
+    @include xs {
+      max-width: 198px;
+    }
   }
 
   &__team-desc {
@@ -130,10 +177,29 @@
       font-size: 34px;
       line-height: 41px;
       margin-bottom: 12px;
+
+      @include lg {
+        font-size: 20px;
+        line-height: normal;
+      }
+
+      @include xs {
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
     }
 
     li {
       margin-bottom: 10px;
+
+      @include lg {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+
+      @include xs {
+        margin-bottom: 10px;
+      }
 
       &:last-child {
         margin: 0;
@@ -144,6 +210,8 @@
         font-size: 14px;
         position: relative;
         padding-bottom: 2px;
+
+
 
         &:after {
           position: absolute;
@@ -173,6 +241,10 @@
   &__team-social {
     margin-top: 20px;
 
+    @include lg {
+      margin-top: 15px;
+    }
+
     ul {
       li {
         margin-bottom: 0;
@@ -189,7 +261,7 @@
     }
   }
 
-  &__team-foto {
+  &__team-photo {
     max-width: 493px;
     width: 100%;
     position: relative;
@@ -214,13 +286,39 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    flex-basis: 23.3%;
+    flex-basis: 23.9%;
     padding: 7px 0 0 8px;
     background: #FEFEFE;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
     margin-right: 16px;
     margin-bottom: 16px;
     position: relative;
+
+    @include lg {
+      flex-basis: 32.1%;
+    }
+
+    @include md {
+      flex-basis: 48.84%;
+    }
+
+    @include sm {
+      flex-basis: 48.4%;
+    }
+
+    @include xs {
+      flex-basis: auto;
+      flex-direction: row-reverse;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0 !important;
+      justify-content: flex-end;
+      padding-right: 45px;
+      margin-bottom: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #ccc;
+    }
+
 
     &:after {
       position: absolute;
@@ -230,17 +328,56 @@
       width: 100%;
       min-height: 94px;
       background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       right: 4px;
       top: 9px;
+
+      @include sm {
+        max-width: 120px;
+        min-height: 94px;
+        background-size: contain;
+      }
+
+      @include xs {
+        display: none;
+      }
     }
 
     &:nth-child(4n) {
       margin-right: 0;
+
+      @include lg {
+        margin-right: 16px;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include lg {
+        margin-right: 0;
+
+        @include md {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      @include md {
+        margin-right: 0;
+      }
     }
   }
 
   &__player-info {
     padding-bottom: 13px;
+
+    @include xs {
+      padding-left: 18px;
+      width: 100%;
+      display: flex;
+      padding-bottom: 7px;
+    }
   }
 
   &__player-number {
@@ -249,14 +386,31 @@
     color: $tc;
     line-height: 150%;
     margin-bottom: 7px;
+
+    @include sm {
+      font-size: 15px;
+      line-height: normal;
+    }
+
+    @include xs {
+      display: inline-block;
+      margin-bottom: 0;
+      max-width: 30px;
+      width: 100px;
+    }
   }
 
   &__player-name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: $tc;
     line-height: 150%;
     margin-bottom: 3px;
+
+    @include sm {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
   }
 
   &__player-position {
@@ -265,6 +419,14 @@
     color: $tc;
     line-height: 150%;
     margin-bottom: 3px;
+
+    @include sm {
+      font-size: 13px;
+    }
+
+    @include xs {
+      margin-bottom: 0;
+    }
   }
 
   &__player-date-birth {
@@ -272,6 +434,11 @@
     color: $tc;
     line-height: 150%;
     margin-bottom: 7px;
+
+    @include xs {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
   }
 
   &__player-citizenship {
@@ -281,19 +448,46 @@
     font-size: 14px;
     color: $tc;
 
+    @include xs {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     .flag {
       width: 24px;
       height: 24px;
       margin-right: 7px;
+
+      @include xs {
+        margin-right: 0;
+      }
+    }
+
+    .country {
+      display: inline-block;
+
+      @include xs {
+        display: none;
+      }
     }
   }
 
-  &__player-foto {
+  &__player-photo {
     max-width: 110px;
     width: 100%;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1;
+
+    @include sm {
+      max-width: 70px;
+    }
+
+    @include xs {
+      max-width: 47px;
+    }
   }
 }

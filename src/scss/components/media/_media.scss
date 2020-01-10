@@ -3,13 +3,71 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include xs {
+      padding: 0 15px;
+    }
+
     .media__item {
       margin-right: 20px;
       margin-bottom: 20px;
 
+      @include sm {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+
+      @include xs {
+        margin-right: 0 !important;
+        width: 100%;
+        max-width: 100%;
+      }
+
       &:nth-child(4n) {
         margin-right: 0;
+
+        @include md {
+          margin-right: 20px;
+        }
       }
+
+      &:nth-child(3n) {
+        @include md {
+          margin-right: 0;
+        }
+
+        @include sm {
+          margin-right: 15px;
+        }
+      }
+
+      &:nth-child(2n) {
+        @include sm {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .heading {
+    @include md {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include xs {
+      flex-direction: column;
+      display: flex;
+    }
+  }
+
+}
+
+.photo {
+  @include xs {
+
+    .date,
+    .author {
+      padding: 0 15px;
     }
   }
 }
