@@ -13,3 +13,4 @@ if ($('body').width() <= 752) {
     $(this).html(text[0]);
   });
 }
+

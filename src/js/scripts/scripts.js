@@ -21,4 +21,4 @@ document.documentElement.style.setProperty('--tabsWidth', `${tabsWidth}px`);
 
 
 
-// map stadiums end
+

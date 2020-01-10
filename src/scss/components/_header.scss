@@ -151,6 +151,10 @@
 
         &:hover {
           color: $mc;
+
+          @include xs {
+            color: $wc;
+          }
         }
       }
     }
@@ -207,6 +211,10 @@
 
         &:hover {
           color: $mc;
+
+          @include xs {
+            color: $wc;
+          }
         }
       }
     }
